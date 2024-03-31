@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@611&family=Pixelify+Sans&display=swap')
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@611&family=Pixelify+Sans&display=swap');
     </style>
 </head>
 <body>
@@ -17,27 +17,39 @@
         <div class="name-and-long-button">
             <div class="name">Ezra M. Wingard</div>
             <div class="long-button">
-                <img src="/EEG.png" alt="Large Image" class="large-image">
-                <span class="about-text">About Me</span>
+                <img src="/EEG.png" alt="Large Image" class="large-image";>
+                <span class="link-text">About Me</span>
                 <a href="/aboutme.html">
-                    <img src="/link-arrow.png" alt="Arrow-Link-To-AboutMe" class="small-image">
+                    <img src="/link-arrow.png" alt="Arrow-Link-To-AboutMe" class="small-image";>
                  </a>
             </div>
         </div>
         <div class="button-group">
             <div class="button-row">
-                <a href="/fakepage.html" class="small-button">
-                    <span class="button-text">Link</span>
+                <a href="/projects.html" class="small-button" style="background-image: url('puzzle-piece.png');">
+                    <span class="link-text" style="color: #8f6e6e">Projects</span>
                 </a>
-                <div class="small-button"></div>
-                <div class="small-button"></div>
+                <a href="/education.html" class="small-button" style="background-image: url('EEG.png');">
+                    <span class="link-text" style="color: #496d67">Education</span>
+                </a>
+                <a href="/skills.html" class="small-button" style="background-image: url('EEG.png');">
+                    <span class="link-text">Skills</span>
+                </a>
             </div>
             <div class="button-row">
-                <div class="small-button"></div>
-                <div class="small-button"></div>
-                <div class="small-button"></div>
+                <a href="https://github.com/ewingard" target="_blank" rel="noopener noreferrer" class="small-button" style="background-image: url('EEG.png');">
+                    <span class="link-text">View my GitHub</span>
+                </a>
+                <a href="/interests.html" class="small-button" style="background-image: url('EEG.png');">
+                    <span class="link-text">Interests & Passions</span>
+                </a>
+                <a href="/publications.html" class="small-button" style="background-image: url('EEG.png');">
+                    <span class="link-text">Publications</span>
+                </a>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<!-- Local Testing Portal: python3 -m http.server 8000 -->

@@ -48,11 +48,11 @@ body, html {
         align-self: top;
     }
 
-    .long-button .about-text {
+    .long-button .link-text {
         margin: 20px 0; /* Add space above and below the text */
         font-family: "League Spartan", sans-serif; /* Choose your desired font */
-        font-size: 26px; /* Adjust the font size as needed */
-        color: #000; /* Set the text color */
+        font-size: 26pt; /* Adjust the font size as needed */
+        color: #8f6e6e; /* Set the text color */
         text-align: center; /* Center the text */
         padding: 60px;
     }
@@ -68,6 +68,7 @@ body, html {
         width: 60px; /* Example size, adjust as needed */
         height: auto; /* Maintain aspect ratio */
         display: block; /* Removes bottom space under the image */
+        margin-bottom: 50px;
     }
     
 
@@ -100,23 +101,31 @@ body, html {
         border-radius: 8px;
         text-decoration: none;
         color: #000;
-        font-size: 26px;
+        font-size: 26pt;
         font-family: "League Spartan", sans-serif;
         font-optical-sizing: auto;
         font-weight: 600;
         font-style: normal;
         padding: 20px; /* Adds padding inside the button, adjust as needed */
-        background-image: url('EEG.png');
         background-repeat: no-repeat;
         background-position: center top 40px; /* Adjusts the starting position 20px down from the top */
-        background-size: 50% auto; /* Resizes the image to be smaller to simulate padding */
+        background-size: 60% auto; /* Resizes the image to be smaller to simulate padding */
         position: relative;
-        overflow: hidden;
+        white-space: nowrap;
     }
-
-    .small-button .button-text {
-        margin-bottom: 40px; /* Increase if more space is needed from the bottom edge */
-        /* Style your text content as needed */
+    
+    .small-button .link-text {
+        margin: 20px 0; /* Add space above and below the text */
+        font-family: "League Spartan", sans-serif; /* Choose your desired font */
+        font-size: 26px; /* Adjust the font size as needed */
+        color: #000; /* Set the text color */
+        text-align: center; /* Center the text */
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+        text-align: center;
     }
     
     .small-button:not(:last-child) {
