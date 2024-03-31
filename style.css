@@ -1,61 +1,7 @@
-/* EXAMPLE CODE BEGIN - DELETE LATER
-h1, h2, h3, li {
-    color: #16A1E2;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-}
-
-li {
-    list-style-type: none;
-}
-
-a, p, h4 {
-    color: skyblue;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-body {
-    background-color: black;
-    padding: 30px;
-}
-
-#boombox-robot, #walkingrobot {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.under-construction {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.section {
-    padding-bottom: 20px;
-}
-
-.main-ul {
-    padding: 0 !important;
-}
-
-.section-2 {
-    padding-bottom: 10px;
-}
-
-footer {
-    padding-top: 50px;
-}
-EXAMPLE CODE END */
 body, html {
     margin: 0;
-    padding: 0;
-    font-family: 'Pixelify Sans', sans-serif;    
-    background: linear-gradient(45deg, #ffbebe, #d4fff8, #fffe86, #deffd4, #f4fff0, #e4c5ff);
+    padding: 0;  
+    background: linear-gradient(135deg, #ffbebe, #d4fff8, #fffe86, #deffd4, #f4fff0, #e4c5ff);
 }
 
     .container {
@@ -70,37 +16,107 @@ body, html {
         flex: 0 1 auto;
         align-self: flex-start;
         font-size: 37pt;
+        white-space: normal;
+        text-wrap: break-word;
         padding: 20px;
         flex-shrink: 0;
+        font-family: "Pixelify Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-optical-sizing: auto;
+        margin-bottom: 20px;
     }    
     
     .long-button {
-        width: 276.9px;
-        height: 452.5px;
+        min-width: 276.9px;
+        min-height: calc(452.2px + 150px);
+        position: relative; /* Allows absolute positioning inside */
         background-color: white;
         margin-right: 22px; /* Space between the long button and the button group */
         border-radius: 8px;
+        flex: 1 1 auto;
+        overflow: hidden; /* Keeps everything contained inside the button */
+        display: flex; /* To help with the layout of the images */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
         align-self: flex-end;
     }
+    
+    .long-button .large-image {
+        width: 50%; /* Makes the image cover the button */
+        height: auto; /* Keeps the image aspect ratio */
+        align-self: top;
+    }
+
+    .long-button .about-text {
+        margin: 20px 0; /* Add space above and below the text */
+        font-family: "League Spartan", sans-serif; /* Choose your desired font */
+        font-size: 26px; /* Adjust the font size as needed */
+        color: #000; /* Set the text color */
+        text-align: center; /* Center the text */
+        padding: 60px;
+    }
+    
+    .long-button a {
+        position: absolute; /* Positions the link absolutely within .long-button */
+        bottom: 20px;
+        align-self: center;
+    }
+    
+    .long-button .small-image {
+        /* Adjust the size of the small image */
+        width: 60px; /* Example size, adjust as needed */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Removes bottom space under the image */
+    }
+    
+
+    .name, .long-button {
+        flex-direction: column;
+    }
+
 
     .button-group {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* height: calc(2 * 307.2px + 22px); /* Height of two buttons and the gap */
+        align-items: flex-end;
+        height: calc(2 * 307.2px + 22px); /* Height of two buttons and the gap */
     }
     
     .button-row {
         display: flex;
         justify-content: center;
-    
     }
-    
+
     .small-button {
-    width: 276.9px;
-    height: 307.2px;
-    background-color: white;
-    border-radius: 8px;
+        display: inline-flex; /* Allows for flexible layouts within the button */
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Centers items horizontally */
+        justify-content: flex-end; /* Pushes content to the bottom */
+        width: 276.9px;
+        height: 307.2px;
+        background-color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #000;
+        font-size: 26px;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        padding: 20px; /* Adds padding inside the button, adjust as needed */
+        background-image: url('EEG.png');
+        background-repeat: no-repeat;
+        background-position: center top 40px; /* Adjusts the starting position 20px down from the top */
+        background-size: 50% auto; /* Resizes the image to be smaller to simulate padding */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .small-button .button-text {
+        margin-bottom: 40px; /* Increase if more space is needed from the bottom edge */
+        /* Style your text content as needed */
     }
     
     .small-button:not(:last-child) {
@@ -120,30 +136,3 @@ body, html {
             /* Additional responsive adjustments */
         }
     }    
-
-/* Prev. Thoughts for CSS - DELETE LATER
-nav ul {
-    list-style: none; /* Removes the default list styling
-    padding: 0; /* Removes default padding
-    margin: 0; /* Removes default margin
-    display: flex; /* Aligns items in a row
-    justify-content: center; /* Centers the buttons
-    gap: 20px; /* Adds some space between each button
-}
-
-nav a {
-    display: block; /* Makes the link fill the entire <li>
-    background-color: #007BFF; /* A nice, eye-catching blue
-    color: white; /* White text stands out nicely
-    text-align: center; /* Centers the text 
-    padding: 20px 40px; /* Top/bottom and left/right padding 
-    text-decoration: none; /* Gets rid of the underline 
-    font-size: 1.5rem; /* Larger font size 
-    border-radius: 8px; /* Softly rounded corners for a modern look 
-    transition: background-color 0.3s ease; /* Smooth color transition on hover 
-}
-
-nav a:hover {
-    background-color: #0056b3; /* Darker blue on hover 
-}
-*/

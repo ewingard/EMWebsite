@@ -7,18 +7,28 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file for styling -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@611&family=Pixelify+Sans&display=swap')
+    </style>
 </head>
 <body>
 
     <div class="container">
         <div class="name-and-long-button">
             <div class="name">Ezra M. Wingard</div>
-            <div class="long-button"></div>
+            <div class="long-button">
+                <img src="/EEG.png" alt="Large Image" class="large-image">
+                <span class="about-text">About Me</span>
+                <a href="/aboutme.html">
+                    <img src="/link-arrow.png" alt="Arrow-Link-To-AboutMe" class="small-image">
+                 </a>
+            </div>
         </div>
         <div class="button-group">
             <div class="button-row">
-                <div class="small-button"></div>
+                <a href="/fakepage.html" class="small-button">
+                    <span class="button-text">Link</span>
+                </a>
                 <div class="small-button"></div>
                 <div class="small-button"></div>
             </div>
@@ -29,10 +39,5 @@
             </div>
         </div>
     </div>
-    <footer>
-        <!-- Footer with social links, copyright info, etc. -->
-        <p>© 2023 My Awesome Site</p>
-    </footer>
-
 </body>
 </html>
