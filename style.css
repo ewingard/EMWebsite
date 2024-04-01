@@ -20,19 +20,19 @@ body, html {
 
     .container {
         display: flex;
-        flex-flow: row-wrap;
+        flex-flow: row;
         justify-content: space-around;
         align-items: center;
-        padding: 90px;
+        padding: 6.5vw; /*90px;*/
     }
 
     .name {
         flex: 0 1 auto;
         align-self: flex-start;
-        font-size: 37pt;
+        font-size: 3.61vw; /* 5.17vh; /* 37pt; */
         white-space: normal;
         text-wrap: break-word;
-        padding: 20px;
+        padding: 1.61vw; /* 20px */
         flex-shrink: 0;
         font-family: "ClearWerk", sans-serif;
         color: #fff;
@@ -40,56 +40,56 @@ body, html {
         font-weight: 400;
         font-style: normal;
         font-optical-sizing: auto;
-        margin-bottom: 0px;
+        margin-bottom: auto;
     }    
     
     .long-button {
-        min-width: 276.9px;
-        min-height: calc(452.2px + 150px);
+        width: 20.72vw; /*276.9px;*/
+        height: 94vh; /*calc(452.2px + 150px);*/
         position: relative; /* Allows absolute positioning inside */
         background-color: white;
-        margin-right: 22px; /* Space between the long button and the button group */
-        border-radius: 8px;
-        margin-bottom: 29px;
+        margin-right: 1.61vw; /* 22px */
+        border-radius: 0.59vw; /* 8px;*/
+        margin-bottom: 1.75vw; /*29px;*/
         flex: 1 1 auto;
         flex-direction: column;
         overflow: hidden; /* Keeps everything contained inside the button */
-        display: flex; /* To help with the layout of the images */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
+        display: flex;
+        justify-content: flex-end; /* Center items horizontally */
+        align-items: center;
         align-self: flex-end;
     }
-    
+
+    .long-button .large-image,
+    .long-button .link-text {
+        width: auto; /* Adjust based on your design */
+        max-width: 100%; /* Ensures content doesn't overflow its container */
+        height: auto; /* Maintain aspect ratio for images */
+        display: block; /* Ensures block-level display */
+        margin: 2.19vw 0; 
+    }
+
     .long-button .large-image {
         width: 100%; /* Makes the image cover the button */
         height: auto; /* Keeps the image aspect ratio */
-        align-self: top;
+        align-self: flex-start;
     }
 
     .long-button .link-text {
-        margin: 30px 0; /* Add space above and below the text */
         font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
-        font-size: 26pt; /* Adjust the font size as needed */
+        font-size: 2.54vw; /* 26pt */
         color: #000000; /* Set the text color */
         text-align: center; /* Center the text */
-        padding: 60px;
+        flex-grow: 1;
     }
-    
-    .long-button a {
-        position: absolute; /* Positions the link absolutely within .long-button */
-        bottom: 20px;
-        align-self: center;
-    }
-    
+
     .long-button .small-image {
         /* Adjust the size of the small image */
-        width: 80px; /* Example size, adjust as needed */
+        width: 5.86vw; /*80px */
         height: auto; /* Maintain aspect ratio */
-        display: block; /* Removes bottom space under the image */
-        margin: 20px 0;
         align-self: flex-end;
+        margin-bottom: 2vw;
     }
-    
 
     .name, .long-button {
         flex-direction: column;
@@ -101,7 +101,8 @@ body, html {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        height: calc(2 * 307.2px + 22px); /* Height of two buttons and the gap */
+        /* height: calc(2 * 307.2px + 22px);*/
+        height: 66.75vh
     }
     
     .button-row {
@@ -113,52 +114,87 @@ body, html {
         display: inline-flex; /* Allows for flexible layouts within the button */
         flex-direction: column; /* Stacks items vertically */
         align-items: center; /* Centers items horizontally */
-        justify-content: flex-end; /* Pushes content to the bottom */
-        width: 276.9px;
-        height: 307.2px;
+        justify-content: flex-end; /* Centers content vertically, can adjust to flex-start or flex-end as needed */
+        width: 20.72vw; /* Adjust width as necessary */
+        height: 48vh; /* Adjust height as necessary */
         background-color: white;
-        border-radius: 8px;
+        border-radius: 0.59vw; /* 8px; */
         text-decoration: none;
         color: #000;
-        font-size: 26pt;
+        font-size: 2.65vw; /* 26pt */
         font-family: "LeagueSpartan", sans-serif;
         font-style: normal;
-        padding: 20px; /* Adds padding inside the button, adjust as needed */
-        background-repeat: no-repeat;
-        background-position: center top 40px; /* Adjusts the starting position 20px down from the top */
-        background-size: 60% auto; /* Resizes the image to be smaller to simulate padding */
+        padding: 1.64vw; 
         position: relative;
         white-space: nowrap;
-    }
+        overflow: hidden; /* This property can help keep everything contained, but adjust accordingly */
+    }    
+
+    .small-button img {
+        margin-top: auto;
+        width: 60%; /* Control size relative to the button */
+        border-radius: 0.59vw; /* Match the button's border-radius */
+    }    
     
     .small-button .link-text {
-        margin: 20px 0; /* Add space above and below the text */
+        margin-top: auto; /* 1.46vw; padding: 20px; */
         font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
-        font-size: 26pt; /* Adjust the font size as needed */
+        font-size: 2.54vw; /* Adjust the font size as needed */
         color: #000; /* Set the text color */
-        text-align: center; /* Center the text */
-        padding: 0 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        text-decoration: none;
         text-align: center;
+        padding: auto;
+        text-decoration: none;
+        flex-grow: 1;
     }
     
     .small-button:not(:last-child) {
-    margin-right: 22px; /* Space between small buttons horizontally */
+    margin-right: 1.61vw; /* 22px */
     }
     
     .button-row:not(:last-child) {
-    margin-bottom: 22px; /* Space between button rows vertically */
+    margin-bottom: 1.61vw; /* 22px */
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1000px) {
         .container {
-            flex-direction: column; /* Stack items vertically on smaller screens */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow: wrap;
         }
-        .name, .button-row {
-            width: 100%; /* Adjust width for smaller screens */
-            /* Additional responsive adjustments */
+        .container, .button-row, .button-group, .name-and-long-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* Ensures full width */
+            height: auto;
+            margin-bottom: 1vw;
+            justify-content: space-between;
         }
-    }    
+        
+        .long-button .small-image{
+            margin-bottom: 4vw;
+            width: 25vw;
+            height: auto;
+        }
+
+        .small-button, .long-button {
+            width: auto;
+            height: auto;
+            margin: 4vw 0;
+            border-radius: 4vw;
+        }
+    
+        .name {
+            font-size: 13vw;
+            letter-spacing: 0.6em;
+        }
+        .long-button .link-text {
+            font-size: 10vw;
+        }
+
+        .small-button .link-text {
+            font-size: 10vw;
+        }
+    }
