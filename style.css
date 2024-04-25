@@ -111,14 +111,14 @@ body, html {
     }
 
     .small-button {
-        display: inline-flex; /* Allows for flexible layouts within the button */
-        flex-direction: column; /* Stacks items vertically */
-        align-items: center; /* Centers items horizontally */
-        justify-content: flex-end; /* Centers content vertically, can adjust to flex-start or flex-end as needed */
-        width: 20.72vw; /* Adjust width as necessary */
-        height: 48vh; /* Adjust height as necessary */
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 20.72vw;
+        height: 48vh;
         background-color: white;
-        border-radius: 0.59vw; /* 8px; */
+        border-radius: 0.59vw; /* 8px */
         text-decoration: none;
         color: #000;
         font-size: 2.65vw; /* 26pt */
@@ -127,19 +127,19 @@ body, html {
         padding: 1.64vw; 
         position: relative;
         white-space: nowrap;
-        overflow: hidden; /* This property can help keep everything contained, but adjust accordingly */
+        overflow: hidden;
     }    
 
     .small-button img {
         margin-top: auto;
-        width: 60%; /* Control size relative to the button */
-        border-radius: 0.59vw; /* Match the button's border-radius */
+        width: 60%;
+        border-radius: 0.59vw; /* 8px */
     }    
     
     .small-button .link-text {
         margin-top: auto; /* 1.46vw; padding: 20px; */
         font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
-        font-size: 2.54vw; /* Adjust the font size as needed */
+        font-size: 2.54vw; /* 26pt */
         color: #000; /* Set the text color */
         text-align: center;
         padding: auto;
@@ -198,3 +198,5 @@ body, html {
             font-size: 10vw;
         }
     }
+
+/* My viewport is 1536 x 841.983 */
