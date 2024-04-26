@@ -7,21 +7,8 @@
     <link rel="stylesheet" href="skills_style.css">
 </head>
 <body>
-   <!-- <button class="nav-toggle" aria-label="toggle navigation">Menu</button>
-    <nav class="top-right-nav">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/aboutme/index.html">About Me</a></li>
-          <li><a href="/projects/index.html">Projects</a></li>
-          <li><a href="/education/index.html">Education</a></li>
-          <li><a href="/skills/index.html">Skills</a></li>
-          <li><a href="https://github.com/ewingard">Github</a></li>
-          <li><a href="/interests/index.html">Interests</a></li>
-          <li><a href="/publications/index.html">Publications</a></li>
-        </ul>
-      </nav> -->
       <button id="menuToggle" aria-label="Menu" aria-expanded="false">
-        <div id="menuIcon" class="icon horizontal">...</div>
+      <div id="menuIcon" class="icon horizontal">...</div>
       </button>
       <div id="textMenu" class="menu-hidden">
         <ul>
@@ -34,66 +21,41 @@
             <li><a href="/interests/index.html">Interests</a></li>
             <li><a href="/publications/index.html">Publications</a></li>
           </ul>
-      </div>      
+      </div>    
+        
     <div class="name">Skills and <br> Proficiencies</br></div>
-    <div class="skills-container">
-      <div class="skills-group" id="programming">
-        <!-- Skill Category Header -->
-        <h2>Programming Skills</h2>
-        <!-- Python -->
-            <div class="skill">
-                <p>Python</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
+        <div class="skills-container">
+            <div class="image-column" id="skills_brainmap">
+            <img src="brain_alsotry.jpg" alt="brain map with skills display" usemap="#brainMap">
+                <map name="brainMap">
+<!--B Clickable-->  <area data-label="programming" alt="programming skills section of the brain map" 
+                    title="Programming Skills" href="" coords="37,117,275,163" shape="rect">
+<!--F Clickable-->  <area data-label="languages" alt="languages skills section of the brain map"
+                    title="Language Skills" href="" coords="26,282,265,329" shape="rect">
+<!--A Clickable-->  <area data-label="creative" alt="creative skills section of the brain map"
+                    title="Creative Skills" href="" coords="34,68,278,98" shape="rect">                  
+<!--C Clickable-->  <area alt="" 
+                    title="" href="" coords="28,163,346,210" shape="rect">
+<!--D Clickable-->  <area alt="" 
+                    title="" href="" coords="319,283,508,330" shape="rect">
+<!--E Clickable-->  <area alt="" 
+                    title="" href="" coords="255,398,333,445" shape="rect">
+<!--G Clickable-->  <area alt=""
+                    title="" href="" coords="62,345,140,391" shape="rect">
+<!--X Clickable-->  <area data-label="research skills" alt="research skills section of the brain map"
+                    title="Research Skills" href="" coords="299,339,377,386" shape="rect">
+<!--A2 Clickable--> <area data-label="data analysis" alt="data analysis skills section of the brain map"
+                    title="Data Analysis Skills" href="" coords="517,67,588,113" shape="rect">
+                </map>
+                <div class="info-column" id="skill-menu">
+                    <!--JS to handle the rest-->
                 </div>
             </div>
-            <!-- R (Tidyverse) -->
-            <div class="skill">
-                <p>Web Development</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
-            </div>
-            </div>
-            <!-- R (Tidyverse) -->
-            <div class="skill">
-                <p>R (Tidyverse)</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
-            </div>
-            </div>
-        <h2>Data Analysis</h2>
-            <div class="skill">
-                <p>MATLAB</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
-            </div>
-        <!-- Spanish -->
-            <div class="skill">
-                <p>R (Tidyverse)</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
         </div>
-      </div>
-      <div class= "skills-group" id="creative">
-        <h2>Languages</h2>
-        <!-- French -->
-            <div class="skill">
-                <p>French</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
-            </div>
-        <!-- Spanish -->
-            <div class="skill">
-                <p>Spanish</p>
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
-            </div>
-      </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- https://imagemap.org/ for the coordinates
+     best practices for Future Me is to do them ONE AT A TIME.-->
