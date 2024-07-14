@@ -18,6 +18,36 @@ body, html {
     font-style: normal;
 }
 
+    .banner {
+        background: #000000;
+    }
+
+    .banner__content {
+        padding: .05vw;
+        max-width: 25vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+      }
+
+    .banner__text {
+        flex-grow: 1;
+        font-family: "LeagueSpartan", sans-serif;
+        color: white;
+    }
+
+    .banner__close {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .banner__text,
+    .banner__close > span {
+        color: #ffffff;
+    }
+
+
     .container {
         display: flex;
         flex-flow: row;
