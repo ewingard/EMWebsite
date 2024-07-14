@@ -175,6 +175,7 @@ body, html {
         padding: auto;
         text-decoration: none;
         flex-grow: 1;
+        padding: 5vh;
     }
     
     .small-button:not(:last-child) {
