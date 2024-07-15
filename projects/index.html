@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ezra's Projects</title>
+    <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
-    <nav>
-        <a href="#whats-new">What's New</a>
-    </nav>
-    <div class="projects">
-        <!-- Your existing project content -->
+    <div id="menuToggle" class="menuButton" onclick="myFunction(this)" aria-label="Menu" aria-expanded="false">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
     </div>
-    <div id="whats-new" class="whats-new">
-        <h2>What's New</h2>
+    <div id="textMenu" class="menu-hidden">
         <ul>
-            <li><strong>Project Alpha</strong>: Added new feature for user authentication. <em>(October 2023)</em></li>
-            <li><strong>Blog Post</strong>: How to optimize your website for SEO. <em>(September 2023)</em></li>
-            <!-- Add more updates as needed -->
-        </ul>
-    </div>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/aboutme/index.html">About Me</a></li>
+            <li><a href="/projects/index.html">Projects</a></li>
+            <li><a href="/education/index.html">Education</a></li>
+            <li><a href="/skills/index.html">Skills</a></li>
+            <li><a href="https://github.com/ewingard">Github</a></li>
+            <li><a href="/interests/index.html">Interests</a></li>
+            <li><a href="/publications/index.html">Publications</a></li>
+          </ul>
+      </div> 
+    <div class="name">projects</br></div>
+    <script src="script.js"></script>
 </body>
 </html>
