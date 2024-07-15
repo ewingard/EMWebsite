@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezra's Skills</title>
-    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="skills_style.css">
 </head>
 <body>
-    <div id="menuToggle" class="menuButton" onclick="myFunction(this)" aria-label="Menu" aria-expanded="false">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </div>
-    <div id="textMenu" class="menu-hidden">
+      <button id="menuToggle" aria-label="Menu" aria-expanded="false">
+      <div id="menuIcon" class="icon horizontal">...</div>
+      </button>
+      <div id="textMenu" class="menu-hidden">
         <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/aboutme/index.html">About Me</a></li>
@@ -23,18 +21,19 @@
             <li><a href="/interests/index.html">Interests</a></li>
             <li><a href="/publications/index.html">Publications</a></li>
           </ul>
-      </div> 
+      </div>    
+        
     <div class="name">Skills and <br> Proficiencies</br></div>
-    <div class="skills-container">
-        <div class="image-column" id="skills_brainmap">
-        <img src="brain_alsotry.jpg" alt="brain map with skills display" usemap="#brainMap">
-            <map name="brainMap">
+        <div class="skills-container">
+            <div class="image-column" id="skills_brainmap">
+            <img src="brain_alsotry.jpg" alt="brain map with skills display" usemap="#brainMap">
+                <map name="brainMap">
 <!--A Clickable-->  <area data-label="creative" alt="creative skills section of the brain map"
                     title="Creative Skills" href="" coords="34,68,278,98" shape="rect">     
 <!--B Clickable-->  <area data-label="programming" alt="programming skills section of the brain map" 
                     title="Programming Skills" href="" coords="37,117,275,163" shape="rect">
 <!--C Clickable-->  <area alt="" 
-                    title="" href="" coords="28,163,346,210" shape="rect">
+title="" href="" coords="28,163,346,210" shape="rect">
 <!--D Clickable-->  <area alt="" 
                     title="" href="" coords="319,283,508,330" shape="rect">
 <!--E Clickable-->  <area data-label="" alt="" 
@@ -54,8 +53,7 @@
             </div>
         </div>
     </div>
-<!-- external script -->    
-    <script src="script.js"></script>
+    <script src="script.js">    </script>
 </body>
 </html>
 

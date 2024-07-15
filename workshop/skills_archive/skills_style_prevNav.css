@@ -1,0 +1,202 @@
+body, html {
+    margin: 0;
+    padding: 0;  
+        background-image: radial-gradient(circle at 50% 50%, #9db5cf, #465582); /* keeping gradient pattern consistent,
+        with a changed color-scheme */
+    }
+
+    @font-face {
+        font-family: 'ClearWerk';
+        src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'LeagueSpartan';
+        src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Menu visibility classes */
+.menu-hidden {
+  display: none;
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust for testing */
+  z-index: 100;
+  background-color: transparent;
+  font-family: 'LeagueSpartan', sans-serif;
+  color: white;
+}
+
+/* Apply common styles to both visible and hidden states */
+.menu-visible, .menu-hidden {
+  background-color: transparent;
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust for testing */
+  z-index: 100;
+  font-family: 'LeagueSpartan', sans-serif;
+  color: white;
+}
+
+/* Specific styles for visible state */
+.menu-visible ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-visible li {
+  display: inline;
+  margin-left: 1.46vw; /* Space between links */
+}
+
+.menu-visible a {
+  text-decoration: none;
+  color: white; /* Adjust color to fit your design */
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+/* Menu toggle button styles */
+.menu-toggle {
+  background-color: transparent;
+  color: white;
+  font-family: 'LeagueSpartan', sans-serif;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: transparent;
+  color: white;
+}
+
+/* Menu icon styles */
+#menuIcon.icon {
+  display: inline-block;
+  width: 2.56vw;
+  height: 2.56vw;
+  font-size: 2.56vw; /* This impacts the size of the '...' and '&#x22EE;' characters */
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+/* Horizontal layout styles */
+.horizontal {
+  flex-direction: row; /* Align dots horizontally */
+  color: white;
+  background-color: transparent;
+}
+      
+    .name {
+        flex: 0 1 auto;
+        align-self: flex-start;
+        font-size: 3.61vw; /* 5.17vh; /* 37pt; */
+        width: 29.08vw;
+        height: 13.49vh;
+        white-space: normal;
+        text-wrap: break-word;
+        padding: 0.5vw;
+        flex-shrink: 0;
+        font-family: "ClearWerk", sans-serif;
+        color: #fff;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+        font-style: normal;
+        font-optical-sizing: auto;
+        position: relative;
+        left: 3.01vw;
+        top: .67vh;
+    }
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2.5vh;
+        width: 91.9vw;
+        height: 31.8vw;
+        position: relative;
+        left: 3.01vw;
+        top: 2.81vh;
+        overflow-y: auto; /* VERTICAL scrolling */
+        overflow-x: hidden; /* NO HORIZONTAL scrolling */
+        border-radius: 0.59vw; /* 8px */
+        padding: 1vw;
+        background-color: white;
+        justify-content: space-between;
+      }
+
+    /*  .skills-container {
+        display: flex;
+        justify-content: space-around; /* Adjust as needed 
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: white;
+        width: 91.9vw;
+        height: 63.8vh;
+        position: relative;
+        left: 3.01vw; /* X position in VW 
+        top: 13.81vh; /* Y position in VH *
+        align-items: center;
+        overflow-y: auto; /* VERTICAL scrolling *
+        overflow-x: hidden; /* HORIZONTAL scrolling *
+        padding: 1vw;
+        gap: 1.46vw; /* 20px for each item in container *
+        border-radius: 0.59vw; /* 8px *
+        margin-top: 0;
+        align-items: flex-start;
+       } */
+
+      .image-column, .info-column {
+        flex: 1;
+        padding: 10px;
+      }
+
+      .image-column img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .info-column, .skill-group h2 {
+        margin: 1.46vw;
+      }
+      
+      .skill-group .skill {
+        margin: 3vw; /* 20px */
+        padding: 2vw;
+      }
+
+      #skill-menu {
+        position: absolute;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 10px;
+        display: none; /* Keep it hidden until needed */
+      }      
+    
+       h1, h2, h3, h4, h5, h6 {
+        font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+        font-size: 2vw; /* 26pt */
+        color: #000000; /* Set the text color */
+        margin-top: 1.46vw; /* 20px */
+        margin-bottom: 10px; /* 10px header */
+      }
+      
+      p {
+        font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+        color: #000000; /* Set the text color */
+        font-size: 1.5vw;
+      }
+
+      @media (max-width: 1000px) {
+        .skills-container {
+          flex-direction: column;
+        }
+        
+        .image-column, .info-column {
+          flex: none; /* Let them take the full width */
+        }      
+      }

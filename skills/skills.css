@@ -19,20 +19,41 @@ body, html {
         font-style: normal;
     }
 
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+    }
+
     .menu-hidden {
         display: none;
+    }
+    
+    .menu-visible {
+        display: block;
+        color: transparent;
         position: fixed;
-        top: 0;
-        right: 0;
-        margin: 1.46vw;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust for testing */
+        z-index: 100;
         font-family: 'LeagueSpartan', sans-serif;
-        color: black;
-        margin-right: 7vw;
-        z-index: 99;
-        background-color: transparent;
-      }
+        color: white;
+    }
 
-      .menu-visible ul {
+    .menu-visible ul {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -42,85 +63,13 @@ body, html {
         display: inline;
         margin-left: 1.46vw; /* Space between links */
       }
-      #textMenu, #menuIcon, .menu-visible, .menu-hidden {
-        background-color: transparent !important;
-        background: none !important;
-      }
-
-      #textMenu, #menuIcon, .menu-visible, .menu-hidden {
-        background-color: transparent !important;
-        background: none !important;
-      }      
-
+      
       .menu-visible a {
         text-decoration: none;
         color: white; /* Adjust color to fit your design */
         font-size: 1rem; /* Adjust size as needed */
       }
 
-      .menu-visible, .menu-hidden {
-        background-color: transparent;
-        position: fixed;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust for testing */
-        z-index: 100;
-      }        
-
-      .menu-visible {
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin: 1.46vw;
-        margin-right: 1.46vw;
-        z-index: 100;
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-        background-color: transparent;
-        color: black;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-family: 'LeagueSpartan', sans-serif;
-      }
-
-      .menu-toggle {
-        font-family:'LeagueSpartan', sans-serif;
-        background-color: transparent;
-        color: black;
-      }
-      
-      .menu-toggle:hover,
-      .nav-toggle:focus {
-        font-family: 'LeagueSpartan', sans-serif;
-        background-color: transparent;
-        color: black;
-      }
-
-      #menuIcon {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 2.56vw;
-        height: 2.56vw;
-        font-size: 2.56vw; /* This impacts the size of the '...' and '&#x22EE;' characters */
-        background-color: transparent;
-        color: black;
-        font-family: 'LeagueSpartan', sans-serif;
-      }
-      
-      /* When switching to a horizontal layout (meatballs menu) */
-      .horizontal {
-        flex-direction: row; /* Align dots horizontally */
-        background-color: transparent;
-      }
-      
-      .dot {
-        display: block; /* Ensure dots are treated as block elements for spacing */
-        margin: 2px; /* Spacing between dots, adjust as needed */
-        background-color: transparent;
-      }
-      
     .name {
         flex: 0 1 auto;
         align-self: flex-start;
