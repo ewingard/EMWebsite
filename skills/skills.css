@@ -48,7 +48,7 @@ body, html {
         position: fixed;
         top: 20px; /* Adjust as needed */
         right: 20px; /* Adjust for testing */
-        z-index: 100;
+        z-index: 100; 
         font-family: 'LeagueSpartan', sans-serif;
         color: white;
     }
@@ -67,7 +67,7 @@ body, html {
       .menu-visible a {
         text-decoration: none;
         color: white; /* Adjust color to fit your design */
-        font-size: 1rem; /* Adjust size as needed */
+        font-size: 1.5rem; /* Adjust size as needed */
       }
 
     .name {
