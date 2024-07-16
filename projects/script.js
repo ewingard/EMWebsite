@@ -32,3 +32,32 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// Resize Coordinates for Image Size
+//   document.addEventListener('DOMContentLoaded', function() {
+//   const img = document.getElementById('responsive-image');
+//   const originalWidth = 700; // original width of your image
+//   const originalHeight = 500; // original height of your image
+//   const areas = document.querySelectorAll('map[name="neuron-nav"] area');
+
+//   function resizeMap() {
+//     const currentWidth = img.clientWidth;
+//     const currentHeight = img.clientHeight;
+//     const widthRatio = currentWidth / originalWidth;
+//     const heightRatio = currentHeight / originalHeight;
+
+//     areas.forEach(area => {
+//       const originalCoords = area.dataset.coords.split(',').map(Number);
+//       const newCoords = originalCoords.map((coord, index) => {
+//         return index % 2 === 0 ? coord * widthRatio : coord * heightRatio;
+//       });
+//       area.coords = newCoords.join(',');
+//     });
+//   }
+
+//   // initial call to set map coordinates
+//   resizeMap();
+
+//   // adjust coordinates on window resize
+//   window.addEventListener('resize', resizeMap);
+// });

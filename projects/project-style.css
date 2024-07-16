@@ -110,10 +110,10 @@ body, html {
     .proj-container {
       display: block;
       gap: 2.5vh;
-      width: 66.9vw;
+      width: 69.9vw;
       height: 31.8vw;
       position: absolute;
-      left: 25.81vw;
+      left: 21.81vw;
       top: 20.81vh;
       overflow-y: auto; /* VERTICAL scrolling */
       overflow-x: hidden; /* NO HORIZONTAL scrolling */
@@ -161,6 +161,11 @@ body, html {
       font-weight: 300;
     }
 
+    h4, p {
+      font-family: 'LeagueSpartan', sans-serif;
+      font-size: 300;
+    }
+
     p, ol, li {
       margin: .1vw 0;
       padding: .5vw;
@@ -170,8 +175,12 @@ body, html {
 
     a {
       font-family: 'LeagueSpartan', sans-serif;
+      color: white;
     }
 
+    a.visited {
+      color: white;
+    }
     #more {display: none;}
 
     .button-wrapper {
@@ -180,7 +189,7 @@ body, html {
       width: 100%;
     }
 
-    /* Style buttons */
+    /* Buttons for Links/Media */
     .btn {
       display: inline-block;
       background-color: #961f6e; /* Blue background */
