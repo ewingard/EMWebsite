@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;  
-        background-image: radial-gradient(circle at 50% 50%, #ffd37e, #ff00a8); /* keeping gradient pattern consistent,
+        background-image: radial-gradient(circle at 50% 50%, #cfa2c8, #961f6e); /* keeping gradient pattern consistent,
         with a changed color-scheme */
     }
 
@@ -88,5 +88,39 @@ body, html {
         font-optical-sizing: auto;
         position: relative;
         left: 3.01vw;
-        top: .67vh;
+        /*lowered to match container = top: 13.67vh; */
+        /* middle location = top: 6.67vh; */
+        /* regular location = top: .67vh; */
+    }
+
+    .bubbles {
+      width: 350px;
+      height: auto;
+      left: .02vw;
+    }
+
+    .proj-container {
+      display: flex;
+      gap: 2.5vh;
+      width: 66.9vw;
+      height: 31.8vw;
+      position: absolute;
+      left: 25.81vw;
+      top: 20.81vh;
+      overflow-y: auto; /* VERTICAL scrolling */
+      overflow-x: hidden; /* NO HORIZONTAL scrolling */
+      border-radius: 0.59vw; /* 8px */
+      padding: 1vw;
+      background-color: white;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 1000px) {
+      .skills-container {
+        flex-direction: column;
+      }
+      
+      .image-column, .info-column {
+        flex: none; /* Let them take the full width */
+      }      
     }
