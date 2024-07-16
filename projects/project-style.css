@@ -101,7 +101,7 @@ body, html {
     }
 
     .proj-container {
-      display: flex;
+      display: block;
       gap: 2.5vh;
       width: 66.9vw;
       height: 31.8vw;
@@ -115,6 +115,49 @@ body, html {
       background-color: white;
       justify-content: space-between;
     }
+
+    .accordion {
+      background-color: white;
+      color: #961f6e;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-family: 'LeagueSpartan', sans-serif;
+      font-size: 1em;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+      background-color: #cfa2c8;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+    }
+
+    h1, h2 {
+      margin: .5vw 0;
+      padding: .5vw;
+      font-family: 'LeagueSpartan', sans-serif;
+    }
+
+    p, ol {
+      margin: .5vw 0;
+      padding: .5vw;
+      font-family: 'LeagueSpartan', sans-serif;
+    }
+
+    a {
+      font-family: 'LeagueSpartan', sans-serif;
+    }
+
+    #more {display: none;}
 
     @media (max-width: 1000px) {
       .skills-container {
