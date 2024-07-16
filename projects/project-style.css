@@ -87,7 +87,8 @@ body, html {
         font-style: normal;
         font-optical-sizing: auto;
         position: relative;
-        left: 3.01vw;
+        left: 25.5vw;
+        top: 6.67vh;
         /*lowered to match container = top: 13.67vh; */
         /* middle location = top: 6.67vh; */
         /* regular location = top: .67vh; */
