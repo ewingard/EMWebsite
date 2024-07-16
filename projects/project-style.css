@@ -19,6 +19,13 @@ body, html {
         font-style: normal;
     }
 
+    @font-face {
+      font-family: 'LeagueSpartan';
+      src: url('assets/fonts/LeagueSpartan-Light.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
 
     .bar1, .bar2, .bar3 {
         width: 35px;
@@ -126,7 +133,7 @@ body, html {
       border: none;
       outline: none;
       font-family: 'LeagueSpartan', sans-serif;
-      font-size: 1em;
+      font-size: 1.2em;
       transition: 0.4s;
     }
 
@@ -136,7 +143,7 @@ body, html {
 
     .panel {
       padding: 0 18px;
-      background-color: white;
+      background-color: #cfa2c8;
       display: none;
       overflow: hidden;
     }
@@ -147,10 +154,18 @@ body, html {
       font-family: 'LeagueSpartan', sans-serif;
     }
 
-    p, ol {
-      margin: .5vw 0;
+    h4 {
+      padding: -.3vw;
+      margin: .4vw;
+      font-family: 'LeagueSpartan', sans-serif;
+      font-weight: 300;
+    }
+
+    p, ol, li {
+      margin: .1vw 0;
       padding: .5vw;
       font-family: 'LeagueSpartan', sans-serif;
+      font-size: 300;
     }
 
     a {
@@ -158,6 +173,32 @@ body, html {
     }
 
     #more {display: none;}
+
+    .button-wrapper {
+      display: inline-block; /* makes the wrapper act as an inline element */
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Style buttons */
+    .btn {
+      display: inline-block;
+      background-color: #961f6e; /* Blue background */
+      border: none; /* Remove borders */
+      color: white; /* White text */
+      padding: .5vw 1vh; /* Some padding */
+      margin: .4vw;
+      cursor: pointer; /* Mouse pointer on hover */
+      border-radius: .59vw;
+      font-family: 'LeagueSpartan', sans-serif;
+      font-size: 1em;
+      text-decoration: none;
+    }
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: black;
+    } 
 
     @media (max-width: 1000px) {
       .skills-container {

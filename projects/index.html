@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezra's Projects</title>
     <link rel="stylesheet" href="project-style.css">
+    <script src="https://kit.fontawesome.com/ea87ee6546.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="menuToggle" class="menuButton" onclick="myFunction(this)" aria-label="Menu" aria-expanded="false">
@@ -34,27 +35,38 @@
     </div>
     <div class="proj-container">
         <h2><a name="AI">AI Bias</a></h2>
-        <p>
-            In the field of artificial intelligence, the topic of neural network prejudice and bias is becoming more well-known by the day.
-            More instances of unethical AI practices have been documented by the <a href="https://www.aiaaic.org/aiaaic-repository">AIAAIC database</a>, with instances branching outside of the scope of this project.
-            It is now well understood that there is a major issue with how we are currently creating neural networks, because a lot of the facial recognition software (whether it be for commercial or personal use) that is being created is deeply flawed in regards to accuracy and equity between populations.
-            For example, there have been many studies that show facial recognition and automatic gender recognition (AGR) technology’s accuracy rates are significantly worse on <a href="https://www.media.mit.edu/projects/gender-shades/overview/">Black women</a> and <a href="https://www.morgan-klaus.com/pdfs/pubs/Scheuerman-CSCW2019-HowComputersSeeGender.pdf"> transgender people.</a></p>
-        <p> Circa 2014, there were a lot of conversations sparked about the potential harms of computer vision and AI uses, especially in government organizations and commercial contexts.<br>
-        <br>
-        <a href="/projects/media/HonorsThesis_Publication_Website.pdf">Read my Honors Thesis here</a> &nbsp; | &nbsp; <a href="/projects/media/HonorsThesis-Poster-Graph.pdf">View my poster presentation here</a> &nbsp; | &nbsp; <a href="/projects/media/QUEST-WebsiteCopy.pdf">View my QUEST Week presentation here</a></p>
-        <button class="accordion">Read More</button>
-        <div class="panel">
-            <p>For the basis of my honors thesis at SUNY Oswego, I used two convolutional neural network (CNN) models that allowed me to probe some pressing questions on facial recognition neural network biases:
-                <ol>
-                    <li>How do biases infiltrate neural networks and affect their accuracy rates?</li>
-                    <li>What are the real-life effects of the reprecussions caused by these biases on marginalized groups of people?</li>
-                    <li>How can we mitigate some of the biases leading to gender prejudice in neural networks?</li>
-                </ol>
-            <p>There have been many studies which have shown the wide array of ways that biases can infiltrate neural networks; one notable mention being through unbalanced datasets. This means that a lot of the datasets being used to train facial recognition neural networks are mostly cisgender white men, and therefore affect the accuracy rates to be better on that group. This disproportionately affects groups that are traditionally underrepresented (both in these datasets and in other places), such as transgender people and non-white individuals.<br>        
-                These biases can negatively affect these marginalized groups, which is shown through the real-life reprecussions that have already been discovered. Some considerable instances include police using facial recognition software to identify criminals, and instead misidentifying innocent Black individuals as criminals, as well as the potential for transgender people being misgendered by machine learning algorithms not being able to change their prescribed gender, leading to harmful mental health effects.<br>
-                I hypothesized that we can mitigate some of the potential biases leading to racial and gender prejudice in facial recognition technology by opting for a balanced dataset for training, as well as moving forward in the future instead of using a male/female binary gender option, opting to use a masculine/feminine continuous spectrum.<br>
-            </p></p>
-        </div>
+        <h4><i>The Impact of Biases in Facial Recognition Artificial Neural Networks</i></h4>
+        <p> Circa 2014, there were a lot of conversations sparked about the potential harms of computer vision and AI uses, especially in government organizations and commercial contexts. My thesis work conducted at SUNY Oswego sought to probe how computer vision algorithms may be impacted by diversity in the datasets used for training.</p>
+            <div class="button-wrapper">
+                <a href="media/HonorsThesis_Publication_Website.pdf">
+                    <button class="btn"><i class="fa-solid fa-file-lines"></i> Thesis</button></a>
+                <a href="media/HonorsThesis-Poster-Graph.pdf">
+                    <button class="btn"><i class="fa-solid fa-file-image"></i> Poster</button></a>
+                <a href="media/QUEST-WebsiteCopy.pdf">
+                    <button class="btn"><i class="fa-solid fa-file-powerpoint"></i> Presentation</button></a>
+                <a href="https://github.com/ewingard/HonorsThesis">
+                <button class="btn"><i class="fa-solid fa-laptop-code"></i> Code</button></a>
+            </div>
+            <button class="accordion">Read More</button>
+            <div class="panel">
+                <p>
+                    In the field of artificial intelligence, the topic of neural network prejudice and bias is becoming more well-known by the day.
+                    More instances of unethical AI practices have been documented by the <a href="https://www.aiaaic.org/aiaaic-repository">AIAAIC database</a>, with instances branching outside of the scope of this project.
+                    It is now well understood that there is a major issue with how we are currently creating neural networks, because a lot of the facial recognition software (whether it be for commercial or personal use) that is being created is deeply flawed in regards to accuracy and equity between populations.
+                    For example, there have been many studies that show facial recognition and automatic gender recognition (AGR) technology’s accuracy rates are significantly worse on <a href="https://www.media.mit.edu/projects/gender-shades/overview/">Black women</a> and <a href="https://www.morgan-klaus.com/pdfs/pubs/Scheuerman-CSCW2019-HowComputersSeeGender.pdf"> transgender people.</a></p>
+                    <p>
+                        For the basis of my honors thesis at SUNY Oswego, I used two convolutional neural network (CNN) models that allowed me to probe some pressing questions on facial recognition neural network biases:
+                        <ol>
+                            <li>How do biases infiltrate neural networks and affect their accuracy rates?</li>
+                            <li>What are the real-life effects of the reprecussions caused by these biases on marginalized groups of people?</li>
+                            <li>How can we mitigate some of the biases leading to gender prejudice in neural networks?</li>
+                        </ol>
+                    <p>
+                        There have been many studies which have shown the wide array of ways that biases can infiltrate neural networks; one notable mention being through unbalanced datasets. This means that a lot of the datasets being used to train facial recognition neural networks are mostly cisgender white men, and therefore affect the accuracy rates to be better on that group. This disproportionately affects groups that are traditionally underrepresented (both in these datasets and in other places), such as transgender people and non-white individuals.<br>        
+                        These biases can negatively affect these marginalized groups, which is shown through the real-life reprecussions that have already been discovered. Some considerable instances include police using facial recognition software to identify criminals, and instead misidentifying innocent Black individuals as criminals, as well as the potential for transgender people being misgendered by machine learning algorithms not being able to change their prescribed gender, leading to harmful mental health effects.<br>
+                        I hypothesized that we can mitigate some of the potential biases leading to racial and gender prejudice in facial recognition technology by opting for a balanced dataset for training, as well as moving forward in the future instead of using a male/female binary gender option, opting to use a masculine/feminine continuous spectrum.<br>
+                    </p></p>
+                </div>
     </div>
     <script src="script.js"></script>
 </body>
