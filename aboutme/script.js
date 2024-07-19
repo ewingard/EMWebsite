@@ -1,3 +1,31 @@
+// function translateQuote() {
+//   var quote = document.getElementById("topQuote");
+//   if (quote.innerHTML === "On peut allumer des dizaines de bougies &agrave; partir d'une seule sans abr&eacute;ger la vie. On ne diminue pas le bonheur en le partageant.") {
+//     quote.innerHTML = "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.";
+//   } else {
+//     quote.innerHTML = "On peut allumer des dizaines de bougies &agrave; partir d'une seule sans abr&eacute;ger la vie. On ne diminue pas le bonheur en le partageant.";
+//   }
+// } 
+
+function translateQuote() {
+  var quote = document.getElementById("topQuote");
+  var originalQuote = "On peut allumer des dizaines de bougies &agrave; partir d'une seule sans abr&eacute;ger la vie. On ne diminue pas le bonheur en le partageant.";
+  var translatedQuote = "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.";
+  
+  var currentText = quote.innerHTML.trim().replace(/\s+/g, ' '); // trim and normalize spaces
+  var normalizedOriginalQuote = originalQuote.trim().replace(/\s+/g, ' ');
+  var normalizedTranslatedQuote = translatedQuote.trim().replace(/\s+/g, ' ');
+  
+  console.log("Current innerHTML: ", currentText); // log current innerHTML
+  console.log("Normalized Original Quote: ", normalizedOriginalQuote); // log normalized original quote
+
+  if (currentText === normalizedOriginalQuote) {
+    quote.innerHTML = translatedQuote;
+  } else {
+    quote.innerHTML = originalQuote;
+  }
+}
+
 //Nav Toggle
 function myFunction(x) {
     x.classList.toggle("change");

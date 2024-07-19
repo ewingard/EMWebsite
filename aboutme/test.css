@@ -1,0 +1,131 @@
+body, html {
+  margin: 0;
+  padding: 0; 
+}
+
+  @font-face {
+      font-family: 'ClearWerk';
+      src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'LeagueSpartan';
+      src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+/* CREDITS TO W3SCHOOLS FOR THE BAR ANIMATION https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+  .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s;
+  }
+
+  .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .menu-hidden {
+      display: none;
+  }
+  
+  .menu-visible {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      color: transparent;
+      position: fixed;
+      top: 1vw; /* Adjust as needed */
+      right: 31.25vw; /* Adjust for testing */
+      left: 2vw;
+      z-index: 100; 
+      font-family: 'LeagueSpartan', sans-serif;
+      color: white;
+      max-width: 100%;
+  }
+
+  .menu-visible ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .menu-visible li {
+      display: inline-block;
+      margin-left: 1.46vw; /* Space between links */
+    }
+    
+    .menu-visible a {
+      text-decoration: none;
+      color: white; /* Adjust color to fit your design */
+      font-size: 1.5rem; /* Adjust size as needed */
+    }
+
+    .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+  
+    .left {
+      left: 0;
+      background-image: radial-gradient(circle at 50% 50%, #d12c2c, #d12c2c, #d66b26, #b28f00, #055927, #465582, #961fe0);
+    }
+    
+    .right {
+      right: 0;
+      background-image: radial-gradient(circle at 50% 50%, #ffe500, #ffe500, #b28f00);
+    }
+    
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .centered img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    .about-container {
+      display: block;
+      gap: 2.5vh;
+      width: 41vw;
+      height: 41vw;
+      position: absolute;
+      overflow-y: auto; /* VERTICAL scrolling */
+      overflow-x: hidden; /* NO HORIZONTAL scrolling */
+      border-radius: 2vw; /* 8px */
+      padding: 1vw;
+      left: 3.5vw;
+      background-color: white;
+      justify-content: space-between;
+    }
+
+    .name {
+      font-family: "ClearWerk", sans-serif;
+      font-size: 3.61vw; /* 5.17vh; /* 37pt; */
+      white-space: normal;
+      text-wrap: break-word;
+      padding: .3vw; /* 20px */
+      text-align: center;
+    }
+
+    

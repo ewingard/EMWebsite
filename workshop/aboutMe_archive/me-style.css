@@ -81,19 +81,18 @@ body, html {
         padding: 0.5vw;
         flex-shrink: 0;
         font-family: "ClearWerk", sans-serif;
-        color: #fff;
+        color: white;
         letter-spacing: 0.2em;
         font-weight: 400;
         font-style: normal;
         font-optical-sizing: auto;
         position: relative;
-        left: 3.01vw;
-        top: .67vh;
+        left: 2.5vw;
+        top: 9.5vh;
     }
 
       .about-container {
-        display: grid;
-        grid-template-columns: auto auto;
+        display: block;
         gap: 2.5vh;
         width: 91.9vw;
         height: 31.8vw;
@@ -120,14 +119,60 @@ body, html {
         font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
         color: #000000; /* Set the text color */
         font-size: 1.5vw;
+        display: flex;
       }
+
+      .top-quote {
+        text-align: center; /* Center text horizontally */
+      }
+    
+      .top-quote i {
+          display: inline; /* Ensure the italic text behaves correctly */
+      }
+
+    /*  buttons by Balint Hudescz https://hudecz.medium.com/how-to-create-a-pure-css-toggle-button-2fcc955a8984
+    
+    formatting text container
+    
+      .toggleContainer div {
+        padding: 6px;
+        text-align: center;
+        z-index: 1;
+     } 
+      
+    formatting containers and bringing them forward
+
+     .toggleCheckbox:checked + .toggleContainer::before {
+        left: 50%;
+   }
+
+    move the button
+      .toggleCheckbox:checked + .toggleContainer::before {
+        left: 50%;
+      }
+
+    color changes
+
+    .toggleCheckbox:checked + .toggleContainer div:first-child{
+      color: white;
+      transition: color 0.3s;
+    }
+    .toggleCheckbox:checked + .toggleContainer div:last-child{
+      color: #343434;
+      transition: color 0.3s;
+    }
+    .toggleCheckbox + .toggleContainer div:first-child{
+      color: #343434;
+      transition: color 0.3s;
+    }
+    .toggleCheckbox + .toggleContainer div:last-child{
+      color: white;
+      transition: color 0.3s;
+    } 
+    */
 
       @media (max-width: 1000px) {
         .about-container {
           flex-direction: column;
         }
-        
-        .image-column, .info-column {
-          flex: none; /* Let them take the full width */
-        }      
-      }
+  }
