@@ -1,0 +1,133 @@
+body, html {
+    margin: 0;
+    padding: 0;  
+        background-image: radial-gradient(circle at 50% 50%, #ffe500, #b28f00); /* keeping gradient pattern consistent,
+        with a changed color-scheme */
+    }
+
+    @font-face {
+        font-family: 'ClearWerk';
+        src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'LeagueSpartan';
+        src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+/* CREDITS TO W3SCHOOLS FOR THE BAR ANIMATION https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+
+    .menu-hidden {
+        display: none;
+    }
+    
+    .menu-visible {
+        display: block;
+        color: transparent;
+        position: fixed;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust for testing */
+        z-index: 100; 
+        font-family: 'LeagueSpartan', sans-serif;
+        color: white;
+    }
+
+    .menu-visible ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu-visible li {
+        display: inline;
+        margin-left: 1.46vw; /* Space between links */
+      }
+      
+      .menu-visible a {
+        text-decoration: none;
+        color: white; /* Adjust color to fit your design */
+        font-size: 1.5rem; /* Adjust size as needed */
+      }
+
+    .name {
+        flex: 0 1 auto;
+        align-self: flex-start;
+        font-size: 3.61vw; /* 5.17vh; /* 37pt; */
+        width: 29.08vw;
+        height: 13.49vh;
+        white-space: normal;
+        text-wrap: break-word;
+        padding: 0.5vw;
+        flex-shrink: 0;
+        font-family: "ClearWerk", sans-serif;
+        color: #fff;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+        font-style: normal;
+        font-optical-sizing: auto;
+        position: relative;
+        left: 3.01vw;
+        top: .67vh;
+    }
+
+      .about-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2.5vh;
+        width: 91.9vw;
+        height: 31.8vw;
+        position: relative;
+        left: 3.01vw;
+        top: 2.81vh;
+        overflow-y: auto; /* VERTICAL scrolling */
+        overflow-x: hidden; /* NO HORIZONTAL scrolling */
+        border-radius: 0.59vw; /* 8px */
+        padding: 1vw;
+        background-color: white;
+        justify-content: space-between;
+      }
+ 
+       h1, h2, h3, h4, h5, h6 {
+        font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+        font-size: 2vw; /* 26pt */
+        color: #000000; /* Set the text color */
+        margin-top: 1.46vw; /* 20px */
+        margin-bottom: 10px; /* 10px header */
+      }
+      
+      p {
+        font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+        color: #000000; /* Set the text color */
+        font-size: 1.5vw;
+      }
+
+      @media (max-width: 1000px) {
+        .about-container {
+          flex-direction: column;
+        }
+        
+        .image-column, .info-column {
+          flex: none; /* Let them take the full width */
+        }      
+      }
