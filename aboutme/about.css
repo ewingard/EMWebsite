@@ -128,4 +128,16 @@ body, html {
       text-align: center;
     }
 
-    
+    p {
+      font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+      color: #000000; /* Set the text color */
+      font-size: 1.5vw;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+      font-size: 2vw; /* 26pt */
+      color: #000000; /* Set the text color */
+      margin-top: 1.46vw; /* 20px */
+      margin-bottom: 10px; /* 10px header */
+    }

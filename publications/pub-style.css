@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;  
-        background-image: radial-gradient(circle at 50% 50%, #9db5cf, #465582); /* keeping gradient pattern consistent,
+        background-image: radial-gradient(circle at 50% 50%, #ffca64, #d66b26); /* keeping gradient pattern consistent,
         with a changed color-scheme */
     }
 
@@ -90,3 +90,40 @@ body, html {
         left: 3.01vw;
         top: .67vh;
     }
+
+      .book-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: auto;
+        top: 9.5vh; /* Y coordinate */
+        left: 289px; /* X coordinate */
+        box-sizing: border-box; /* ensures padding is inside the container */
+        
+        overflow: hidden; /* ensure content stays within rounded corners */
+      }
+
+      .book-image {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        width: calc(100% - 76.8px); /* adjust width minus padding */
+        height: calc(100% - 76.8px); /* adjust height minus padding */
+        border-radius: 2vw; /* rounding corners */
+      }
+
+      .publication-1 {
+        position: absolute;
+        font-family: 'LeagueSpartan', sans-serif; /* or any font you prefer */
+        font-size: 1rem; /* Adjust size as needed */
+        text-align: right;
+        text-wrap: wrap;
+        top: 2.5vw;
+        left: 4.5vw;
+        max-width: 35%;
+        /* background: rgba(0, 0, 0, 0.5); optional: semi-transparent background */
+        padding: 10px;
+        border-radius: 5px; /* optional: rounded corners for the overlay */
+      }
