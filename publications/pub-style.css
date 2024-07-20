@@ -81,14 +81,14 @@ body, html {
         padding: 0.5vw;
         flex-shrink: 0;
         font-family: "ClearWerk", sans-serif;
-        color: #fff;
+        color: black;
         letter-spacing: 0.2em;
         font-weight: 400;
         font-style: normal;
         font-optical-sizing: auto;
-        position: relative;
-        left: 3.01vw;
-        top: .67vh;
+        position: absolute;
+        left: 35%;
+        top: 10.67vh;
     }
 
       .book-container {
@@ -97,11 +97,10 @@ body, html {
         justify-content: center;
         align-items: center;
         width: 60vw;
-        height: auto;
+        height: 40vw;
         top: 9.5vh; /* Y coordinate */
         left: 289px; /* X coordinate */
         box-sizing: border-box; /* ensures padding is inside the container */
-        
         overflow: hidden; /* ensure content stays within rounded corners */
       }
 
@@ -120,8 +119,8 @@ body, html {
         font-size: 1rem; /* Adjust size as needed */
         text-align: right;
         text-wrap: wrap;
-        top: 2.5vw;
-        left: 4.5vw;
+        top: 5.5vw;
+        left: 5.3vw;
         max-width: 35%;
         /* background: rgba(0, 0, 0, 0.5); optional: semi-transparent background */
         padding: 10px;
