@@ -90,3 +90,7 @@ body, html {
         left: 3.01vw;
         top: .67vh;
     }
+
+    .exp-bubbles{
+      position: relative;
+    }

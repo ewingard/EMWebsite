@@ -101,7 +101,7 @@ body, html {
         /* regular location = top: .67vh; */
     }
 
-    .bubbles {
+    .neuron-buttons {
       width: 350px;
       height: auto;
       left: .02vw;

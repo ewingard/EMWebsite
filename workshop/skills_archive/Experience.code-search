@@ -1,0 +1,70 @@
+# Query: Experience
+# ContextLines: 1
+
+25 results - 9 files
+
+index.html:
+  44                  </a>
+  45:                 <a href="/experience/index.html" class="small-button">
+  46                      <img src="assets/images/education.png" alt="Graduate Cap Drawing" style="width: 70%; border-radius: 0.59vw;">
+  47:                     <span class="link-text">Experience</span>
+  48                  </a>
+
+aboutme/index.html:
+  21            <li><a href="/projects/index.html">Projects</a></li>
+  22:           <li><a href="/experience/index.html">EXperience</a></li>
+  23            <li><a href="/skills/index.html">Skills</a></li>
+
+experience/index.html:
+   4      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   5:     <title>Ezra's Experience</title>
+   6      <link rel="stylesheet" href="about.css">
+
+   9  <body>
+  10:     <div class="name">Experience</div>
+  11      <div id="menuToggle" class="menuButton" onclick="myFunction(this)" aria-label="Menu" aria-expanded="false">
+
+  20            <li><a href="/projects/index.html">Projects</a></li>
+  21:           <li><a href="/experience/index.html">Experience</a></li>
+  22            <li><a href="/skills/index.html">Skills</a></li>
+
+  27      </div>
+  28:     <img src="/experience/media/exp-bubbles.png" alt="Visual Bubble Design with No Purpose at All Yet" class="exp-bubbles">
+
+projects/index.html:
+   21              <li><a href="/projects/index.html">Projects</a></li>
+   22:             <li><a href="/experience/index.html">Experience</a></li>
+   23              <li><a href="/skills/index.html">Skills</a></li>
+
+  112              <h4><i>Mental Rotation and Embodied Cognition</i></h4>
+  113:             <p> Aphantasia, or the inability to visulaize sensory imagery in the mind, is a condition that I experience. Ranging from Aphantasia to Hyperphantasia, 'visual' imagery affected includes the major senses:
+  114                  visual, tactile, olfactory, gustatory, and auditory. During my undergraduate studies, I assisted with a project studying aphantasia using a mental rotation task.
+
+publications/index.html:
+  19              <li><a href="/projects/index.html">Projects</a></li>
+  20:             <li><a href="/experience/index.html">Experience</a></li>
+  21              <li><a href="/skills/index.html">Skills</a></li>
+
+skills/index.html:
+  19              <li><a href="/projects/index.html">Projects</a></li>
+  20:             <li><a href="/experience/index.html">Experience</a></li>
+  21              <li><a href="/skills/index.html">Skills</a></li>
+
+workshop/aboutMe_archive/index.html:
+  21              <li><a href="/projects/index.html">Projects</a></li>
+  22:             <li><a href="/experience/index.html">Experience</a></li>
+  23              <li><a href="/skills/index.html">Skills</a></li>
+
+workshop/skills_archive/index_oldnav.html:
+  17              <li><a href="/projects/index.html">Projects</a></li>
+  18:             <li><a href="/experience/index.html">Experience</a></li>
+  19              <li><a href="/skills/index.html">Skills</a></li>
+
+workshop/skills_archive/skills_index_old.html:
+  15            <li><a href="/projects/index.html">Projects</a></li>
+  16:           <li><a href="/experience/index.html">Experience</a></li>
+  17            <li><a href="/skills/index.html">Skills</a></li>
+
+  30              <li><a href="/projects/index.html">Projects</a></li>
+  31:             <li><a href="/experience/index.html">Experience</a></li>
+  32              <li><a href="/skills/index.html">Skills</a></li>
