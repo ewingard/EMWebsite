@@ -17,6 +17,17 @@ document.getElementById('menuToggle').addEventListener('click', function myFunct
 
 });
 
+//Mobile Nav Toggle
+function mobileNavToggle() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+//End Mobile Nav
+
 // Panel Script
 var acc = document.getElementsByClassName("accordion");
 var i;

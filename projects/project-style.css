@@ -35,11 +35,11 @@ body, html {
         transition: 0.4s;
     }
 
-  .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-  }
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
 
-  .change .bar2 {opacity: 0;}
+    .change .bar2 {opacity: 0;}
 
     .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
@@ -76,6 +76,49 @@ body, html {
         color: white; /* Adjust color to fit your design */
         font-size: 1.5rem; /* Adjust size as needed */
       }
+
+      /* Mobile Nav Section! */
+    .mobileMenu {
+      display: none;
+    }
+
+    .mobileMenu {
+      overflow: hidden;
+      background-color: #333;
+      position: relative;
+      z-index: 101;
+    }
+    
+    .mobileMenu #myLinks {
+      display: none;
+    }
+    
+    .mobileMenu a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: 'LeagueSpartan', sans-serif;
+      display: block;
+    }
+    
+    .mobileMenu a.icon {
+      background: black;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    .mobileMenu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .active-menu {
+      background-color: #005239;
+      color: white;
+    }
 
     .name {
         flex: 0 1 auto;
@@ -218,11 +261,25 @@ body, html {
     } 
 
     @media (max-width: 1000px) {
-      .skills-container {
-        flex-direction: column;
+      .proj-container {
+        left: 0vw;
+        width: 100%;
+        height: auto;
       }
-      
-      .image-column, .info-column {
-        flex: none; /* Let them take the full width */
-      }      
+      .neuron-buttons {
+        display:none;
+      }
+      .mobileMenu {
+        display: block;
+    }
+      .menuButton {
+          display: none;
+      }
+
+      .name{
+        top: 3vw;
+        text-align: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
     }
