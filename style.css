@@ -34,6 +34,7 @@ body, html {
         flex-grow: 1;
         font-family: "LeagueSpartan", sans-serif;
         color: white;
+        text-align: center;
     }
 
     .banner__close {
@@ -187,6 +188,9 @@ body, html {
     }
 
     @media (max-width: 1000px) {
+        body {
+            width: 100%;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -229,5 +233,13 @@ body, html {
             font-size: 10vw;
         }
     }
+        .banner__content {
+            max-width: 100%; /* still make it wider for mobile */
+            flex-direction: row;
+        }
 
+        .banner__text,
+        .banner__close {
+            font-size: 1em; /* keep font size consistent */
+        }
 /* My viewport is 1536 x 841.983 */

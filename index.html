@@ -9,12 +9,12 @@
 </head>
 <body>
 <!-- head banner for Updates, New Things I've been doing, credits to dcode on youtube for the tut-->
-    <div class="banner">
+    <div class="banner" id="banner">
         <div class="banner__content">
         <div class="banner__text">
            <span>Welcome! Check out what's new and fresh <a href="projects/index.html#WN" style= "color: white;">here</a></span>
         </div>
-        <button class="banner__close" type="button">
+        <button class="banner__close" type="button" id="banner close">
             <span class="material-symbols-outlined">
                 close
             </span>
@@ -71,12 +71,9 @@
         document.querySelector(".banner__close").addEventListener("click", function () {
         this.closest(".banner").style.display = "none";
         });
-    </script>    
+    </script>
+    <script src="script.js"></script>    
 </body>
 </html>
-
-<!--<a href="/projects/index.html" class="small-button" style="background-image: url('/assets/images/brain.png');">
-                    <span class="link-text">Projects</span>
-                </a> -->
 <!-- Local Testing Portal: 
     python3 -m http.server 8000 -->

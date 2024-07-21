@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;  
-        background-image: radial-gradient(circle at 50% 50%, #9db5cf, #465582); /* keeping gradient pattern consistent,
+        background-image: radial-gradient(circle at 50% 50%, #b2b2b2, #000000); /* keeping gradient pattern consistent,
         with a changed color-scheme */
     }
 

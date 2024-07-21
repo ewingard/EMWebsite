@@ -90,3 +90,9 @@ body, html {
         left: 3.01vw;
         top: .67vh;
     }
+
+    .word-cloudtainer {
+      position: absolute;
+      left: 10vw;
+      top: 7vw;
+    }
