@@ -188,17 +188,20 @@ body, html {
     }
 
     @media (max-width: 1000px) {
-        body {
+        body, html {
             width: 100%;
+            overflow-x: hidden;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            overflow: wrap;
+            overflow: hidden;
+            width: 100;
+            box-sizing: border-box;
         }
-        .container, .button-row, .button-group, .name-and-long-button {
+        .button-row, .button-group, .name-and-long-button {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -206,6 +209,16 @@ body, html {
             height: auto;
             margin-bottom: 1vw;
             justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .long-button .link-text, .small-button .link-text {
+            font-size: 10vw;
+            text-align: center; /* Center text */
+            white-space: wrap; /* Prevent text wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+            max-width: 100%; /* Ensure text doesn't overflow its container */
         }
         
         .long-button .small-image{
@@ -220,19 +233,21 @@ body, html {
             margin: 4vw 0;
             border-radius: 4vw;
         }
+
+        .long-button {
+            width: 102%;
+        }
     
+        .small-button {
+            width: 99%;
+        }
         .name {
             font-size: 13vw;
-            letter-spacing: 0.6em;
+            letter-spacing: 0.2em;
+            text-align: center;
+            padding: 2vw;
         }
-        .long-button .link-text {
-            font-size: 10vw;
-        }
-
-        .small-button .link-text {
-            font-size: 10vw;
-        }
-    }
+    
         .banner__content {
             max-width: 100%; /* still make it wider for mobile */
             flex-direction: row;
@@ -242,4 +257,5 @@ body, html {
         .banner__close {
             font-size: 1em; /* keep font size consistent */
         }
+    }
 /* My viewport is 1536 x 841.983 */
