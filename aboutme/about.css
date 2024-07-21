@@ -233,6 +233,7 @@ body, html {
           top: 0;
           left: 0;
           width: 100%;
+          z-index: 101;
       }
   
       .menuButton {
@@ -267,7 +268,21 @@ body, html {
           overflow: hidden;
       }
 
-      .about-container{
+      .about-container {
+        width: 90%;
+        height: 90%;
         align-self: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow-y: auto; /* VERTICAL scrolling */   
       }
-  } 
+        .name {
+          font-size: 2rem; /* Adjust font size as needed */
+      }
+
+      p {
+          font-size: 1.5rem; /* Adjust font size as needed */
+      }
+}
