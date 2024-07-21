@@ -13,16 +13,16 @@ body, html {
     }
     
     @font-face {
-        font-family: 'LeagueSpartan';
+        font-family: 'LeagueSpartan-SemiBold';
         src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
-        font-weight: normal;
+        font-weight: 600;
         font-style: normal;
     }
 
     @font-face {
-      font-family: 'LeagueSpartan';
-      src: url('assets/fonts/LeagueSpartan-Light.woff') format('woff');
-      font-weight: normal;
+      font-family: 'LeagueSpartan-Light';
+      src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
+      font-weight: 300;
       font-style: normal;
     }
 
@@ -50,14 +50,14 @@ body, html {
     }
     
     .menu-visible {
-        display: block;
-        color: transparent;
-        position: fixed;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust for testing */
-        z-index: 100; 
-        font-family: 'LeagueSpartan', sans-serif;
-        color: white;
+      display: block;
+      color: transparent;
+      position: fixed;
+      top: 20px; /* Adjust as needed */
+      right: 20px; /* Adjust for testing */
+      z-index: 100; 
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
+      color: white;
     }
 
     .menu-visible ul {
@@ -98,7 +98,7 @@ body, html {
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       display: block;
     }
     
@@ -175,7 +175,7 @@ body, html {
       text-align: left;
       border: none;
       outline: none;
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       font-size: 1.2em;
       transition: 0.4s;
     }
@@ -194,7 +194,7 @@ body, html {
     h1, h2 {
       margin: .5vw 0;
       padding: .5vw;
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       color: black;
     }
 
@@ -207,25 +207,19 @@ body, html {
     h4 {
       padding: -.3vw;
       margin: .4vw;
-      font-family: 'LeagueSpartan', sans-serif;
-      font-weight: 300;
-    }
-
-    h4, p {
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-Light', sans-serif;
       font-size: 300;
     }
 
     p, ol, li {
       margin: .1vw 0;
       padding: .5vw;
-      font-family: 'LeagueSpartan', sans-serif;
-      font-size: 300;
+      font-family: 'LeagueSpartan-Light', sans-serif;
     }
 
 
     a {
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       color: black;
     }
 
@@ -250,7 +244,7 @@ body, html {
       margin: .4vw;
       cursor: pointer; /* Mouse pointer on hover */
       border-radius: .59vw;
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       font-size: 1em;
       text-decoration: none;
     }
