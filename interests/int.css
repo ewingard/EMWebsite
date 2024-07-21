@@ -137,13 +137,35 @@ body, html {
       position: absolute;
       left: 10vw;
       top: 7vw;
+      display: block;
     }
 
     @media (max-width: 1000px){
       .mobileMenu {
         display: block;
+        z-index: 101;
     }
       .menuButton {
           display: none;
+      }
+
+      .name {
+        top: 3vw;
+        left: 0vw;
+        font-size: 2rem;
+      }
+
+      .word-cloudtainer {
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the viewport area */
+        left: 0vw;
+        top: 25vw;
+    }
+
+      .word-cloudtainer img {
+          width: 100vw; /* Full viewport width */
+          height: auto; /* Maintain aspect ratio */
+          object-fit: cover; /* Cover the viewport area */
       }
     }

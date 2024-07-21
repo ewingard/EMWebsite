@@ -169,8 +169,9 @@ body, html {
     }
 
     @media (max-width: 1000px) {
-      body. html {
+      body, html {
         overflow: hidden !important;
+      
       }
       .exp-container {
         position: relative;

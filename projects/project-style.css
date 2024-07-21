@@ -277,9 +277,9 @@ body, html {
       }
 
       .name{
+        position: relative;
         top: 3vw;
-        text-align: center;
-        justify-content: center;
+        align-text: center;
         font-size: 2rem;
       }
     }
