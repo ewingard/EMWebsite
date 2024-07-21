@@ -172,8 +172,35 @@ body, html {
       @media (max-width: 1000px){
         .mobileMenu {
           display: block;
+          z-index: 101;
       }
         .menuButton {
             display: none;
+        }
+  
+        .name {
+          position: relative;
+          top: 10vw;
+          left: 20%;
+          font-size: 2rem;
+        }
+  
+        .book-container {
+          width: 100vw; /* Full viewport width */
+          height: auto; /* Maintain aspect ratio */
+          object-fit: cover; /* Cover the viewport area */
+          left: 0vw;
+          top: 5vw;
+        }
+
+        .publication-1 {
+          left: 13vw;
+          max-width: 30%;
+        }
+  
+        .book-image img {
+            width: 100vw; /* Full viewport width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the viewport area */
         }
       }

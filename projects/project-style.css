@@ -279,7 +279,6 @@ body, html {
       .name{
         position: relative;
         top: 3vw;
-        align-text: center;
         font-size: 2rem;
       }
     }
