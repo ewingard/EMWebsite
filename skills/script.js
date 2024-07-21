@@ -48,7 +48,7 @@ function displaySkills(label) {
 // Define the skills content for each area
 const skillsContent = {
     code: `<h2>Programming Skills</h2><p>I have experience working with multiple languages, including (but not limited to) HTML, CSS, JavaScript, Java, Prolog, Python, MATLAB, and R (including the tidyverse package) .</p>`,
-    languages: `<h2>Language Skills</h2><p>I am a native English speaker, with near-fluency (CEFR C1 or advanced-low level) in French, and beginner knowledge of Spanish.</p>`,
+    languages: `<h2>Language Skills</h2><p>I am a native English speaker, with near-fluency (CEFR C1 or advanced-low level) in French. I am in the beginning stages of learning Spanish.</p>`,
     creative: `<h2>Creative Skills</h2><p>I am an artist and I love to draw! I also have experience teaching art through the New Bethel Foundation's Art and Creative Writing Summer Camp. I have gotten some experience through my work as a Research Assistant under Dr. Caitlin Hudac using Photoshop for stimulus creation.</p>`,
     webdev: `<h2>Website Development Skills</h2><p>I am currently using this website to learn webdev skills including HTML, CSS, and JavaScript.</p>`,
     undefined: `<h2>Undefined Area</h2><p>This area is under construction at the moment. Please check back soon for more details!</p>`,
