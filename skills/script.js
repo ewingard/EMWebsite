@@ -16,9 +16,11 @@ document.getElementById('menuToggle').addEventListener('click', function myFunct
     x.setAttribute('aria-expanded', !isExpanded);
 
     });
+
+//Skills Labels
 const skills = {
-    programming: ['Python', 'WebDevelopment', 'R + Tidyverse'],
-    languages: ['English', 'Spanish'],
+    code: ['Python', 'WebDevelopment', 'R + Tidyverse'],
+    languages: ['English', 'French'],
     creative: ['Photoshop', 'Drawing']
 };
 
@@ -33,6 +35,7 @@ function mobileNavToggle() {
   }
 //End Mobile Nav
 
+//Skills in my Brain
 function displaySkills(label) {
     const skillMenu = document.getElementById('skill-menu');
     skillMenu.innerHTML = ''; // Clear previous content
@@ -44,9 +47,13 @@ function displaySkills(label) {
 
 // Define the skills content for each area
 const skillsContent = {
-    programming: `<h2>Programming Skills</h2><p>Here's where you can dive into languages like Python, JavaScript, and C++.</p>`,
-    languages: `<h2>Language Skills</h2><p>Fluency in English, Spanish, and Japanese.</p>`,
-    creative: `<h2>Creative Skills</h2><p>Exploring creativity through Graphic Design, Photography, and Creative Writing.</p>`
+    code: `<h2>Programming Skills</h2><p>I have experience working with multiple languages, including (but not limited to) HTML, CSS, JavaScript, Java, Prolog, Python, MATLAB, and R (including the tidyverse package) .</p>`,
+    languages: `<h2>Language Skills</h2><p>I am a native English speaker, with near-fluency (CEFR C1 or advanced-low level) in French, and beginner knowledge of Spanish.</p>`,
+    creative: `<h2>Creative Skills</h2><p>I am an artist and I love to draw! I also have experience teaching art through the New Bethel Foundation's Art and Creative Writing Summer Camp. I have gotten some experience through my work as a Research Assistant under Dr. Caitlin Hudac using Photoshop for stimulus creation.</p>`,
+    webdev: `<h2>Website Development Skills</h2><p>I am currently using this website to learn webdev skills including HTML, CSS, and JavaScript.</p>`,
+    undefined: `<h2>Undefined Area</h2><p>This area is under construction at the moment. Please check back soon for more details!</p>`,
+    research: `<h2>Research Skills</h2><p>I am currently working under Dr. Caitlin Hudac in the B-RAD Lab. I've been familiarizing myself with REDCap database management, EEG techniques (inlcuding programming in E-Basic for E-Prime task creation and refinement, using NetStation software), participant recruitment and data managment procedures.</p>`,
+    data: `<h2>Data Management Skills</h2><p>I am extremely familiar with R and accompanying packages (most notably the tidyverse package and the lavaan package). I am also familiar with using MATLAB for fMRI behavioral data analysis, and SPSS for general-purpose psychology data analysis.</p>`
 };
 
 document.querySelectorAll('area').forEach(area => {
@@ -63,34 +70,36 @@ document.querySelectorAll('area').forEach(area => {
 
 // Alleged content resizer
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Image Map Resizer
-    imageMapResize();
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Initialize Image Map Resizer
+//     imageMapResize();
 
-    // Nav Toggle
-    document.getElementById('menuToggle').addEventListener('click', function() {
-        this.classList.toggle("change");
-        const textMenu = document.getElementById('textMenu');
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        textMenu.classList.toggle('menu-hidden');
-        textMenu.classList.toggle('menu-visible');
-        this.setAttribute('aria-expanded', !isExpanded);
-    });
+//     // Nav Toggle
+//     document.getElementById('menuToggle').addEventListener('click', function() {
+//         this.classList.toggle("change");
+//         const textMenu = document.getElementById('textMenu');
+//         const isExpanded = this.getAttribute('aria-expanded') === 'true';
+//         textMenu.classList.toggle('menu-hidden');
+//         textMenu.classList.toggle('menu-visible');
+//         this.setAttribute('aria-expanded', !isExpanded);
+//     });
 
-    const skillsContent = {
-        programming: `<h2>Programming Skills</h2><p>Here's where you can dive into languages like Python, JavaScript, and C++.</p>`,
-        languages: `<h2>Language Skills</h2><p>Fluency in English, Spanish, and Japanese.</p>`,
-        creative: `<h2>Creative Skills</h2><p>Exploring creativity through Graphic Design, Photography, and Creative Writing.</p>`
-    };
+//     const skillsContent = {
+//         programming: `<h2>Programming Skills</h2><p>Here's where you can dive into languages like Python, JavaScript, and C++.</p>`,
+//         languages: `<h2>Language Skills</h2><p>Fluency in English, Spanish, and Japanese.</p>`,
+//         creative: `<h2>Creative Skills</h2><p>Exploring creativity through Graphic Design, Photography, and Creative Writing.</p>`,
+//         webdev: `<h2>Website Development Skills</h2><p>I am currently using this website to learn webdev skills including HTML, CSS, and JavaScript.</p>`,
+//         undefined: `<h2>Undefined Area</h2><p>This area is under construction at the moment. Please check back soon for more details!</p>`
+//     };
 
-    document.querySelectorAll('area').forEach(area => {
-        area.addEventListener('click', function(e) {
-            e.preventDefault();
-            const label = this.getAttribute('data-label');
-            const contentToShow = skillsContent[label];
-            const skillMenu = document.querySelector('.info-column');
-            skillMenu.innerHTML = contentToShow;
-            skillMenu.style.display = 'block';
-        });
-    });
-});
+//     document.querySelectorAll('area').forEach(area => {
+//         area.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             const label = this.getAttribute('data-label');
+//             const contentToShow = skillsContent[label];
+//             const skillMenu = document.querySelector('.info-column');
+//             skillMenu.innerHTML = contentToShow;
+//             skillMenu.style.display = 'block';
+//         });
+//     });
+// });
