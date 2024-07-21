@@ -11,10 +11,17 @@ body, html {
   }
   
   @font-face {
-      font-family: 'LeagueSpartan';
+      font-family: 'LeagueSpartan-SemiBold';
       src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
-      font-weight: normal;
+      font-weight: 600;
       font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'LeagueSpartan-Light';
+    src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
   }
 
 /* CREDITS TO W3SCHOOLS FOR THE BAR ANIMATION https://www.w3schools.com/howto/howto_css_menu_icon.asp */
@@ -49,7 +56,7 @@ body, html {
       right: 31.25vw; /* Adjust for testing */
       left: 2vw;
       z-index: 100; 
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       color: white;
       max-width: 100%;
   }
@@ -91,7 +98,7 @@ body, html {
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       display: block;
     }
           
@@ -171,13 +178,17 @@ body, html {
     }
 
     p {
-      font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+      font-family: "LeagueSpartan-SemiBold", sans-serif; /* Choose your desired font */
       color: #000000; /* Set the text color */
       font-size: 1.5vw;
     }
 
+    p.quote, p.bio {
+      font-family: 'LeagueSpartan-Light', sans-serif;
+    }
+
     h1, h2, h3, h4, h5, h6 {
-      font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
+      font-family: "LeagueSpartan-SemiBold", sans-serif; /* Choose your desired font */
       font-size: 2vw; /* 26pt */
       color: #000000; /* Set the text color */
       margin-top: 1.46vw; /* 20px */
