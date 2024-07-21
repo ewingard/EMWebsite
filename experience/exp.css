@@ -168,11 +168,33 @@ body, html {
       right: 2.5vh;
     }
 
-    @media (max-width: 1000px){
+    @media (max-width: 1000px) {
+      body. html {
+        overflow: hidden !important;
+      }
+      .exp-container {
+        position: relative;
+        left: 0vw;
+        top: 0vw;
+        width: 100%;
+        height: auto;
+      }
+      .exp-bubbles {
+        display:none;
+      }
       .mobileMenu {
         display: block;
     }
       .menuButton {
           display: none;
+      }
+      
+      p {
+        font-size: 2rem;
+      }
+      .name{
+        top: 3vw;
+        left: 25%;
+        font-size: 2rem;
       }
     }
