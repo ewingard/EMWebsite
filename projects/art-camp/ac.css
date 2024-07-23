@@ -1,0 +1,302 @@
+body, html {
+    margin: 0;
+    padding: 0;  
+    background-image: radial-gradient(circle at 50% 50%, #cfa2c8, #961f6e); /* keeping gradient pattern consistent, with a changed color-scheme */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: 'ClearWerk';
+    src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan-SemiBold';
+    src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan-Light';
+    src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu-hidden {
+    display: none;
+}
+
+.menu-visible {
+    display: block;
+    color: transparent;
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust for testing */
+    z-index: 100; 
+    font-family: 'LeagueSpartan-SemiBold', sans-serif;
+    color: white;
+}
+
+.menu-visible ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-visible li {
+    display: inline;
+    margin-left: 1.46vw; /* Space between links */
+}
+
+.menu-visible a {
+    text-decoration: none;
+    color: white; /* Adjust color to fit your design */
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+/* Mobile Nav Section! */
+.mobileMenu {
+    display: none;
+}
+
+.mobileMenu {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    z-index: 101;
+}
+
+.mobileMenu #myLinks {
+    display: none;
+}
+
+.mobileMenu a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'LeagueSpartan-SemiBold', sans-serif;
+    display: block;
+}
+
+.mobileMenu a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mobileMenu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active-menu {
+    background-color: #005239;
+    color: white;
+}
+
+.name {
+    font-size: 3.61vw; /* 5.17vh; 37pt; */
+    width: 29.08vw;
+    height: 13.49vh;
+    white-space: normal;
+    text-wrap: break-word;
+    padding: 0.5vw;
+    font-family: "ClearWerk", sans-serif;
+    color: #fff;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.neuron-buttons {
+    width: 350px;
+    height: auto;
+    left: .02vw;
+}
+
+.proj-container {
+    display: block;
+    gap: 2.5vh;
+    width: 69.9vw;
+    height: 31.8vw;
+    position: absolute;
+    left: 25.5vw;
+    top: 20.81vh;
+    overflow-y: auto; /* VERTICAL scrolling */
+    overflow-x: hidden; /* NO HORIZONTAL scrolling */
+    border-radius: 0.59vw; /* 8px */
+    padding: 1vw;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.accordion {
+    background-color: white;
+    color: #961f6e;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-family: 'LeagueSpartan-SemiBold', sans-serif;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #cfa2c8;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #cfa2c8;
+    display: none;
+    overflow: hidden;
+}
+
+h1, h2 {
+    margin: .5vw 0;
+    padding: .5vw;
+    font-family: 'LeagueSpartan-SemiBold', sans-serif;
+    color: black;
+}
+
+h2 {
+    margin: .5vw 0;
+    padding: .5vw;
+    color: black;
+}
+
+h4 {
+    padding: -.3vw;
+    margin: .4vw;
+    font-family: 'LeagueSpartan-Light', sans-serif;
+    font-size: 300;
+}
+
+p, ol, li {
+    margin: .1vw 0;
+    padding: .5vw;
+    font-family: 'LeagueSpartan-Light', sans-serif;
+}
+
+a {
+    font-family: 'LeagueSpartan-SemiBold', sans-serif;
+    color: black;
+}
+
+a.visited {
+    color: white;
+}
+#more {display: none;}
+
+.button-wrapper {
+    display: inline-block; /* makes the wrapper act as an inline element */
+    text-align: center;
+    width: 100%;
+}
+
+/* Buttons for Links/Media */
+.btn {
+    display: inline-block;
+    background-color: #961f6e; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: .5vw 1vh; /* Some padding */
+    margin: .4vw;
+    cursor: pointer; /* Mouse pointer on hover */
+    border-radius: .59vw;
+    font-family: 'LeagueSpartan-SemiBold', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: black;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0); /* transparent background */
+    border-radius: 2vw;
+    padding: 20px;
+    max-width: 70vw;
+    max-height: 80vh; /* Ensures it doesn't take full height */
+    overflow-y: auto; /* Makes it scrollable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* centers content horizontally */
+    align-items: center;     /* centers content vertically */
+    margin: 20px auto; /* centers container horizontally */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+    .proj-container {
+        left: 0vw;
+        width: 100%;
+        height: auto;
+    }
+    .neuron-buttons {
+        display: none;
+    }
+    .mobileMenu {
+        display: block;
+    }
+    .menuButton {
+        display: none;
+    }
+
+    .name {
+        position: relative;
+        top: 3vw;
+        font-size: 2rem;
+        max-width: 100vw;
+    }
+}
