@@ -125,9 +125,9 @@ body, html {
 
 .name {
     font-size: 3.61vw; /* 5.17vh; 37pt; */
-    width: 29.08vw;
-    height: 13.49vh;
-    white-space: normal;
+    width: 100%; /* make it full width */
+    white-space: nowrap; /* prevent wrapping */
+    overflow: hidden; /* handle overflow */
     text-wrap: break-word;
     padding: 0.5vw;
     font-family: "ClearWerk", sans-serif;
@@ -137,30 +137,11 @@ body, html {
     font-style: normal;
     font-optical-sizing: auto;
     text-align: center;
-    margin: 0 auto;
+    margin: 0; /* remove margin */
+    position: relative;
+    top: 2vw;
 }
 
-.neuron-buttons {
-    width: 350px;
-    height: auto;
-    left: .02vw;
-}
-
-.proj-container {
-    display: block;
-    gap: 2.5vh;
-    width: 69.9vw;
-    height: 31.8vw;
-    position: absolute;
-    left: 25.5vw;
-    top: 20.81vh;
-    overflow-y: auto; /* VERTICAL scrolling */
-    overflow-x: hidden; /* NO HORIZONTAL scrolling */
-    border-radius: 0.59vw; /* 8px */
-    padding: 1vw;
-    background-color: white;
-    justify-content: space-between;
-}
 
 .accordion {
     background-color: white;
@@ -249,32 +230,55 @@ a.visited {
     background-color: black;
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0); /* transparent background */
-    border-radius: 2vw;
-    padding: 20px;
-    max-width: 70vw;
-    max-height: 80vh; /* Ensures it doesn't take full height */
-    overflow-y: auto; /* Makes it scrollable */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center; /* centers content horizontally */
-    align-items: center;     /* centers content vertically */
-    margin: 20px auto; /* centers container horizontally */
-}
+    .container {
+        background-color: rgba(255, 255, 255, 0); /* transparent background */
+        border-radius: 2vw;
+        padding: 10px; /* reduce padding */
+        max-width: 70vw;
+        max-height: 80vh; /* Ensures it doesn't take full height */
+        overflow-y: auto; /* Makes it scrollable */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center; /* centers content horizontally */
+        align-items: center;     /* centers content vertically */
+        margin: 0 auto; /* remove top margin to bring it closer */
+    }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 20px;
-}
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 20px;
+    }
 
-.gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* two columns on mobile */
+    }
+
+    .name {
+        font-size: clamp(2rem, 5vw, 3rem); /* adjust font size dynamically */
+        white-space: nowrap; /* prevent wrapping */
+        overflow: hidden; /* handle overflow */
+        width: fit-content; /* fit the width to the content */
+        display: flex; /* use flex to align within the container */
+        justify-content: center; /* center the text horizontally */
+        align-items: center; /* center the text vertically */
+        margin: 0 auto; /* remove margin to bring it closer */
+    }
+
+    .container {
+        padding: 10px; /* reduce padding */
+        margin: 0 auto; /* remove top margin to bring it closer */
+    }
 }
 
 @media (max-width: 1000px) {
@@ -296,7 +300,21 @@ a.visited {
     .name {
         position: relative;
         top: 3vw;
-        font-size: 2rem;
-        max-width: 100vw;
+        font-size: clamp(2rem, 5vw, 3rem); /* adjust font size dynamically */
+        white-space: nowrap; /* prevent wrapping */
+        overflow: hidden; /* handle overflow */
+        width: fit-content; /* fit the width to the content */
+        display: flex; /* use flex to align within the container */
+        justify-content: center; /* center the text horizontally */
+        align-items: center; /* center the text vertically */
+        margin: 0 auto; /* remove margin to bring it closer */
+    }
+
+    .container {
+        padding: 10px; /* reduce padding */
+        margin: 0 auto; /* remove top margin to bring it closer */
+        position: relative;
+        top: 5vw;
+        height: 100vw;
     }
 }
