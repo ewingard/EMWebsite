@@ -83,9 +83,6 @@ body, html {
 /* Mobile Nav Section! */
 .mobileMenu {
     display: none;
-}
-
-.mobileMenu {
     overflow: hidden;
     background-color: #333;
     position: relative;
@@ -139,9 +136,8 @@ body, html {
     text-align: center;
     margin: 0; /* remove margin */
     position: relative;
-    top: 2vw;
+    top: .5vw;
 }
-
 
 .accordion {
     background-color: white;
@@ -202,7 +198,10 @@ a {
 a.visited {
     color: white;
 }
-#more {display: none;}
+
+#more {
+    display: none;
+}
 
 .button-wrapper {
     display: inline-block; /* makes the wrapper act as an inline element */
@@ -230,76 +229,51 @@ a.visited {
     background-color: black;
 }
 
-    .container {
-        background-color: rgba(255, 255, 255, 0); /* transparent background */
-        border-radius: 2vw;
-        padding: 10px; /* reduce padding */
-        max-width: 70vw;
-        max-height: 80vh; /* Ensures it doesn't take full height */
-        overflow-y: auto; /* Makes it scrollable */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: center; /* centers content horizontally */
-        align-items: center;     /* centers content vertically */
-        margin: 0 auto; /* remove top margin to bring it closer */
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-        padding: 20px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-    }
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* two columns on mobile */
-    }
-
-    .name {
-        font-size: clamp(2rem, 5vw, 3rem); /* adjust font size dynamically */
-        white-space: nowrap; /* prevent wrapping */
-        overflow: hidden; /* handle overflow */
-        width: fit-content; /* fit the width to the content */
-        display: flex; /* use flex to align within the container */
-        justify-content: center; /* center the text horizontally */
-        align-items: center; /* center the text vertically */
-        margin: 0 auto; /* remove margin to bring it closer */
-    }
-
-    .container {
-        padding: 10px; /* reduce padding */
-        margin: 0 auto; /* remove top margin to bring it closer */
-    }
+.container {
+    background-color: rgba(255, 255, 255, 0); /* transparent background */
+    border-radius: 2vw;
+    padding: 10px; /* reduce padding */
+    width: 100%; /* make full width */
+    max-width: 100%; /* ensure it doesn't overflow horizontally */
+    max-height: 80vh; /* Ensures it doesn't take full height */
+    overflow-y: auto; /* Makes it scrollable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* centers content horizontally */
+    align-items: flex-start; /* aligns content to the top */
+    margin: 0 auto; /* remove top margin to bring it closer */
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* explicitly 5 columns */
+    gap: 10px; /* add gap between images */
+    padding: 20px; /* add padding around the gallery */
+    width: 100%; /* make full width */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 300px; /* calculate optimal max height */
+    aspect-ratio: 1/1; /* maintain aspect ratio */
+}
+
+/* Media Query for Mobile Devices */
 @media (max-width: 1000px) {
-    .proj-container {
-        left: 0vw;
-        width: 100%;
-        height: auto;
+
+    body, html {
+        overflow: hidden;
     }
-    .neuron-buttons {
-        display: none;
-    }
-    .mobileMenu {
-        display: block;
-    }
-    .menuButton {
-        display: none;
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* two columns on mobile */
+        gap: 1vw; /* adjust gap for mobile */
+        padding: 10px; /* adjust padding for mobile */
     }
 
     .name {
-        position: relative;
-        top: 3vw;
         font-size: clamp(2rem, 5vw, 3rem); /* adjust font size dynamically */
         white-space: nowrap; /* prevent wrapping */
         overflow: hidden; /* handle overflow */
@@ -311,10 +285,10 @@ a.visited {
     }
 
     .container {
-        padding: 10px; /* reduce padding */
+        padding: 20px; /* reduce padding */
         margin: 0 auto; /* remove top margin to bring it closer */
-        position: relative;
-        top: 5vw;
-        height: 100vw;
+        left: 0vw;
+        max-width: 90%;
+        height: auto;
     }
 }
