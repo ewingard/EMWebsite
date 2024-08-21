@@ -150,7 +150,7 @@ body, html {
     }
     
     .centered img {
-      width: 150px;
+      width: 14vw;
       border-radius: 50%;
     }
 
@@ -195,45 +195,7 @@ body, html {
       margin-top: 1.46vw; /* 20px */
       margin-bottom: 10px; /* 10px header */
     }
-/* 
-    @media (max-width: 1000px) {
-      body, html {
-        overflow-y: auto;
-    }
-      .mobileMenu {
-          display: block;
-      }
-  
-      .menuButton {
-          display: none;
-      }
-  
-      .split {
-          width: 100%;
-          height: calc(50% - 30px); /* Adjust height to fit nav and padding *
-          position: relative;
-          padding-top: 60px; /* Adjust this value to accommodate your nav *
-      }
-  
-      .left {
-          width: 100%;
-          height: calc(50% - 30px); /* Adjust height to fit nav and padding *
-          top: 0;
-          left: 0;
-          padding-top: 60px; /* Adjust this value to accommodate your nav *
-          box-sizing: border-box; /* Ensures padding is included in height *
-      }
-  
-      .right {
-          width: 100%;
-          height: calc(50% - 30px); /* Adjust height to fit nav and padding *
-          top: calc(50% - 30px); /* Adjust top to fit nav and padding *
-          left: 0;
-          padding-top: 10px; /* Small padding to separate sections *
-          box-sizing: border-box; /* Ensures padding is included in height *
-          overflow: none;
-      }
-  } */
+    
     .tagline-container {
       display: flex;
       flex-direction: column;
@@ -335,16 +297,23 @@ body, html {
         overflow-y: auto; /* VERTICAL scrolling */   
       }
 
+      .centered img {
+        width: 50vw;
+        border-radius: 50%;
+      }
+
       .tagline-container {
         align-items: center;
+        position: relative;
+        left: 8vw;
       }
 
       hr.line { 
-        width: 90%;
+        width: 100%;
         align-self: center;
       }
 
-      .name { font-size: 2rem;}
+      .name { font-size: 3rem;}
 
-      p {font-size: 1.5rem;}
+      p {font-size: 1.75rem;}
 }
