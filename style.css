@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;  
         background-image: radial-gradient(circle at 50% 50%, #54afb5, #005239);
+    overflow: hidden;
 }
 
 @font-face {
@@ -24,7 +25,7 @@ body, html {
 
     .banner__content {
         padding: .05vw;
-        max-width: 25vw;
+        max-width: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -34,6 +35,7 @@ body, html {
         flex-grow: 1;
         font-family: "LeagueSpartan", sans-serif;
         color: white;
+        font-size: 1.25rem;
         text-align: center;
     }
 
@@ -54,7 +56,7 @@ body, html {
         flex-flow: row;
         justify-content: space-around;
         align-items: center;
-        padding: 6.5vw; /*90px;*/
+        padding: 1vw; /*90px;*/
     }
 
     .name {
@@ -63,10 +65,12 @@ body, html {
         font-size: 3.61vw; /* 5.17vh; /* 37pt; */
         white-space: normal;
         text-wrap: break-word;
-        padding: 1.61vw; /* 20px */
+        position: relative;
+        padding: 1.51vw; /* 20px */
         flex-shrink: 0;
         font-family: "ClearWerk", sans-serif;
         color: #fff;
+        left: 6vw;
         letter-spacing: 0.2em;
         font-weight: 400;
         font-style: normal;
@@ -75,14 +79,15 @@ body, html {
     }    
     
     .long-button {
-        width: 20.72vw; /*276.9px;*/
-        height: 94vh; /*calc(452.2px + 150px);*/
+        width: 20vw; /*276.9px;*/
+        height: 67.25vh; /*calc(452.2px + 150px);*/
         position: relative; /* Allows absolute positioning inside */
         background-color: white;
-        margin-right: 1.61vw; /* 22px */
+        margin-right: 0vw; /* 22px */
         border-radius: 0.59vw; /* 8px;*/
-        margin-bottom: 1.75vw; /*29px;*/
+        margin-bottom: 1vw; /*29px;*/
         flex: 1 1 auto;
+        left: 6vw;
         flex-direction: column;
         overflow: hidden; /* Keeps everything contained inside the button */
         display: flex;
@@ -97,13 +102,14 @@ body, html {
         max-width: 100%; /* Ensures content doesn't overflow its container */
         height: auto; /* Maintain aspect ratio for images */
         display: block; /* Ensures block-level display */
-        margin: 2.19vw 0; 
+        margin: 1vw 0; 
     }
 
     .long-button .large-image {
-        width: 100%; /* Makes the image cover the button */
+        width: 17vw; /* Makes the image cover the button */
         height: auto; /* Keeps the image aspect ratio */
-        align-self: flex-start;
+        align-items: center;
+
     }
 
     .long-button .link-text {
@@ -111,12 +117,13 @@ body, html {
         font-size: 2.54vw; /* 26pt */
         color: #000000; /* Set the text color */
         text-align: center; /* Center the text */
+        margin: 0.75vw 0;
         flex-grow: 1;
     }
 
     .long-button .small-image {
         /* Adjust the size of the small image */
-        width: 5.86vw; /*80px */
+        width: 5vw; /*80px */
         height: auto; /* Maintain aspect ratio */
         align-self: flex-end;
         margin-bottom: 2vw;
@@ -126,19 +133,20 @@ body, html {
         flex-direction: column;
     }
 
-
     .button-group {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
         /* height: calc(2 * 307.2px + 22px);*/
-        height: 66.75vh
+        height: 66.75vh;
     }
     
     .button-row {
         display: flex;
         justify-content: center;
+        position: relative;
+        right: 6vw;
     }
 
     .small-button {
@@ -146,8 +154,8 @@ body, html {
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        width: 20.72vw;
-        height: 48vh;
+        width: 16.65vw;
+        height: 35vh;
         background-color: white;
         border-radius: 0.59vw; /* 8px */
         text-decoration: none;
@@ -168,7 +176,7 @@ body, html {
     }    
     
     .small-button .link-text {
-        margin-top: auto; /* 1.46vw; padding: 20px; */
+        margin-top: -2vw; /* 1.46vw; padding: 20px; */
         font-family: "LeagueSpartan", sans-serif; /* Choose your desired font */
         font-size: 2.54vw; /* 26pt */
         color: #000; /* Set the text color */
