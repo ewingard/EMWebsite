@@ -244,7 +244,6 @@ body, html {
       margin: .4vw;
       cursor: pointer; /* Mouse pointer on hover */
       border-radius: .59vw;
-      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       font-size: 1em;
       text-decoration: none;
     }
@@ -261,15 +260,14 @@ body, html {
         height: auto;
       }
       .neuron-buttons {
-        display:none;
+        display: none;
       }
       .mobileMenu {
         display: block;
-    }
+      }
       .menuButton {
           display: none;
       }
-
       .name{
         position: relative;
         top: 3vw;
