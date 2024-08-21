@@ -134,7 +134,7 @@ body, html {
     font-style: normal;
     font-optical-sizing: auto;
     text-align: center;
-    margin: 0; /* remove margin */
+    margin-top: 2vw; /* remove margin */
     position: relative;
     top: .5vw;
 }
@@ -263,7 +263,6 @@ a.visited {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 1000px) {
-
     body, html {
         overflow: hidden;
     }
@@ -281,7 +280,15 @@ a.visited {
         display: flex; /* use flex to align within the container */
         justify-content: center; /* center the text horizontally */
         align-items: center; /* center the text vertically */
-        margin: 0 auto; /* remove margin to bring it closer */
+        margin: 0.3em auto; /* remove margin to bring it closer */
+    }
+
+    .mobileMenu {
+        display: block;
+      }
+    
+    .menuButton {
+          display: none;
     }
 
     .container {
