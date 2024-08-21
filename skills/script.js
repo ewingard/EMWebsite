@@ -47,13 +47,13 @@ function displaySkills(label) {
 
 // Define the skills content for each area
 const skillsContent = {
-    code: `<h2>Programming Skills</h2><p>I have experience working with multiple languages, including (but not limited to) HTML, CSS, JavaScript, Java, Prolog, Python, MATLAB, and R (including the tidyverse package) .</p>`,
+    code: `<h2>Programming Skills</h2><p>I have experience working with multiple languages, including (but not limited to) HTML (<i class="fa-brands fa-html5" style="color: #000000;"></i>), CSS (<i class="fa-brands fa-css3-alt" style="color: #000000;"></i>), JavaScript (<i class="fa-brands fa-js" style="color: #000000;"></i>), Java (<i class="fa-brands fa-java" style="color: #000000;"></i>), Prolog, Python (<i class="fa-brands fa-python" style="color: #000000;"></i>), MATLAB , and R (<i class="fa-brands fa-r-project" style="color: #000000;"></i>) .</p>`,
     languages: `<h2>Language Skills</h2><p>I am a native English speaker, with near-fluency (CEFR C1 or advanced-low level) in French. I am in the beginning stages of learning Spanish.</p>`,
     creative: `<h2>Creative Skills</h2><p>I am an artist and I love to draw! I also have experience teaching art through the New Bethel Foundation's Art and Creative Writing Summer Camp. I have gotten some experience through my work as a Research Assistant under Dr. Caitlin Hudac using Photoshop for stimulus creation.</p>`,
-    webdev: `<h2>Website Development Skills</h2><p>I am currently using this website to learn webdev skills including HTML, CSS, and JavaScript.</p>`,
+    webdev: `<h2>Website Development Skills</h2><p>I am currently using this website for project-based learning of webdev skills including HTML (<i class="fa-brands fa-html5" style="color: #000000;"></i>), CSS (<i class="fa-brands fa-css3-alt" style="color: #000000;"></i>), and JavaScript (<i class="fa-brands fa-js" style="color: #000000;"></i>).</p>`,
     undefined: `<h2>Undefined Area</h2><p>This area is under construction at the moment. Please check back soon for more details!</p>`,
     research: `<h2>Research Skills</h2><p>I am currently working under Dr. Caitlin Hudac in the B-RAD Lab. I've been familiarizing myself with REDCap database management, EEG techniques (inlcuding programming in E-Basic for E-Prime task creation and refinement, using NetStation software), participant recruitment and data managment procedures.</p>`,
-    data: `<h2>Data Management Skills</h2><p>I am extremely familiar with R and accompanying packages (most notably the tidyverse package and the lavaan package). I am also familiar with using MATLAB for fMRI behavioral data analysis, and SPSS for general-purpose psychology data analysis.</p>`
+    data: `<h2>Data Management Skills</h2><p>I am extremely familiar with R (<i class="fa-brands fa-r-project" style="color: #000000;"></i>) and accompanying packages (most notably the tidyverse package and the lavaan package). I am also familiar with using MATLAB for fMRI behavioral data analysis, and SPSS for general-purpose psychology data analysis.</p>`
 };
 
 document.querySelectorAll('area').forEach(area => {
