@@ -133,11 +133,16 @@ body, html {
         top: .67vh;
     }
 
-    .word-cloudtainer {
+    #word-cloudtainer {
       position: absolute;
+      height: 586px;
+      width: 994px;
       left: 10vw;
       top: 7vw;
       display: block;
+      overflow-y: scroll;
+      background: url(/interests/media/int_wordcloud_v2.png) no-repeat center center;
+      background-size: cover;
     }
 
     @media (max-width: 1000px){
