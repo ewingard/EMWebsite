@@ -26,6 +26,20 @@ function mobileNavToggle() {
     x.style.display = "block";
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const toggleContent = document.querySelector('.toggle-content');
+
+  toggleBtn.addEventListener('click', function () {
+      if (toggleContent.style.display === 'none' || toggleContent.style.display === '') {
+          toggleContent.style.display = 'block';
+      } else {
+          toggleContent.style.display = 'none';
+      }
+  });
+});
+
 //End Mobile Nav
 
 // Panel Script

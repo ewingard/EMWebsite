@@ -49,6 +49,25 @@ body, html {
         display: none;
     }
     
+        /* Hide the content by default */
+    .toggle-content {
+        display: none;
+    }
+
+    /* Style the button */
+    .toggle-btn {
+        background-color: transparent;
+        color: #961f6e;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .toggle-btn:hover {
+        background-color: transparent;
+    }
+
     .menu-visible {
       display: block;
       color: transparent;
