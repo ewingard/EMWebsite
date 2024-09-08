@@ -163,10 +163,23 @@ body, html {
         /* regular location = top: .67vh; */
     }
 
-    .neuron-buttons {
+    .neuron-container {
       width: 350px;
-      height: auto;
-      left: .02vw;
+      height: 525px;
+      display: block;
+      left: .02;
+      position: absolute;
+      justify-content: space-between;
+    }
+
+    .neuron-buttons {
+      max-width: 100%;
+      max-height: 100%;
+      box-sizing: border-box;
+    } 
+
+    .neuron-buttons:hover {
+      transform: none;
     }
 
     .proj-container {
@@ -176,7 +189,7 @@ body, html {
       height: 31.8vw;
       position: absolute;
       left: 25.5vw;
-      top: 20.81vh;
+      top: 1.81vh;
       overflow-y: auto; /* VERTICAL scrolling */
       overflow-x: hidden; /* NO HORIZONTAL scrolling */
       border-radius: 0.59vw; /* 8px */
