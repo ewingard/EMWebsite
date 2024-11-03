@@ -123,10 +123,10 @@ body, html {
     /* Buttons for Links/Media */
     .btn {
       display: inline-block;
-      background-color: #961f6e; /* Blue background */
+      background-color: #961f6e;
       border: none; /* Remove borders */
-      color: white; /* White text */
-      padding: .5vw 1vh; /* Some padding */
+      color: white;
+      padding: .5vw 1vh;
       margin: .4vw;
       cursor: pointer; /* Mouse pointer on hover */
       border-radius: .59vw;

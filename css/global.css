@@ -134,3 +134,9 @@ body, html {
         font-style: normal;
         font-optical-sizing: auto;
     }    
+
+    p {
+      font-family: "LeagueSpartan-SemiBold", sans-serif; /* Choose your desired font */
+      color: #000000; /* Set the text color */
+      font-size: 1.5vw;
+    }
