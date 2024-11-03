@@ -1,25 +1,31 @@
 body, html {
     margin: 0;
-    padding: 0;  
-        background-image: radial-gradient(circle at 50% 50%, #9db5cf, #465582); /* keeping gradient pattern consistent,
-        with a changed color-scheme */
-    }
+    padding: 0;
+    overflow: hidden;
+}
 
-    @font-face {
-        font-family: 'ClearWerk';
-        src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'LeagueSpartan';
-        src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'ClearWerk';
+    src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'LeagueSpartan-SemiBold';
+    src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
 
+@font-face {
+  font-family: 'LeagueSpartan-Light';
+  src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* CREDITS TO W3SCHOOLS FOR THE BAR ANIMATION https://www.w3schools.com/howto/howto_css_menu_icon.asp */
     .bar1, .bar2, .bar3 {
         width: 35px;
         height: 5px;
@@ -49,7 +55,7 @@ body, html {
         top: 20px; /* Adjust as needed */
         right: 20px; /* Adjust for testing */
         z-index: 100; 
-        font-family: 'LeagueSpartan', sans-serif;
+        font-family: 'LeagueSpartan-SemiBold', sans-serif;
         color: white;
     }
 
@@ -90,7 +96,7 @@ body, html {
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
-      font-family: 'LeagueSpartan', sans-serif;
+      font-family: 'LeagueSpartan-SemiBold', sans-serif;
       display: block;
     }
     
@@ -116,11 +122,10 @@ body, html {
         flex: 0 1 auto;
         align-self: flex-start;
         font-size: 3.61vw; /* 5.17vh; /* 37pt; */
-        width: 29.08vw;
-        height: 13.49vh;
         white-space: normal;
         text-wrap: break-word;
-        padding: 0.5vw;
+        position: relative;
+        padding: 1.51vw; /* 20px */
         flex-shrink: 0;
         font-family: "ClearWerk", sans-serif;
         color: #fff;
@@ -128,44 +133,4 @@ body, html {
         font-weight: 400;
         font-style: normal;
         font-optical-sizing: auto;
-        position: relative;
-        left: 3.01vw;
-        top: .67vh;
-    }
-
-    .word-cloudtainer {
-      position: absolute;
-      left: 10vw;
-      top: 7vw;
-      display: block;
-    }
-
-    @media (max-width: 1000px){
-      .mobileMenu {
-        display: block;
-        z-index: 101;
-    }
-      .menuButton {
-          display: none;
-      }
-
-      .name {
-        top: 3vw;
-        left: 0vw;
-        font-size: 2rem;
-      }
-
-      .word-cloudtainer {
-        width: 100vw; /* Full viewport width */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the viewport area */
-        left: 0vw;
-        top: 25vw;
-    }
-
-      .word-cloudtainer img {
-          width: 100vw; /* Full viewport width */
-          height: auto; /* Maintain aspect ratio */
-          object-fit: cover; /* Cover the viewport area */
-      }
-    }
+    }    

@@ -1,0 +1,242 @@
+body, html {
+    background-image: radial-gradient(circle at 50% 50%, #54afb5, #005239);
+}
+
+.name {
+    left: 6vw;
+    margin-bottom: auto;
+}    
+
+.banner {
+    background: #000000;
+}
+
+.banner__content {
+    padding: .05vw;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+.banner__text {
+    flex-grow: 1;
+    font-family: "LeagueSpartan-SemiBold", sans-serif;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.banner__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.banner__text,
+.banner__close > span {
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vw; /*90px;*/
+}
+
+.long-button {
+    width: 20vw; /*276.9px;*/
+    height: 67.25vh; /*calc(452.2px + 150px);*/
+    position: relative; /* Allows absolute positioning inside */
+    background-color: white;
+    margin-right: 0vw; /* 22px */
+    border-radius: 0.59vw; /* 8px;*/
+    margin-bottom: 1vw; /*29px;*/
+    flex: 1 1 auto;
+    left: 6vw;
+    flex-direction: column;
+    overflow: hidden; /* Keeps everything contained inside the button */
+    display: flex;
+    justify-content: flex-end; /* Center items horizontally */
+    align-items: center;
+    align-self: flex-end;
+}
+
+.long-button .large-image,
+.long-button .link-text {
+    width: auto; /* Adjust based on your design */
+    max-width: 100%; /* Ensures content doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio for images */
+    display: block; /* Ensures block-level display */
+    margin: 1vw 0; 
+}
+
+.long-button .large-image {
+    width: 17vw; /* Makes the image cover the button */
+    height: auto; /* Keeps the image aspect ratio */
+    align-items: center;
+}
+
+.link-text {
+    font-size: 2.54vw; /* 26pt */
+    color: #000000;
+    font-style: normal;
+    text-align: center;
+    font-family: "LeagueSpartan-SemiBold", sans-serif;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.long-button .link-text {
+    margin: 0.75vw 0;
+}
+
+.long-button .small-image {
+    width: 5vw; /*80px */
+    height: auto; /* Maintain aspect ratio */
+    align-self: flex-end;
+    margin-bottom: 2vw;
+}
+
+.name, .long-button {
+    flex-direction: column;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* height: calc(2 * 307.2px + 22px);*/
+    height: 66.75vh;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 6vw;
+}
+
+.small-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 16.65vw;
+    height: 35vh;
+    background-color: white;
+    border-radius: 0.59vw; /* 8px */
+    text-decoration: none;
+    padding: 1.64vw; 
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}    
+
+.small-button img {
+    margin-top: auto;
+    width: 60%;
+    border-radius: 0.59vw; /* 8px */
+}    
+
+.small-button .link-text {
+    margin-top: -2vw; /* 1.46vw; padding: 20px; */
+    padding: auto;
+    padding: 5vh;
+}
+
+.small-button:not(:last-child) {
+margin-right: 1.61vw; /* 22px */
+}
+
+.button-row:not(:last-child) {
+margin-bottom: 1.61vw; /* 22px */
+}
+
+@media (max-width: 1000px) {
+    body, html {
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y:auto;
+        align-items: center;
+        justify-items: flex-start;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container .long-button{
+        align-self: flex-start;
+        width:89%
+    }
+
+    .container .small-button {
+        left: 7vw;
+        width: 87%;
+    }
+    .button-row, .button-group, .name-and-long-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Ensures full width */
+        height: auto;
+        margin-bottom: 1vw;
+        justify-content: flex-end;
+        box-sizing: border-box;
+    }
+
+    .long-button .link-text, .small-button .link-text {
+        font-size: 10vw;
+        text-align: center; /* Center text */
+        white-space: wrap; /* Prevent text wrapping */
+        overflow: hidden; /* Hide overflow text */
+        max-width: 100%; /* Ensure text doesn't overflow its container */
+    }
+    
+    .long-button .large-image {
+        margin-top: 4vw;
+        width: 75vw;
+        height: auto;
+    }
+
+    .long-button .small-image{
+        margin-bottom: 4vw;
+        width: 25vw;
+        height: auto;
+    }
+
+    .small-button, .long-button {
+        width: auto;
+        height: auto;
+        margin: 4vw 0;
+        border-radius: 4vw;
+    }
+
+    .name {
+        font-size: 13vw;
+        letter-spacing: 0.2em;
+        text-align: center;
+        left: 3vw;
+        padding: 2vw;
+    }
+
+    .banner__content {
+        max-width: 100%; /* still make it wider for mobile */
+        flex-direction: row;
+    }
+
+    .banner__text,
+    .banner__close {
+        font-size: 1em; /* keep font size consistent */
+    }
+}
+/* My viewport is 1536 x 841.983 */

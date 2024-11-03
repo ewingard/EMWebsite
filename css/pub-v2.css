@@ -1,0 +1,146 @@
+body, html {
+    background-image: radial-gradient(circle at 50% 50%, #ffca64, #d66b26);
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "LeagueSpartan-SemiBold", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+main {
+    position: relative;
+	min-height: 100vh; /* ensures it takes full height of the viewport */
+	background-color: #d9d9d9;
+    flex-grow: 1; /* allows it to expand */
+	min-height: 100vh; /* ensures full viewport height */
+}
+
+.book {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+	--book-height: 80vh;
+	--book-ratio: 1.12;
+}
+
+.book > div {
+	height: var(--book-height);
+	width: calc(var(--book-height) / var(--book-ratio));
+	overflow: auto;
+	background-color: #d12c2c;
+	transform: scale(0.9);
+	border-radius: 6px;
+	transform-origin: left;
+}
+
+.book-cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	background: #d12c2c;
+	color: white;
+	transition: transform 2s;
+}
+
+.book-cover::before {
+	width: 5vw; /* make it responsive */
+	right: 5vw; /* adjust accordingly */
+}
+
+h1 {
+	font-size: calc(98px * 0.4); /* scale down the font size */
+}
+
+h2 {
+	font-size: calc(16px * 0.4); /* scale down the font size */
+}
+
+.separator {
+	width: calc(var(--separator-size) * 0.4);
+	height: calc(var(--separator-size) * 0.4);
+	margin: 20px auto 30px auto; /* adjust margins */
+}
+
+.separator::after,
+.separator::before {
+	width: 3vw; /* make it responsive */
+}
+
+
+.separator::after {
+	left: 15px;
+}
+
+.separator::before {
+	right: 15px;
+}
+
+.book-content {
+	transform: scale(0.9) translateY(30px);
+	background-color: white !important;
+	transition: all 0.3s 1s;
+}
+
+.book-content h3,
+.book-content p {
+	opacity: 0;
+	transition: all 0.3s 0.3s;
+}
+
+/* h3 {
+	padding: 30px;
+} */
+
+.publication {
+	padding: 0vw 1vw 0.52vw 0.5vw;
+	text-align: justify;
+	font-size: 1.5rem;
+    margin: 0.5vw;
+	font-family: 'LeagueSpartan-SemiBold', sans-serif;
+}
+
+.book-cover > div {
+	transition: opacity 0s 0.6s;
+}
+
+
+.book:hover > .book-content {
+	transform: scale(0.9) translateY(0px);
+}
+
+.book:hover > .book-cover {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+.book:hover > .book-cover > div,
+.book:hover > .book-content h3,
+.book:hover > .book-content p {
+	opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+	.book {
+		--book-height: 60vw; /* further adjust for smaller screens */
+	}
+
+	h1 {
+		font-size: calc(98px * 0.3); /* even smaller font on mobile */
+	}
+
+	h2 {
+		font-size: calc(16px * 0.3);
+	}
+}

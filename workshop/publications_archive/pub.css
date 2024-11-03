@@ -1,0 +1,85 @@
+body, html {
+        background-image: radial-gradient(circle at 50% 50%, #ffca64, #d66b26);
+    }
+
+    .name {
+        width: 29.08vw;
+        height: 13.49vh;
+        padding: 0.5vw;
+        color: black;
+        position: absolute;
+        left: 35%;
+        top: 10.67vh;
+    }
+
+      .book-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 40vw;
+        top: 9.5vh; /* Y coordinate */
+        left: 289px; /* X coordinate */
+        box-sizing: border-box; /* ensures padding is inside the container */
+        overflow: hidden; /* ensure content stays within rounded corners */
+      }
+
+      .book-image {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        width: calc(100% - 75.8px); /* adjust width minus padding */
+        height: calc(100% - 75.8px); /* adjust height minus padding */
+        border-radius: 2vw; /* rounding corners */
+      }
+
+      .publication-1 {
+        position: absolute;
+        font-family: 'LeagueSpartan', sans-serif; /* or any font you prefer */
+        font-size: 1rem; /* Adjust size as needed */
+        text-align: right;
+        text-wrap: wrap;
+        top: 5.5vw;
+        left: 5.3vw;
+        max-width: 35%;
+        /* background: rgba(0, 0, 0, 0.5); optional: semi-transparent background */
+        padding: 10px;
+        border-radius: 5px; /* optional: rounded corners for the overlay */
+      }
+
+      @media (max-width: 1000px){
+        .mobileMenu {
+          display: block;
+          z-index: 101;
+      }
+        .menuButton {
+            display: none;
+        }
+  
+        .name {
+          position: relative;
+          top: 10vw;
+          left: 20%;
+          font-size: 2rem;
+        }
+  
+        .book-container {
+          width: 100vw; /* Full viewport width */
+          height: auto; /* Maintain aspect ratio */
+          object-fit: cover; /* Cover the viewport area */
+          left: 0vw;
+          top: 5vw;
+        }
+
+        .publication-1 {
+          left: 13vw;
+          max-width: 30%;
+        }
+  
+        .book-image img {
+            width: 100vw; /* Full viewport width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the viewport area */
+        }
+      }
