@@ -99,15 +99,18 @@ body, html {
       } */
 
       @media (max-width: 1000px) {
+        body, html {
+          overflow-y: auto;
+        }
+
         .skills-container {
             display: flex;
             flex-direction: column;
             padding: 2vw; /* Add padding for smaller screens */
             max-height: none;
-            height: auto;
-            top: 17vw;
+            height: 100vh;
+            top: 10vw;
         }
-    
         .name {
             font-size: 2em; /* Adjust title size for mobile */
             top: 5vw;

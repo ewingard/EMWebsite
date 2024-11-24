@@ -63,6 +63,7 @@ document.querySelectorAll('area').forEach(area => {
         // Fetch and display the corresponding skills content
         const contentToShow = skillsContent[label];
         const skillMenu = document.querySelector('.info-column'); // Ensure this targets the correct element
+        var skContainer = document.querySelector('.skills-container');
         skillMenu.innerHTML = contentToShow;
         skillMenu.style.display = 'block'; // Make sure it's visible
     });

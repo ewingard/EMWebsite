@@ -64,13 +64,21 @@ body, html {
         overflow: hidden !important;
       
       }
+
       .exp-container {
         position: relative;
         left: 0vw;
         top: 0vw;
-        width: 100%;
+        width: 98vw;
         height: auto;
+        transition: height 0.3s ease;
       }
+
+      .panel {
+        display: none; /* hide panels initially */
+        overflow: hidden;
+      }     
+
       .exp-bubbles {
         display:none;
       }
@@ -86,7 +94,7 @@ body, html {
       }
       .name{
         top: 3vw;
-        left: 25%;
+        left: 28%;
         font-size: 2rem;
       }
     }
