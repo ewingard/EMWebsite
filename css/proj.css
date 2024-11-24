@@ -1,7 +1,6 @@
 body, html {
-
-        background-image: radial-gradient(circle at 50% 50%, #cfa2c8, #961f6e);
-    }
+    background-image: radial-gradient(circle at 50% 50%, #cfa2c8, #961f6e);
+  }
 
     .name {
         font-size: 3.61vw; /* 5.17vh; /* 37pt; */
@@ -53,8 +52,8 @@ body, html {
     }
 
     .accordion {
-      background-color: white;
       color: #961f6e;
+      background-color: white;
       cursor: pointer;
       padding: 18px;
       width: 100%;
@@ -64,6 +63,16 @@ body, html {
       font-family: 'LeagueSpartan-SemiBold', sans-serif;
       font-size: 1.2em;
       transition: 0.4s;
+    }
+
+    .toggle-btn {
+      color: #961f6e;
+      background-color: transparent;
+      border: none;
+    }
+
+    .toggle-content {
+      display: none;
     }
 
     .active, .accordion:hover {
@@ -140,10 +149,14 @@ body, html {
     } 
 
     @media (max-width: 1000px) {
+      body, html {
+        overflow-y: auto;
+      }
       .proj-container {
-        left: 0vw;
-        width: 100%;
+        left: 1vw;
+        width: 96vw;
         height: auto;
+        overflow-y: auto;
       }
       .neuron-buttons {
         display: none;
@@ -158,5 +171,10 @@ body, html {
         position: relative;
         top: 3vw;
         font-size: 2rem;
+        margin: 1em;
+      }
+
+      p, ol, li, a {
+        font-size: 1rem;
       }
     }

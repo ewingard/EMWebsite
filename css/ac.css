@@ -3,35 +3,43 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .name {
     padding: 0.5vw;
     margin-top: 2vw; /* remove margin */
     top: .5vw;
+    left: 40vw;
+}
+
+.container {
+    width: 97%;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* explicitly 5 columns */
-    gap: 10px; /* add gap between images */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px; /* gap between images */
     padding: 20px; /* add padding around the gallery */
-    width: 100%; /* make full width */
+    width: 100%;
 }
 
 .gallery img {
     width: 100%;
     height: auto;
     display: block;
+    justify-content: center;
     object-fit: cover;
-    max-height: 300px; /* calculate optimal max height */
+    max-height: 300px;
     aspect-ratio: 1/1; /* maintain aspect ratio */
 }
 
-/* Media Query for Mobile Devices */
+/* Mobile Optimization */
 @media (max-width: 1000px) {
     body, html {
-        overflow: hidden;
+        overflow-y: auto;
     }
     .gallery {
         grid-template-columns: repeat(2, 1fr); /* two columns on mobile */
@@ -40,14 +48,15 @@ body, html {
     }
 
     .name {
-        font-size: clamp(2rem, 5vw, 3rem); /* adjust font size dynamically */
+        font-size: clamp(2rem, 5vw, 3rem);
         white-space: nowrap; /* prevent wrapping */
-        overflow: hidden; /* handle overflow */
-        width: fit-content; /* fit the width to the content */
-        display: flex; /* use flex to align within the container */
+        overflow: hidden;
+        width: fit-content;
+        display: flex;
         justify-content: center; /* center the text horizontally */
         align-items: center; /* center the text vertically */
-        margin: 0.3em auto; /* remove margin to bring it closer */
+        margin: 0.5em auto; /* smaller margins */
+        left: 0vw;
     }
 
     .mobileMenu {
@@ -59,8 +68,8 @@ body, html {
     }
 
     .container {
-        padding: 20px; /* reduce padding */
-        margin: 0 auto; /* remove top margin to bring it closer */
+        padding: 20px;
+        margin: -1.5em auto; /* remove top margin */
         left: 0vw;
         max-width: 90%;
         height: auto;

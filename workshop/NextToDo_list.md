@@ -4,6 +4,7 @@
 
 **Nice ToDo' for Future Ezra**
 - Update Experience section (finalize vision)
-- WordCloud auto-population (veryy long-term goal)
+- WordCloud auto-population (very long-term goal)
 - Beautify Publications "book" design -- make mobile friendly
 - Skills section -- make it appear on the Righthand side not below
+- Mobile site updates

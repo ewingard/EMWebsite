@@ -58,6 +58,16 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+//Updates Toggle
+function updatesToggle() {
+  var tog = document.getElementsByClassName("toggle-content")[0]
+  if (tog.style.display === "none") {
+    tog.style.display = "block";
+  } else {
+    tog.style.display = "none";
+  }
+}
+
 // Resize Coordinates for Image Size
 //   document.addEventListener('DOMContentLoaded', function() {
 //   const img = document.getElementById('responsive-image');
