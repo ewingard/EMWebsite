@@ -8,7 +8,7 @@
     - CV - include anything else? Icons? Dynamic CV w/additional info?
         - Similar to other Comp Sci CVs or something completely different?
     - DONE:
-        - CV updates
+        - CV updates (12/19/24 = Final 2024 CV.)
 - WordCloud auto-population (very long-term goal)
 - Beautify Publications "book" design -- make mobile friendly (??)
     - Designs for cover = ??
