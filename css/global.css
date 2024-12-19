@@ -140,3 +140,25 @@ body, html {
       color: #000000; /* Set the text color */
       font-size: 1.5vw;
     }
+
+    @media (max-width: 1000px) {
+      body, html {
+        overflow-y: auto;
+      }
+  
+      .mobileMenu {
+          display: block;
+          z-index: 101;
+      }
+
+      .menuButton {
+        display: none;
+      }
+
+      .name{
+        position: relative;
+        top: 3vw;
+        font-size: 2rem;
+        margin: 1em;
+      }
+    }

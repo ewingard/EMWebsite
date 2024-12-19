@@ -88,16 +88,6 @@ body, html {
         font-size: 1.5vw;
       }
 
-/*      @media (max-width: 1000px) {
-        .skills-container {
-          flex-direction: column;
-        }
-        
-        .image-column, .info-column {
-          flex: none;
-        }      
-      } */
-
       @media (max-width: 1000px) {
         body, html {
           overflow-y: auto;
@@ -111,26 +101,19 @@ body, html {
             height: 100vh;
             top: 10vw;
         }
-        .name {
-            font-size: 2em; /* Adjust title size for mobile */
+        /* .name {
+            font-size: 2em;
             top: 5vw;
-        }
+        } */
     
         .info-column {
-            font-size: 1em; /* Adjust info column text size for mobile */
+            font-size: 1em;
         }
     
         h1, h2, h3, h4, h5, h6 {
-            font-size: 1.5em; /* Adjust headings for mobile */
+            font-size: 1.5em;
         }
-    
         p {
-            font-size: 1em; /* Adjust paragraph text for mobile */
+            font-size: 1em;
         }
-          .mobileMenu {
-              display: block;
-          }
-          .menuButton {
-              display: none;
-          }
       }

@@ -133,11 +133,11 @@ h2 {
 
 @media (max-width: 600px) {
 	.book {
-		--book-height: 60vw; /* further adjust for smaller screens */
+		--book-height: 60vw;
 	}
 
 	h1 {
-		font-size: calc(98px * 0.3); /* even smaller font on mobile */
+		font-size: calc(98px * 0.3);
 	}
 
 	h2 {

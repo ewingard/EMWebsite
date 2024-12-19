@@ -152,21 +152,18 @@ body, html {
       body, html {
         overflow-y: auto;
       }
+      
       .proj-container {
         left: 1vw;
         width: 96vw;
         height: auto;
         overflow-y: auto;
       }
+
       .neuron-buttons {
         display: none;
       }
-      .mobileMenu {
-        display: block;
-      }
-      .menuButton {
-          display: none;
-      }
+
       .name{
         position: relative;
         top: 3vw;

@@ -130,19 +130,6 @@
     body, html {
       overflow-y: auto;
     }
-
-    .mobileMenu {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 101;
-    }
-  
-    .menuButton {
-      display: none;
-    }
   
     .split {
         width: 100%;

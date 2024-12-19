@@ -82,19 +82,11 @@ body, html {
       .exp-bubbles {
         display:none;
       }
-      .mobileMenu {
-        display: block;
-    }
-      .menuButton {
-          display: none;
-      }
       
       p {
         font-size: 2rem;
       }
       .name{
-        top: 3vw;
         left: 28%;
-        font-size: 2rem;
       }
     }

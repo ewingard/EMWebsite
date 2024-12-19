@@ -15,19 +15,6 @@ body, html {
     }
 
     @media (max-width: 1000px){
-      .mobileMenu {
-        display: block;
-        z-index: 101;
-    }
-      .menuButton {
-          display: none;
-      }
-
-      .name {
-        top: 3vw;
-        left: 0vw;
-        font-size: 2rem;
-      }
 
       .word-cloudtainer {
         width: 100vw; /* Full viewport width */

@@ -58,15 +58,7 @@ body, html {
         margin: 0.5em auto; /* smaller margins */
         left: 0vw;
     }
-
-    .mobileMenu {
-        display: block;
-      }
     
-    .menuButton {
-          display: none;
-    }
-
     .container {
         padding: 20px;
         margin: -1.5em auto; /* remove top margin */
