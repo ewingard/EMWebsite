@@ -4,7 +4,27 @@
 
 **Nice ToDo' for Future Ezra**
 - Update Experience section (finalize vision)
+    - Finalize Vision
+    - CV - include anything else? Icons? Dynamic CV w/additional info?
+        - Similar to other Comp Sci CVs or something completely different?
+    - DONE:
+        - CV updates
 - WordCloud auto-population (very long-term goal)
-- Beautify Publications "book" design -- make mobile friendly
+- Beautify Publications "book" design -- make mobile friendly (??)
+    - Designs for cover = ??
+    - "Next Page" Section (W3 Schools) (Need addt'l publications)
 - Skills section -- make it appear on the Righthand side not below
+    - MOBILE -- JUST LIST ALL SKILLS? REMOVE BRAIN? FINALIZE VISION - RN IT DOESN'T WORK TOO GREAT.
 - Mobile site updates
+    - Skills Section mobile friendly
+    - DONE:
+        - moved mobile nav to global
+- Draw images to replace placeholders
+    - Exp
+    - Skills
+    - Interests
+    - Projects
+    - Github
+    - Publications
+    - DONE:
+        - Self Portrait/About Me
