@@ -1,6 +1,8 @@
 **Critical ToDo's**
 - Mobile Friendly Checker (Publications specifically, all other pages)
 - Fix Neuron Button Responsivness
+- Update Projects page for TADV
+- Update Narcissism Poster
 
 **Nice ToDo' for Future Ezra**
 - Update Experience section (finalize vision)
@@ -28,3 +30,13 @@
     - Publications
     - DONE:
         - Self Portrait/About Me
+- Translate website into French
+    - Exp
+    - Skills
+    - Interests
+    - Projects
+    - Publications
+    - About Me
+- Translate French Presentations
+    - AIDS Crisis
+    - The Middle Ages
