@@ -4,15 +4,14 @@
 - Update Projects page for TADV
     - Update projects for FortuneTeller HTML quiz + poster
 - Update Narcissism Poster
-- 
 
 **Nice ToDo' for Future Ezra**
+- Change About Me picture
 - Update Experience section (finalize vision)
-    - Finalize Vision
-    - CV - include anything else? Icons? Dynamic CV w/additional info?
+    - [ ]Finalize Vision
+    - [ ] CV - include anything else? Icons? Dynamic CV w/additional info?
         - Similar to other Comp Sci CVs or something completely different?
-    - DONE:
-        - CV updates (12/19/24 = Final 2024 CV.)
+    - [x] CV updates (12/19/24 = Final 2024 CV.)
 - WordCloud auto-population (very long-term goal)
 - Beautify Publications "book" design -- make mobile friendly (??)
     - Designs for cover = ??
@@ -22,7 +21,7 @@
 - Mobile site updates
     - Skills Section mobile friendly
     - DONE:
-        - moved mobile nav to global
+        - [x] moved mobile nav to global
 - Draw images to replace placeholders
     - Exp
     - Skills
@@ -31,7 +30,7 @@
     - Github
     - Publications
     - DONE:
-        - Self Portrait/About Me
+        - [x] Self Portrait/About Me
 - Translate website into French
     - Exp
     - Skills
