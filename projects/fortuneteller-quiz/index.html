@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/fortuneteller_quiz.css">
+    <title>Fortune Teller Mobile</title>
+</head>
+<body>
+
+    <div id="video-container" class="video-container">
+        <video id="intro-video" class="intro-video" autoplay muted>
+            <source src="/projects/fortuneteller-quiz/media/Blank_IntroVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="quiz-container" style="display: none">
+        <img src="/projects/fortuneteller-quiz/media/quiz_container_v4.png" alt="Quiz Container Background" class="quiz-image">
+        <div class="question"></div>
+        <div class="options"></div>
+        <div class="result" style="display: none;">Your Fortune: <span id="fortune"></span></div>
+        <button class="learn-btn" style="display: none;">Learn More</button>
+    </div>
+    <script src="/projects/fortuneteller-quiz/script.js"></script>
+</body>
+</html>
+
+<!-- python3 -m http.server 8000 -->

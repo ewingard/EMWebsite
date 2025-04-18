@@ -2,7 +2,9 @@
 - Mobile Friendly Checker (Publications specifically, all other pages)
 - Fix Neuron Button Responsivness
 - Update Projects page for TADV
+    - Update projects for FortuneTeller HTML quiz + poster
 - Update Narcissism Poster
+- 
 
 **Nice ToDo' for Future Ezra**
 - Update Experience section (finalize vision)
