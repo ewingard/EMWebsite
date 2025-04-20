@@ -185,7 +185,26 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error("intro-video not found!");
         return;
     }
+// Check for Safari and skip the video if detected
+        if (isSafari()) {
+            console.log("Skipping video on Safari");
+            videoContainer.style.display = 'none'; // Hide the video container
+            quizContainer.style.display = 'block'; // Show the quiz immediately
+        } else {
+            // Play video for non-Safari browsers
+            introVideo.play().catch((error) => {
+                console.error("Video autoplay failed:", error);
+                // If autoplay fails, skip to quiz
+                videoContainer.style.display = 'none';
+                quizContainer.style.display = 'block';
+            });
     
+            // After video ends, show the quiz
+            introVideo.addEventListener('ended', function () {
+                videoContainer.style.display = 'none';
+                quizContainer.style.display = 'block';
+            });
+        }
     // may need to add something here to say IF NOT FUNCTIONAL ON SAFARI, remove/load certain elements.
     // if browser type = Safari, forego the video or force the quiz-tainer to load as Block?
 
@@ -213,3 +232,8 @@ function mobileNavToggle() {
     }
     }
 //End Mobile Nav
+
+function isSafari() {
+    const ua = navigator.userAgent;
+    return /Safari/.test(ua) && !/Chrome/.test(ua);  // Safari is identified, but not Chrome
+}
