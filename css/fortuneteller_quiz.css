@@ -57,33 +57,37 @@ body {
     display: block;
 }
 
+.menu-visible {
+    display:block;
+}
+
 /* code snippet from https://getcssscan.com/css-buttons-examples?ref=shapes-bottom */
 .option, .learn-btn {
-align-items: center;
-background-color: #fff;
-border-radius: 12px;
-box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
-box-sizing: border-box;
-color: #121212;
-cursor: pointer;
-display: inline-flex;
-flex: 1 1 auto;
-font-family: Inter,sans-serif;
-font-size: 1rem;
-font-weight: 400;
-justify-content: center;
-line-height: 1;
-margin: 0;
-outline: none;
-padding: 1rem 1rem;
-text-align: center;
-text-decoration: none;
-transition: box-shadow .2s,-webkit-box-shadow .2s;
-white-space: nowrap;
-border: 0;
-user-select: none;
--webkit-user-select: none;
-touch-action: manipulation;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .option:hover, .learn-btn:hover {
@@ -183,12 +187,19 @@ svg {
       overflow-y: auto;
     }
 
-    .mobileMenu {
-        display: block;
-        z-index: 101;
-    }
-
     .menu-visible {
       display: none;
     }
-  }
+        
+    /* Ensure the menu takes the full width and is fixed at the top */
+    .mobileMenu {
+        display: block;  /* Show menu on mobile */
+        position: fixed; /* Fixed to the top of the screen */
+        top: 0;          /* Align it to the top */
+        left: 0;
+        width: 100%;     /* Full width */
+        z-index: 1000;   /* Make sure it stays above other content */
+        padding: 10px;
+        box-sizing: border-box; /* Prevents padding from affecting layout */
+      }
+ }

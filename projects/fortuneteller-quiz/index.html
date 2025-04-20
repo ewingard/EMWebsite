@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FortuneTeller Quiz</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/fortuneteller_quiz.css">
-    <title>Fortune Teller Mobile</title>
+    <script src="https://kit.fontawesome.com/ea87ee6546.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <body>
+
         <div id="textMenu" class="menu-visible">
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -17,6 +18,8 @@
                 <li><a href="/experience/">Experience</a></li>
                 <li><a href="/skills/">Skills</a></li>
                 <li><a href="https://github.com/ewingard">Github</a></li>
+                <li><a href="/interests/">Interests</a></li>
+                <li><a href="/publications/">Publications</a></li>
               </ul>
           </div>
           <div class="mobileMenu">
@@ -26,9 +29,14 @@
               <a href="/projects/">Projects</a>
               <a href="/experience/">Experience</a>
               <a href="/skills/">Skills</a>
-              <a href="https://github.com/ewingard">Visit my Github Page</a>
+              <a href="https://github.com/ewingard" target="_blank">Visit my Github Page</a>
+              <a href="/interests/">Interests</a>
+              <a href="/publications/">Publications</a>
             </div>
-        </div>
+                <a href="javascript:void(0);" class="icon" onclick="mobileNavToggle()">
+                  <i class="fa fa-bars"></i>
+                </a>
+            </div>
     <div id="video-container" class="video-container">
         <video id="intro-video" class="intro-video" autoplay muted>
             <source src="/projects/fortuneteller-quiz/media/Blank_IntroVideo.mp4" type="video/mp4">
