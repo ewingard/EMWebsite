@@ -109,6 +109,11 @@ svg {
     object-fit: fill;
 }
 
+.mobileMenu {
+    top: 0px;
+    left: 0px;
+  }
+
 .quiz-container {
     position: relative;
     top: 2vw;

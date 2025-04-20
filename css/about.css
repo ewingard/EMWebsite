@@ -1,192 +1,234 @@
-  .menu-visible {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    top: 1vw;
-    right: 31.25vw;
-    left: 2vw;
+/* General styles for menu */
+.menu-hidden {
+  display: hidden;
+}
+.menu-visible {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  top: 1vw;
+  right: 31.25vw;
+  left: 2vw;
+}
+
+.mobile-menu {
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width on mobile */
+  background-color: #333; /* Or any background color you want */
+  position: fixed; /* Fixed to the top of the screen */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-image: radial-gradient(circle at 50% 50%, #d12c2c, #d12c2c, #d66b26, #b28f00, #055927, #465582, #961fe0);
+  display: flex;
+}
+
+.right {
+  right: 0;
+  background-image: radial-gradient(circle at 50% 50%, #ffe500, #ffe500, #b28f00);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 14vw;
+  border-radius: 50%;
+}
+
+.about-container {
+  display: block;
+  gap: 2.5vh;
+  width: 41vw;
+  height: 41vw;
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 2vw;
+  padding: 1vw;
+  left: 3.5vw;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.name {
+  color: #000000;
+  letter-spacing: 0em;
+  padding: .3vw;
+  left: 0vw;
+  text-align: center;
+}
+
+p {
+  font-family: "LeagueSpartan-SemiBold", sans-serif;
+  color: #000000;
+  font-size: 1.5vw;
+}
+
+p.quote, p.bio {
+  font-family: 'LeagueSpartan-Light', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "LeagueSpartan-SemiBold", sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  margin-top: 1.46vw;
+  margin-bottom: 10px;
+}
+
+.tagline-container {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  align-items: flex-start;
+  margin-top: auto;
+  width: 80%;
+  padding: 0px;
+}
+
+hr.line {
+  border: none;
+  border: 2px solid white;
+  width: 100%;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  margin: 0.2vw;
+  padding: 0.5vw 0.5vh;
+  padding-bottom: 5vw;
+  cursor: pointer;
+  border: none;
+  font-family: 'LeagueSpartan-SemiBold', sans-serif;
+  font-size: 1.75em;
+  text-decoration: none;
+}
+
+.tagline-container span {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tagline-container p {
+  color: white;
+  padding-top: .5em;
+  margin: 0vw;
+  padding-bottom: 0.75em;
+  margin-bottom: -1vw;
+}
+
+/* Mobile */
+@media (max-width: 1000px) {
+  /* Ensure the menu takes the full width and is fixed at the top */
+  .mobileMenu {
+    display: block;  /* Show menu on mobile */
+    position: fixed; /* Fixed to the top of the screen */
+    top: 0;          /* Align it to the top */
+    left: 0;
+    width: 100%;     /* Full width */
+    background-color: #333; /* Background color */
+    z-index: 1000;   /* Make sure it stays above other content */
+    padding: 10px;
+    box-sizing: border-box; /* Prevents padding from affecting layout */
   }
 
+  .mobileMenu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  /* Optionally add hover effects for links */
+  .mobileMenu a:hover {
+    background-color: #575757;
+  }
+
+  /* Make sure centered content is not hidden behind the fixed menu */
   .split {
+    width: 100%;  /* Full width */
     height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .left {
+    width: 100%;
+    height: 75%;
+    top: 0;
     left: 0;
-    background-image: radial-gradient(circle at 50% 50%, #d12c2c, #d12c2c, #d66b26, #b28f00, #055927, #465582, #961fe0);
-    display: flex;
+    padding-top: 125%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
-    
+
   .right {
-    right: 0;
-    background-image: radial-gradient(circle at 50% 50%, #ffe500, #ffe500, #b28f00);
+    width: 100%;
+    height: 75%;
+    top: 50%;
+    left: 0;
+    padding-top: 150%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
-    
-  .centered {
+
+  .about-container {
+    width: 90%;
+    height: 90%;
+    align-self: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    overflow-y: auto;
   }
-    
+
   .centered img {
-    width: 14vw;
+    width: 50vw;
     border-radius: 50%;
   }
 
-  .about-container {
-    display: block;
-    gap: 2.5vh;
-    width: 41vw;
-    height: 41vw;
-    position: absolute;
-    overflow-y: auto; /* VERTICAL scrolling */
-    overflow-x: hidden; /* NO HORIZONTAL scrolling */
-    border-radius: 2vw; /* 8px */
-    padding: 1vw;
-    left: 3.5vw;
-    background-color: white;
-    justify-content: space-between;
-  }
-
-  .name {
-    color: #000000;
-    letter-spacing: 0em;
-    padding: .3vw; /* 20px */
-    left: 0vw;
-    text-align: center;
-  }
-
-  p {
-    font-family: "LeagueSpartan-SemiBold", sans-serif; /* Choose your desired font */
-    color: #000000; /* Set the text color */
-    font-size: 1.5vw;
-  }
-
-  p.quote, p.bio {
-    font-family: 'LeagueSpartan-Light', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "LeagueSpartan-SemiBold", sans-serif; /* Choose your desired font */
-    font-size: 2vw; /* 26pt */
-    color: #000000; /* Set the text color */
-    margin-top: 1.46vw; /* 20px */
-      margin-bottom: 10px; /* 10px header */
-  }
-    
+  /* Ensure tagline container and text adjust well on mobile */
   .tagline-container {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    align-items: flex-start;
-    margin-top: auto;
-    width: 80%;
-    padding: 0px;
+    align-items: center;
+    position: relative;
+    left: 8vw;
   }
 
   hr.line {
-    border: none;
-    border: 2px solid white;
     width: 100%;
-    margin: 0;
+    align-self: center;
   }
 
-  .btn {
-    display: inline-block;
-    background-color: transparent;
-    margin: 0.2vw;
-    padding: 0.5vw 0.5vh;
-    padding-bottom: 5vw;
-    cursor: pointer;
-    border: none;
-    font-family: 'LeagueSpartan-SemiBold', sans-serif;
-    font-size: 1.75em;
-    text-decoration: none;
+  .name {
+    font-size: 3rem;
   }
 
-  .tagline-container span {
-    display: flex;
-    gap: 1em;
-    justify-content:flex-start;
-    align-items: center;
+  p {
+    font-size: 1.75rem;
   }
-
-  .tagline-container p {
-    color: white;
-    padding-top: .5em;
-    margin: 0vw;
-    padding-bottom: 0.75em;
-    margin-bottom: -1vw;
-  }
-
-  @media (max-width: 1000px) {
-    body, html {
-      overflow-y: auto;
-    }
-  
-    .split {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        box-sizing: border-box;
-    }
-
-    .left {
-      width: 100%;
-      height: 75%;
-      top: 0;
-      left: 0;
-      padding-top: 125%;
-      box-sizing: border-box;
-      overflow: hidden;
-    }
-  
-    .right {
-      width: 100%;
-      height: 75%;
-      top: 50%;
-      left: 0;
-      padding-top: 150%;
-      box-sizing: border-box;
-      overflow: hidden;
-    }
-
-    .about-container {
-      width: 90%;
-      height: 90%;
-      align-self: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      overflow-y: auto; /* VERTICAL scrolling */   
-    }
-
-    .centered img {
-      width: 50vw;
-      border-radius: 50%;
-    }
-
-    .tagline-container {
-      align-items: center;
-      position: relative;        
-      left: 8vw;
-    }
-
-    hr.line { 
-      width: 100%;
-      align-self: center;      
-    }
-
-    .name {font-size: 3rem;}
-
-    p {font-size: 1.75rem;}
 }
