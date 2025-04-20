@@ -179,48 +179,47 @@ document.addEventListener('DOMContentLoaded', function () {
     const introVideo = document.getElementById('intro-video');
     const videoContainer = document.getElementById('video-container');
     const quizContainer = document.querySelector('.quiz-container');
-    const overlay = document.getElementById('overlay'); // Just in case you're using this
+    const instructionSlide = document.getElementById('instruction-slide');
+    const startQuizBtn = document.getElementById('start-quiz-btn');
 
     if (!introVideo) {
         console.error("intro-video not found!");
         return;
     }
-// Check for Safari and skip the video if detected
-        if (isSafari()) {
-            console.log("Skipping video on Safari");
-            videoContainer.style.display = 'none'; // Hide the video container
-            quizContainer.style.display = 'block'; // Show the quiz immediately
-        } else {
-            // Play video for non-Safari browsers
-            introVideo.play().catch((error) => {
-                console.error("Video autoplay failed:", error);
-                // If autoplay fails, skip to quiz
-                videoContainer.style.display = 'none';
-                quizContainer.style.display = 'block';
-            });
-    
-            // After video ends, show the quiz
-            introVideo.addEventListener('ended', function () {
-                videoContainer.style.display = 'none';
-                quizContainer.style.display = 'block';
-            });
-        }
-    // may need to add something here to say IF NOT FUNCTIONAL ON SAFARI, remove/load certain elements.
-    // if browser type = Safari, forego the video or force the quiz-tainer to load as Block?
 
-    introVideo.addEventListener('ended', function () {
-        // Hide the video container
+    // Handle Safari browser check and video play
+    if (isSafari()) {
+        console.log("Skipping video on Safari");
         videoContainer.style.display = 'none';
-
-        // Show the quiz container
         quizContainer.style.display = 'block';
+    } else {
+        introVideo.play().catch((error) => {
+            console.error("Video autoplay failed:", error);
+            videoContainer.style.display = 'none';
+            quizContainer.style.display = 'block';
+        });
 
-        // Optional: hide overlay if it exists
-        if (overlay) {
-            overlay.classList.add('hidden');
-        }
+        introVideo.addEventListener('ended', function () {
+            videoContainer.style.display = 'none';
+            quizContainer.style.display = 'block';
+        });
+    }
+
+    // Show instruction slide
+    instructionSlide.style.display = 'block';
+    questionEl.style.display = "none";
+    optionsEl.style.display = "none";
+
+    // Hide instruction slide and start the quiz when the "Start Quiz" button is clicked
+    startQuizBtn.addEventListener('click', function () {
+        instructionSlide.style.display = 'none';
+        quizContainer.style.display = 'block';
+        questionEl.style.display = 'block';
+        optionsEl.style.display = 'block';
+        loadQuestion();
     });
 });
+
 
 // Mobile Nav Toggle
 function mobileNavToggle() {
