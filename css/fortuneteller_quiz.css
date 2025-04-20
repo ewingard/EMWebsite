@@ -23,7 +23,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-}   
+} 
 
 .video-container {
     position: fixed;
@@ -57,6 +57,7 @@ body {
     display: block;
 }
 
+/* code snippet from https://getcssscan.com/css-buttons-examples?ref=shapes-bottom */
 .option, .learn-btn {
 align-items: center;
 background-color: #fff;
@@ -110,6 +111,7 @@ svg {
 
 .quiz-container {
     position: relative;
+    top: 2vw;
     background: #fff;
     width: 100%;
     max-width: 800px;
@@ -170,3 +172,18 @@ svg {
     display: none;
     top: 20%;
 }
+
+@media (max-width: 1000px) {
+    body, html {
+      overflow-y: auto;
+    }
+
+    .mobileMenu {
+        display: block;
+        z-index: 101;
+    }
+
+    .menu-visible {
+      display: none;
+    }
+  }
