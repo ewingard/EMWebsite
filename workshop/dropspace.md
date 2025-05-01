@@ -4,3 +4,8 @@
 ** Aes Websites **
 - http://biancamangels.com/about -- skills brain
 
+** FREE CODE WEBSITES, IDEAS, ETC. **
+- Books for Pubs Page:
+    https://devsnap.me/css-book-effects
+    https://codepen.io/kitjenson/pen/qzzVpg -- book turning
+    https://codepen.io/create_vc/pen/arvvXL -- book HTML ; using ; cite.

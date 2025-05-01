@@ -1,16 +1,18 @@
 **Critical ToDo's**
-- Mobile Friendly Checker (Publications specifically, all other pages)
-- Fix Neuron Button Responsivness
-- Update Projects page for TADV
-    - Update projects for FortuneTeller HTML quiz + poster
-- Update Narcissism Poster
+- [ ] Mobile Friendly Checker (Publications specifically, all other pages)
+- [ ] Fix Neuron Button Responsivness
+- [ ] Update Projects page for TADV
+    - [ ] Update projects for FortuneTeller HTML quiz + poster, other SCWB Posters.
+- [ ] Update Publications page with posters -- list Pubs 1st, Linked Items 2nd, All Others 3rd. Make sure book flips thru w/ Next Page.
+- [ ] CV Updates (5/1/25, post-SANS)
+- [ ] Update Narcissism Poster
 
 **Nice ToDo' for Future Ezra**
-- Change About Me picture
-- Update Experience section (finalize vision)
+- [x] Change About Me picture
+- [ ] Update Experience section (finalize vision)
     - [ ]Finalize Vision
-    - [ ] CV - include anything else? Icons? Dynamic CV w/additional info?
-        - Similar to other Comp Sci CVs or something completely different?
+    - [ ] instead of CV PDF, code CV in similar to Projects.
+        - [ ] Similar to other Comp Sci CVs or something completely different?
     - [x] CV updates (12/19/24 = Final 2024 CV.)
 - WordCloud auto-population (very long-term goal)
 - Beautify Publications "book" design -- make mobile friendly (??)
@@ -19,25 +21,24 @@
 - Skills section -- make it appear on the Righthand side not below
     - MOBILE -- JUST LIST ALL SKILLS? REMOVE BRAIN? FINALIZE VISION - RN IT DOESN'T WORK TOO GREAT.
 - Mobile site updates
-    - Skills Section mobile friendly
-    - DONE:
-        - [x] moved mobile nav to global
+    - [ ] Skills Section mobile friendly
+    - [x] moved mobile nav to global
 - Draw images to replace placeholders
-    - Exp
-    - Skills
-    - Interests
-    - Projects
-    - Github
-    - Publications
-    - DONE:
-        - [x] Self Portrait/About Me
+    - [ ] Exp
+    - [ ] Skills
+    - [ ] Interests
+    - [ ] Projects
+    - [ ] Github
+    - [ ] Publications
+    - [x] Self Portrait/About Me
+        - [ ] UPDATE 5/1/25 with SHORT HAIR.
 - Translate website into French
-    - Exp
-    - Skills
-    - Interests
-    - Projects
-    - Publications
-    - About Me
-- Translate French Presentations
+    - [ ] Exp
+    - [ ] Skills
+    - [ ] Interests
+    - [ ] Projects
+    - [ ] Publications
+    - [ ] About Me
+- Translate French Presentations to English
     - AIDS Crisis
     - The Middle Ages
