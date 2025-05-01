@@ -1,23 +1,20 @@
 **Critical ToDo's**
-- [ ] Mobile Friendly Checker (Publications specifically, all other pages)
 - [ ] Fix Neuron Button Responsivness
 - [ ] Update Projects page for TADV
     - [ ] Update projects for FortuneTeller HTML quiz + poster, other SCWB Posters.
-- [ ] Update Publications page with posters -- list Pubs 1st, Linked Items 2nd, All Others 3rd. Make sure book flips thru w/ Next Page.
 - [ ] CV Updates (5/1/25, post-SANS)
 - [ ] Update Narcissism Poster
+- [ ] Make all links target=_blank (Github menu = blank, all other menu NOT.)
 
+- [x] Update Publications page with posters -- list Pubs 1st, Linked Items 2nd, All Others 3rd.
+- [x] Mobile Friendly Checker (Publications specifically, all other pages) 
 **Nice ToDo' for Future Ezra**
 - [x] Change About Me picture
 - [ ] Update Experience section (finalize vision)
-    - [ ]Finalize Vision
-    - [ ] instead of CV PDF, code CV in similar to Projects.
-        - [ ] Similar to other Comp Sci CVs or something completely different?
+    - [ ] instead of CV PDF, code CV in similar to Projects/About Me.
     - [x] CV updates (12/19/24 = Final 2024 CV.)
 - WordCloud auto-population (very long-term goal)
-- Beautify Publications "book" design -- make mobile friendly (??)
-    - Designs for cover = ??
-    - "Next Page" Section (W3 Schools) (Need addt'l publications)
+- "Next Page" Section (W3 Schools) for publications page.
 - Skills section -- make it appear on the Righthand side not below
     - MOBILE -- JUST LIST ALL SKILLS? REMOVE BRAIN? FINALIZE VISION - RN IT DOESN'T WORK TOO GREAT.
 - Mobile site updates
@@ -40,5 +37,5 @@
     - [ ] Publications
     - [ ] About Me
 - Translate French Presentations to English
-    - AIDS Crisis
-    - The Middle Ages
+    - [ ] AIDS Crisis
+    - [ ] The Middle Ages

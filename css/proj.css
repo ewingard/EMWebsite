@@ -97,21 +97,22 @@ body, html {
       margin: .5vw 0;
       padding: .5vw;
       color: black;
+      font-size: 1.5rem;
     }
 
     h4 {
       padding: -.3vw;
       margin: .4vw;
       font-family: 'LeagueSpartan-Light', sans-serif;
-      font-size: 300;
+      font-size: 1.25rem;
     }
 
     p, ol, li {
       margin: .1vw 0;
       padding: .5vw;
       font-family: 'LeagueSpartan-Light', sans-serif;
+      font-size: 1.15rem;
     }
-
 
     a {
       font-family: 'LeagueSpartan-SemiBold', sans-serif;
