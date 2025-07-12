@@ -1,8 +1,9 @@
 **Critical ToDo's**
 - [ ] Fix Neuron Button Responsivness
 - [ ] Update Projects page for TADV
-    - [ ] Update projects for FortuneTeller HTML quiz + poster, other SCWB Posters.
+    - [x] Update projects for FortuneTeller HTML quiz + poster, other SCWB Posters.
 - [ ] CV Updates (5/1/25, post-SANS)
+- [ ] Update Exp CSS to work
 - [ ] Update Narcissism Poster
 - [ ] Make all links target=_blank (Github menu = blank, all other menu NOT.)
 

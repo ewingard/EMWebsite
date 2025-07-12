@@ -54,15 +54,6 @@ body, html {
     .accordion {
       color: #961f6e;
       background-color: white;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      font-family: 'LeagueSpartan-SemiBold', sans-serif;
-      font-size: 1.2em;
-      transition: 0.4s;
     }
 
     .toggle-btn {
