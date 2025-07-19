@@ -1,23 +1,23 @@
 **Critical ToDo's**
 - [ ] Fix Neuron Button Responsivness
-- [ ] Update Projects page for TADV
+- [x] Update Projects page for TADV
     - [x] Update projects for FortuneTeller HTML quiz + poster, other SCWB Posters.
-- [ ] CV Updates (5/1/25, post-SANS)
+- [x] CV Updates (5/1/25, post-SANS)
 - [ ] Update Exp CSS to work
-- [ ] Update Narcissism Poster
-- [ ] Make all links target=_blank (Github menu = blank, all other menu NOT.)
-
+- [x] Update Narcissism Poster
+- [x] Make all links target=_blank (Github menu = blank, all other menu NOT.)
 - [x] Update Publications page with posters -- list Pubs 1st, Linked Items 2nd, All Others 3rd.
 - [x] Mobile Friendly Checker (Publications specifically, all other pages) 
+
 **Nice ToDo' for Future Ezra**
 - [x] Change About Me picture
-- [ ] Update Experience section (finalize vision)
-    - [ ] instead of CV PDF, code CV in similar to Projects/About Me.
+- [x] Update Experience section (finalize vision)
+    - [x] instead of CV PDF, code CV in similar to Projects/About Me.
     - [x] CV updates (12/19/24 = Final 2024 CV.)
-- WordCloud auto-population (very long-term goal)
-- "Next Page" Section (W3 Schools) for publications page.
-- Skills section -- make it appear on the Righthand side not below
-    - MOBILE -- JUST LIST ALL SKILLS? REMOVE BRAIN? FINALIZE VISION - RN IT DOESN'T WORK TOO GREAT.
+- [ ] WordCloud auto-population (very long-term goal)
+- [ ] "Next Page" Section (W3 Schools) for publications page.
+- [ ] Skills section -- make it appear on the Righthand side not below
+    - [ ] MOBILE -- JUST LIST ALL SKILLS? REMOVE BRAIN? FINALIZE VISION - RN IT DOESN'T WORK TOO GREAT.
 - Mobile site updates
     - [ ] Skills Section mobile friendly
     - [x] moved mobile nav to global
@@ -29,7 +29,9 @@
     - [ ] Github
     - [ ] Publications
     - [x] Self Portrait/About Me
-        - [ ] UPDATE 5/1/25 with SHORT HAIR.
+        - [x] UPDATE 5/1/25 with SHORT HAIR.
+        - [ ] UPDATE 7/2025 with MEDIUM-HAIRCUT
+        - [ ] UPDATE About Me page with better selfie!
 - Translate website into French
     - [ ] Exp
     - [ ] Skills
@@ -37,6 +39,6 @@
     - [ ] Projects
     - [ ] Publications
     - [ ] About Me
-- Translate French Presentations to English
+- Translate French Presentations to English (Can't Find)
     - [ ] AIDS Crisis
     - [ ] The Middle Ages
