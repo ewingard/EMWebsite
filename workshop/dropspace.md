@@ -9,3 +9,5 @@
     https://devsnap.me/css-book-effects
     https://codepen.io/kitjenson/pen/qzzVpg -- book turning
     https://codepen.io/create_vc/pen/arvvXL -- book HTML ; using ; cite.
+- WAVE (Accessibility Report)
+    https://wave.webaim.org/report#/www.ewingard.xyz
