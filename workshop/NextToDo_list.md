@@ -3,7 +3,7 @@
 - [x] Update Projects page for TADV
     - [x] Update projects for FortuneTeller HTML quiz + poster, other SCWB Posters.
 - [x] CV Updates (5/1/25, post-SANS)
-- [ ] Update Exp CSS to work
+- [X] Update Exp CSS to work
 - [x] Update Narcissism Poster
 - [x] Make all links target=_blank (Github menu = blank, all other menu NOT.)
 - [x] Update Publications page with posters -- list Pubs 1st, Linked Items 2nd, All Others 3rd.
