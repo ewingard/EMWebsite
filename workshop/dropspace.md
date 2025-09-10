@@ -11,3 +11,5 @@
     https://codepen.io/create_vc/pen/arvvXL -- book HTML ; using ; cite.
 - WAVE (Accessibility Report)
     https://wave.webaim.org/report#/www.ewingard.xyz
+- Leaflet - JS library for interactive maps:
+    https://leafletjs.com/
