@@ -261,6 +261,11 @@ article {
     box-sizing: border-box;
   }
 
+  #issueBox {
+    max-width: 90vw;
+    text-wrap: auto;
+  }
+
   header .typewriter {
     display: block;
     width: 100%;
@@ -540,6 +545,11 @@ article {
 
   .newspaper {
     padding: 0.75rem;
+  }
+
+  #issueBox {
+    max-width: 90vw;
+    text-wrap: auto;
   }
 
   header h1 {
