@@ -13,6 +13,10 @@ body {
   background-image: radial-gradient(circle at 50% 50%, #b2b2b2, black);
 }
 
+  a {
+      text-decoration: auto;
+}
+
 .newspaper {
   max-width: 97vw;
   max-height: auto;
@@ -220,7 +224,6 @@ article {
     background-image: none;
     overflow-x: hidden;
   }
-
   /* =========================================
      NEWSPAPER
      ========================================= */
@@ -273,6 +276,10 @@ article {
 
     text-align: center;
     box-sizing: border-box;
+  }
+
+    a {
+      text-decoration: auto;
   }
 
   header h1 {
@@ -558,6 +565,10 @@ article {
 
   header h4 {
     font-size: 0.9rem;
+  }
+
+    a {
+      text-decoration: auto;
   }
 
   #side-article h3 {
