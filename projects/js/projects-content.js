@@ -664,7 +664,7 @@ const projects = [
                     (like how we use our calendar, tasks/notes app, and other apps to offload cognition), this demonstrates a core principle of your phone being a
                     mechanism for <i>embodied cognition</i>.
                     <a href="/assets/media/experience/Aphantasia-EC-CapstoneSlides.pdf" target="_blank">Presentation <i class="fa-solid fa-file-powerpoint"></i></a> | <a href="/assets/media/experience/RelationshipBtwnAphantasia+EC-CapstonePaper.pdf" target="_blank">Paper 
-                        <i class="fa-solid fa-file-lines"></i></a>
+                        <i class="fa-solid fa-file-lines"></i></a> | <a href="http://cs.oswego.edu/~ewingard/COG468WorkSite/" target="_blank">Capstone Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </p>`
             },
 
