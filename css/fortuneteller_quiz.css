@@ -13,7 +13,7 @@ body, html {
 }
 
 body {
-    background-image: url('/projects/fortuneteller-quiz/media/Starry_BG.svg');
+    background-image: url('/assets/media/fortune-teller/Starry_BG.svg');
     background-size: cover;
     width: 100%;
     height: 100%;

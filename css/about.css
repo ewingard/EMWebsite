@@ -1,235 +1,1362 @@
-/* General styles for menu */
-.menu-hidden, .mobile-menu {
-  display: none;
-}
-.menu-visible {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  top: 1vw;
-  right: 31.25vw;
-  left: 2vw;
+/* =========================================
+   WINDOWS 95 ABOUT PAGE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
 }
 
-.mobile-menu {
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width on mobile */
-  background-color: #333; /* Or any background color you want */
-  position: fixed; /* Fixed to the top of the screen */
-  z-index: 1000; /* Ensure it stays on top */
+@font-face {
+  font-family: 'Windows 95 Sans Serif';
+  src: url("/assets/fonts/w-95-sans-serif.woff");
 }
 
-.mobileMenu #myLinks.menu-hidden {
-  display: none;
-}
-
-.mobileMenu #myLinks.menu-visible {
-  display: block; /* When visible */
-  background-color: #333;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px 0;
-}
-
-
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.left {
-  left: 0;
-  background-image: radial-gradient(circle at 50% 50%, #d12c2c, #d12c2c, #d66b26, #b28f00, #055927, #465582, #961fe0);
-  display: flex;
-}
-
-.right {
-  right: 0;
-  background-image: radial-gradient(circle at 50% 50%, #ffe500, #ffe500, #b28f00);
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.centered img {
-  width: 21.5vw;
-  border-radius: 50%;
-}
-
-.about-container {
-  display: block;
-  gap: 2.5vh;
-  width: 41vw;
-  height: 41vw;
-  position: absolute;
-  overflow-y: auto;
-  overflow-x: hidden;
-  border-radius: 2vw;
-  padding: 1vw;
-  left: 3.5vw;
-  background-color: white;
-  justify-content: space-between;
-}
-
-.name {
-  color: #000000;
-  letter-spacing: 0em;
-  padding: .3vw;
-  left: 0vw;
-  text-align: center;
-}
-
-p {
-  font-family: "LeagueSpartan-SemiBold", sans-serif;
-  color: #000000;
-  font-size: 1.5vw;
-}
-
-p.quote, p.bio {
-  font-family: 'LeagueSpartan-Light', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "LeagueSpartan-SemiBold", sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  margin-top: 1.46vw;
-  margin-bottom: 10px;
-}
-
-.tagline-container {
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  align-items: flex-start;
-  margin-top: auto;
-  width: 80%;
-  padding: 0px;
-}
-
-hr.line {
-  border: none;
-  border: 2px solid white;
-  width: 100%;
-  margin: 0;
-}
-
-.btn {
-  display: inline-block;
-  background-color: transparent;
-  margin: 0.2vw;
-  padding: 0.5vw 0.5vh;
-  padding-bottom: 5vw;
-  cursor: pointer;
-  border: none;
-  font-family: 'LeagueSpartan-SemiBold', sans-serif;
-  font-size: 1.75em;
-  text-decoration: none;
-}
-
-.tagline-container span {
-  display: flex;
-  gap: 1em;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.tagline-container p {
-  color: white;
-  padding-top: .5em;
-  margin: 0vw;
-  padding-bottom: 0.75em;
-  margin-bottom: -1vw;
-}
-
-/* Mobile */
-@media (max-width: 1000px) {
-  /* Ensure the menu takes the full width and is fixed at the top */
-  .mobileMenu {
-    display: block;  /* Show menu on mobile */
-    position: fixed; /* Fixed to the top of the screen */
-    top: 0;          /* Align it to the top */
-    left: 0;
-    width: 100%;     /* Full width */
-    z-index: 1000;   /* Make sure it stays above other content */
-    padding: 10px;
-    box-sizing: border-box; /* Prevents padding from affecting layout */
-  }
-
-  /* Make sure centered content is not hidden behind the fixed menu */
-  .split {
-    width: 100%;  /* Full width */
+html,
+body {
+    margin: 0;
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+body {
+    /* font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif; */
+    font-family: "Windows 95 Sans Serif";
+    font-size: 10px;
+    color: #000;
+
+    cursor: url("/assets/cursors/arrow_s.cur"), default;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    cursor: /*url("/assets/cursors/beam_s.cur"),*/ text;
+}
+
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+.desktop {
     position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
 
-  .left {
-    width: 100%;
-    height: 75%;
-    top: 0;
-    left: 0;
-    padding-top: 125%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
+    width: 100vw;
+    height: 100vh;
 
-  .right {
-    width: 100%;
-    height: 75%;
-    top: 50%;
-    left: 0;
-    padding-top: 150%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
+    background-image:
+        url("/assets/images/windows_bg.jpg");
 
-  .about-container {
-    width: 90%;
-    height: 90%;
-    align-self: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   DESKTOP ICONS
+   ========================================= */
+
+.desktop-icons {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow-y: auto;
-  }
 
-  .centered img {
-    width: 50vw;
-    border-radius: 50%;
-  }
+    top: 20px;
+    left: 20px;
 
-  /* Ensure tagline container and text adjust well on mobile */
-  .tagline-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.desktop-icon {
+    width: 90px;
+
+    background: transparent;
+    border: none;
+
+    color: black;
+
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    position: relative;
-    left: 8vw;
-  }
 
-  hr.line {
+    gap: 5px;
+
+    text-align: center;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.desktop-icon .icon {
+    font-size: 32px;
+}
+
+.desktop-icon:hover {
+    background: rgba(0, 0, 128, 0.5);
+}
+
+.desktop-icon:focus {
+    outline: 1px dotted white;
+}
+
+
+/* =========================================
+   WINDOWS
+   ========================================= */
+
+.window {
+    position: absolute;
+
+    width: 500px;
+    /* min-width: 250px; */
+
+    height: auto;
+    /* min-height: 250px; */
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+
+    box-shadow: 1px 1px 0 #000;
+
+    display: none;
+
+    overflow: hidden;
+}
+
+.window.active {
+    display: block;
+}
+
+.window.minimized {
+    display: none;
+}
+
+.window.maximized {
+    width: calc(100vw - 10px);
+    height: calc(100vh - 40px);
+
+    top: 0 !important;
+    left: 0 !important;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   RESIZE CURSORS
+   ========================================= */
+
+    .window[data-resize-direction="e"],
+    .window[data-resize-direction="w"] {
+    cursor: url("/assets/cursors/resize_horizontal.cur"), ew-resize;
+}
+
+    .window[data-resize-direction="n"],
+    .window[data-resize-direction="s"] {
+    cursor: url("/assets/cursors/resize_vertical.cur"), ns-resize;
+}
+
+
+/*
+ * size1_s.cur = /
+ */
+
+    .window[data-resize-direction="nw"],
+    .window[data-resize-direction="se"] {
+    cursor: url("/assets/cursors/size2_s.cur"), nwse-resize;
+}
+
+
+/*
+ * size2_s.cur = \
+ */
+
+    .window[data-resize-direction="ne"],
+    .window[data-resize-direction="sw"] {
+    cursor: url("/assets/cursors/size1_s.cur"), nesw-resize;
+}
+
+
+/* =========================================
+   TITLE BAR
+   ========================================= */
+
+.title-bar {
+    height: 22px;
+
+    background: #000080;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 4px;
+
+    font-weight: bold;
+
+    cursor: url("/assets/cursors/move_s.cur"), grab;
+}
+
+.title-bar:active {
+    cursor: url("/assets/cursors/move_s.cur"), grab;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   WINDOW BUTTONS
+   ========================================= */
+
+.window-buttons {
+    display: flex;
+    gap: 2px;
+
+    padding-right: 2px;
+}
+
+.window-buttons button {
+    width: 18px;
+    height: 18px;
+
+    padding: 0;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    line-height: 12px;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.window-buttons button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+/* =========================================
+   WINDOW MENU
+   ========================================= */
+
+.window-menu {
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 8px;
+
+    border-bottom: 1px solid #808080;
+}
+
+.window-menu span:first-letter {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   WINDOW CONTENT
+   ========================================= */
+
+.window-content {
+    padding: 15px;
+
+    background: #c0c0c0;
+}
+
+.window-content h1 {
+    font-size: 16px;
+}
+
+.window-content h2 {
+    font-size: 14px;
+}
+
+.window-content hr {
+    border: none;
+
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid white;
+
+    height: 2px;
+}
+
+
+/* =========================================
+   TEXT EDITOR
+   ========================================= */
+
+.text-editor {
+    margin: 8px;
+
+    min-height: 250px;
+
+    padding: 10px;
+
+    background: white;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+    font-family: "Courier New", monospace;
+
+    line-height: 1.5;
+
+    overflow: auto;
+}
+
+/* =========================================
+   README / TEXT WINDOW
+   ========================================= */
+
+#readmeWindow {
+    display: none;
+    flex-direction: column;
+
+    width: 500px;
+    min-width: 500px;
+
+    height: 450px;
+    min-height: 450px;
+}
+
+#readmeWindow.active {
+    display: flex;
+}
+
+#readmeWindow .title-bar,
+#readmeWindow .window-menu {
+    flex-shrink: 0;
+}
+
+#readmeWindow p {
+    font-size: 12px;
+}
+
+/* =========================================
+   WINDOWS 95 SCROLLBAR — ABOUTME.TXT
+   ========================================= */
+
+#readmeWindow .text-editor {
+    flex: 1;
+    min-height: 250px;
+    overflow: auto;
+    scrollbar-color: #c0c0c0 #c0c0c0;
+}
+
+/* Chrome / Edge / Safari */
+#readmeWindow .text-editor::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+}
+
+#readmeWindow .text-editor::-webkit-scrollbar-track {
+    background: #c0c0c0;
+}
+
+#readmeWindow .text-editor::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #808080;
+    
+        cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+/* =========================================
+   SCROLLBAR ARROWS
+   ========================================= */
+
+#readmeWindow .text-editor::-webkit-scrollbar-button {
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+/* UP */
+#readmeWindow .text-editor::-webkit-scrollbar-button:vertical:decrement {
+    background-image:
+        linear-gradient(135deg, transparent 50%, #000 50%),
+        linear-gradient(45deg, transparent 50%, #000 50%);
+    background-size: 5px 5px;
+    background-position:
+        calc(50% - 2px) 6px,
+        calc(50% + 2px) 6px;
+    background-repeat: no-repeat;
+}
+
+/* DOWN */
+#readmeWindow .text-editor::-webkit-scrollbar-button:vertical:increment {
+    background-image:
+        linear-gradient(45deg, transparent 50%, #000 50%),
+        linear-gradient(135deg, transparent 50%, #000 50%);
+    background-size: 5px 5px;
+    background-position:
+        calc(50% - 2px) 5px,
+        calc(50% + 2px) 5px;
+    background-repeat: no-repeat;
+}
+
+/* PRESSED */
+#readmeWindow .text-editor::-webkit-scrollbar-button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+/* =========================================
+   RECYCLE BIN
+   ========================================= */
+
+#recycleWindow {
+    flex-direction: column;
+
+    width: 200px;
+
+    height: 150px;
+
+}
+/* =========================================
+   INFO TABLE
+   ========================================= */
+
+.info-table {
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    gap: 8px;
+
+    background: white;
+
+    padding: 10px;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+/* =========================================
+   FOLDERS
+   ========================================= */
+
+.folder-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 10px;
+}
+
+.folder {
+    text-align: center;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+
+    padding: 8px;
+
+    background: transparent;
+
+    border: none;
+
+    color: black;
+
+    font-family: inherit;
+
+    font-size: inherit;
+}
+
+.folder span {
+    font-size: 38px;
+}
+
+.folder img {
+    width: 38px;
+    height: 38px;
+}
+
+.folder p {
+    margin: 5px 0 0;
+}
+
+.folder:hover {
+    background: #000080;
+    color: white;
+}
+
+/* =========================================
+   "SYSTEM INFORMATION" / MY COMPUTER WINDOW
+   ========================================= */
+
+    #computerWindow {
+        right: 25px;
+        top: 25px;
+    }
+
+/* =========================================
+   INTEREST INFORMATION WINDOW
+   ========================================= */
+
+.interest-info-window {
+    min-width: 400px;
+}
+
+#interestInfoContent {
+    background: white;
+
+    min-height: 120px;
+
+    padding: 10px;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+/* =========================================
+   FAVORITES WINDOW
+   ========================================= */
+
+   #favoritesWindow {
+    min-height: 200px;
+    min-width: 250px;
+   }
+
+
+/* =========================================
+   STATUS BAR
+   ========================================= */
+
+.status-bar {
+    height: 22px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2px 5px;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+/* =========================================
+   SMALL WINDOW
+   ========================================= */
+
+.small-window {
+    width: 300px;
+}
+
+.center {
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   PAINT WINDOW
+   ========================================= */
+.paint-window {
+    width: 500px;
+    min-width: 500px;
+
+    height: 400px;
+    min-height: 400px;
+
+    display: none;
+
+    flex-direction: column;
+}
+
+.paint-window.active {
+    display: flex;
+}
+
+.paint-toolbar {
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 4px;
+
+    border-bottom: 1px solid #808080;
+}
+
+.paint-tool {
+    height: 25px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    padding: 2px 7px;
+
+    font-family: inherit;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.paint-tool.active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.paint-colors {
+    display: flex;
+
+    gap: 3px;
+
+    margin-left: 5px;
+}
+
+.paint-color {
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    border: 2px solid #808080;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.paint-color.active {
+    outline: 1px dotted #000;
+    outline-offset: 1px;
+}
+
+
+/* =========================================
+   PAINT TOOLBAR
+   ========================================= */
+
+.paint-toolbar {
+    flex-shrink: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.paint-toolbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.paint-toolbar p {
+    font-size: 10px;
+}
+
+/* =========================================
+   PAINT CANVAS CONTAINER
+   ========================================= */
+
+.paint-canvas-container {
+    margin: 8px;
+
+    padding: 5px;
+
+    background: #808080;
+
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PAINT CANVAS
+   ========================================= */
+
+#paintCanvas {
+    display: block;
+
     width: 100%;
-    align-self: center;
-  }
+    height: 100%;
 
-  .name {
-    font-size: 3rem;
-  }
+    background: white;
 
-  p {
-    font-size: 1.75rem;
-  }
+    touch-action: none;
+
+    cursor:
+        url("/assets/cursors/pen_s.cur"),
+        crosshair;
+}
+
+
+/* =========================================
+   PAINT STATUS BAR
+   ========================================= */
+
+.paint-window > .status-bar {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   PAINT FILE MENU
+   ========================================= */
+
+.paint-menu {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 8px;
+
+    height: 25px;
+}
+
+
+/* FILE MENU BUTTON */
+
+.paint-menu > #paintFileMenu {
+    position: relative;
+
+    height: 23px;
+
+    margin: 0;
+    padding: 0 4px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #000;
+
+    font-family: inherit;
+    font-size: 10px;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+
+/* Windows 95-style selected File menu */
+
+.paint-menu > #paintFileMenu:hover,
+.paint-menu > #paintFileMenu:focus {
+    background: #000080;
+    color: white;
+    outline: none;
+}
+
+
+/* =========================================
+   FILE DROPDOWN
+   ========================================= */
+
+.paint-file-dropdown {
+    position: absolute;
+
+    top: 24px;
+    left: 4px;
+
+    width: 130px;
+
+    padding: 2px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    display: none;
+
+    z-index: 10000;
+}
+
+
+/* Show dropdown */
+
+.paint-file-dropdown.open {
+    display: block;
+}
+
+
+/* =========================================
+   FILE DROPDOWN BUTTONS
+   ========================================= */
+
+.paint-file-dropdown button {
+    display: block;
+
+    width: 100%;
+    height: 24px;
+
+    padding: 2px 8px;
+
+    background: #c0c0c0;
+
+    border: none;
+
+    color: #000;
+
+    font-family: inherit;
+    font-size: 10px;
+
+    text-align: left;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+
+/* Hover = classic Windows 95 blue selection */
+
+.paint-file-dropdown button:hover {
+    background: #000080;
+    color: white;
+}
+
+
+/* Pressed appearance */
+
+.paint-file-dropdown button:active {
+    background: #000080;
+    color: white;
+
+    padding-top: 3px;
+    padding-left: 9px;
+}
+
+
+/* =========================================
+   PAINT MENU ITEMS
+   ========================================= */
+
+.paint-menu > span {
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 2px;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.paint-menu > span:hover {
+    background: #000080;
+    color: white;
+}
+
+/* =========================================
+   TASKBAR
+   ========================================= */
+
+.taskbar {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 32px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 2px;
+}
+
+
+/* START BUTTON */
+
+.start-button {
+    height: 26px;
+
+    min-width: 72px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.start-button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+/* =========================================
+   TASKBAR
+   ========================================= */
+
+.taskbar-divider {
+    height: 25px;
+
+    border-left: 2px solid #808080;
+    border-right: 1px solid white;
+
+    margin: 0 4px;
+}
+
+.taskbar-items {
+    display: flex;
+
+    gap: 3px;
+
+    flex: 1;
+
+    overflow: hidden;
+}
+
+.taskbar-item {
+    min-width: 120px;
+    height: 25px;
+
+    text-align: left;
+
+    padding: 3px 8px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+}
+
+.taskbar-item.taskbar-minimized {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+/* =========================================
+   SYSTEM TRAY
+   ========================================= */
+
+.system-tray {
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 8px;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+/* =========================================
+   START MENU
+   ========================================= */
+
+.start-menu {
+    position: absolute;
+
+    left: 2px;
+    bottom: 32px;
+
+    width: 240px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    display: none;
+
+    z-index: 9999;
+}
+
+.start-menu.open {
+    display: flex;
+}
+
+.start-banner {
+    width: 35px;
+
+    background: #808080;
+    color: white;
+
+    padding: 8px 4px;
+
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+
+    font-size: 18px;
+}
+
+.start-banner .windows-number {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+}
+
+
+.start-items {
+    flex: 1;
+
+    padding: 5px;
+}
+
+.start-items button,
+.start-items a {
+    display: block;
+
+    width: 100%;
+
+    padding: 9px 8px;
+
+    background: transparent;
+
+    border: none;
+
+    color: black;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    cursor: url("/assets/cursors/select.cur"), pointer;
+
+    font-family: inherit;
+}
+
+.start-items button:hover,
+.start-items a:hover {
+    background: #000080;
+    color: white;
+}
+
+.start-items hr {
+    border: none;
+
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid white;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px), (pointer: coarse) {
+
+    .desktop {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+    }
+
+
+    /*
+     * Desktop icons
+     */
+
+    .desktop-icons {
+        left: 10px;
+        top: 10px;
+        gap: 12px;
+    }
+
+
+    /*
+     * Every active window becomes fullscreen
+     * except for the taskbar area.
+     */
+
+    .window.active {
+        position: fixed;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100vw !important;
+        height: calc(100dvh - 32px) !important;
+
+        min-width: 0 !important;
+        min-height: 0 !important;
+
+        max-width: none !important;
+        max-height: none !important;
+
+        overflow-y: auto;
+
+        z-index: 1000;
+    }
+
+
+    /*
+     * The maximize button isn't necessary because
+     * mobile windows are always maximized.
+     */
+
+    .window.active .maximize {
+        display: none;
+    }
+
+
+    /*
+     * Larger touch targets while preserving
+     * the Windows 95 appearance.
+     */
+
+    .window-buttons {
+        gap: 3px;
+    }
+
+    .window-buttons button {
+        width: 28px;
+        height: 24px;
+
+        font-size: 14px;
+    }
+
+
+    /*
+     * Make content readable.
+     */
+
+    .window-content {
+        font-size: 13px;
+        overflow: auto;
+    }
+
+    .window-content h1 {
+        font-size: 16px;
+    }
+
+    .window-content h2 {
+        font-size: 14px;
+    }
+
+
+    /*
+     * System information becomes one column.
+     */
+
+    .info-table {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    .info-table > div:nth-child(odd) {
+        margin-top: 8px;
+    }
+
+
+    /*
+     * Interests.
+     */
+
+    .folder-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .folder {
+        min-height: 80px;
+        padding: 12px 8px;
+    }
+
+
+    /*
+     * README.
+     */
+
+    #readmeWindow {
+        width: 100vw !important;
+        min-width: 0 !important;
+
+        height: calc(100dvh - 32px) !important;
+        min-height: 0 !important;
+    }
+
+
+    /*
+     * Paint.
+     */
+
+    .paint-window {
+        width: 100vw !important;
+        min-width: 0 !important;
+
+        height: calc(100dvh - 32px) !important;
+        min-height: 0 !important;
+    }
+
+    .paint-toolbar {
+        flex-wrap: nowrap;
+        min-height: 42px;
+    }
+
+    .paint-tool {
+        flex-shrink: 0;
+        height: 32px;
+        padding: 3px 10px;
+    }
+
+    .paint-colors {
+        flex-shrink: 0;
+    }
+
+    .paint-color {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    /*
+     * Start menu.
+     */
+
+    .start-menu {
+        width: min(300px, calc(100vw - 4px));
+    }
+
+    .start-items a {
+        padding: 12px 8px;
+    }
+
+
+    /*
+     * Taskbar.
+     */
+
+    .taskbar-items {
+        display: flex;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .taskbar-items::-webkit-scrollbar {
+        display: none;
+    }
+
+    .taskbar-item {
+        min-width: 90px;
+    }
+
+    /*
+     * Title bar.
+     */
+
+
+    .title-bar {
+        touch-action: none;
+        cursor: default;
+    }
+
 }

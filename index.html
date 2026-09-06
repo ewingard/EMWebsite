@@ -1,79 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ezra M. Wingard</title>
+    <title>Ezra Wingard's Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/global.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/typewriter.css"/>
+    <link rel="preload" as="image" href="assets/images/ezra_self-portrait.svg"/>
+    <script src="https://kit.fontawesome.com/ea87ee6546.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- head banner for Updates, New Things I've been doing, credits to dcode on youtube for the tut-->
-    <div class="banner" id="banner">
-        <div class="banner__content">
-        <div class="banner__text">
-           <span>Welcome! Check out what's new and fresh <a href="projects/index.html#WN" style= "color: white;">here</a></span>
+    <div class="newspaper">
+    <header>
+        <div>
+            <h4 id="issueNumber">Loading issue...</h4>
         </div>
-        <button class="banner__close" type="button" id="banner close">
-            <span class="material-symbols-outlined">
-                close
-            </span>
-        </button>
+        <div class="typewriter" id="typewriter"><h1>Ezra M. Wingard</h1></div>
+        <div>
+            <h4>Take it EZ</h4>
         </div>
-    </div>
-<!-- end head banner-->
+    </header>
 
-    <div class="container">
-        <div class="name-and-long-button">
-            <div class="name">Ezra M. Wingard</div>
-            <div class="long-button">
-                <a href="aboutme/">
-                    <img src="assets/images/ezra_self-portrait-shorthair.PNG" alt="Self-Portrait" class="large-image";>
-                </a>
-                <span class="link-text">About Me</span>
-                <a href="/aboutme/">
-                    <img src="assets/images/link-arrow.png" alt="Arrow-Link-To-AboutMe" class="small-image";>
-                 </a>
-            </div>
-        </div>
-        <div class="button-group">
-            <div class="button-row">
-                <a href="/projects/" class="small-button">
-                    <img src="assets/images/brain.png" alt="Brain Drawing" style="width: 70%; border-radius: 0.59vw;">
-                    <span class="link-text">Projects</span>
-                </a>
-                <a href="/experience/" class="small-button">
-                    <img src="assets/images/education.png" alt="Graduate Cap Drawing" style="width: 70%; border-radius: 0.59vw;">
-                    <span class="link-text">Experience</span>
-                </a>
-                <a href="/skills/" class="small-button">
-                    <img src="assets/images/cogs.png" alt="Cogs Drawing" style="width: 70%; border-radius: 0.59vw;">
-                    <span class="link-text">Skills</span>
-                </a>
-            </div>
-            <div class="button-row">
-                <a href="https://github.com/ewingard" target="_blank" rel="noopener noreferrer" class="small-button">
-                    <img src="assets/images/code.png" alt="Drawing of Code Bracket" style="width: 70%; border-radius: 0.59vw;">
-                    <span class="link-text">View my GitHub</span>
-                </a>
-                <a href="/interests/" class="small-button">
-                    <img src="assets/images/hearts.png" alt="Hearts Drawing" style="width: 70%; border-radius: 0.59vw;">
-                    <span class="link-text">Interests</span>
-                </a>
-                <a href="/publications/" class="small-button">
-                    <img src="assets/images/books.png" alt="Books Drawing" style="width: 70%; border-radius: 0.59vw;">
-                    <span class="link-text">Publications</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    <nav>
+        <h5 id="lastUpdate"></h5>
+        <h5>Version 2, Established 2026</h5>
+        <h5>Copyright © Ezra M. Wingard 2026.</h5>
+    </nav>
+    <section>
+    <article id="side-article">
+        <h3>BREAKING: NEW UPDATES</h3>
+            <p>In Fall 2026, a Master's program was started in History. A concentration in Public History was designated at the start date. On August 5th, a library-focused presentation at the annual College of Charleston LibLearning retreat. Two professional 
+                certifications, College of Charleston's Life Design Coach certificate and Certified Interpretive Guide Certificate, are at large; assumed to be completed by December 2026. 
+            </p>
+        <h3><a href="/projects/projects.html">PROJECTS <i id="link" class="fa-solid fa-link" alt="link"></i></a></h3>
+            <p>During undergraduate studies, an honors thesis was completed on artificial intelligence ethics, specifically the usage of AI and computer vision for facial recognition
+                based on gender identity and gender modality. Other projects completed during undergraduate education include: research on embodied cognition, aphantasia,
+                narcissism, and works completed in French. Post-graduation, projects were completed at the University
+                of South Carolina during employment as a neuroscience research assistant: the Social Connection and Well-Being (SCWB) study, an NIH R01-funded study using EEG 
+                (electroencephalography) to explore how social connection and well-being changes across time in adolescents, a JavaScript-based quiz
+                created for a poster presentation with a mock version of a SCWB task, manuscript preparation with Michelle Brown on childhood maltreatment and psychopathology.
+                Current projects include preparation for my Master's thesis, digital library exhibits, and various Excel projects. Also included are details on my current volunteering ventures.
+                Any inquiries on volunteering experience should be routed to <u><a href="/skills_experience/experience.html">experience</a></u>.
+            </p>
+        <h3><a href="/skills_experience/experience.html">SKILLS AND EXPERIENCE <i id="link" class="fa-solid fa-link" alt="link"></i></a></h3>
+        <p>Experience is primarily in non-profit, community-based organizations, led by passions for helping others and leaving the world better than it was found. A career with an original
+        trajectory of psychology and neuroscience research, enlightened by the humanities and shifting towards libraries and digital humanities. A home has been created in the cultural heritage sector.
+        Odd jobs paved a path in the non-profit and community organization sectors, including wildlife rehabilitation, arts education, and peer support group mentorship. Volunteering
+        happens often, with typical domains aimed at pedagogy and encouraging adolescent research, open science, and continuing education. Current volunteering projects are centered in community knowledge expansion
+        and education, as well as transcription efforts to assist researchers. Fulfillment can typically be found in continuing education and shared passions. Micro-credentials, certificates, and bite-sized courses
+        are often sought after to encourage lifelong learning. Open to digital library, humanities (history, archives), research (history, psychology, cognitive science) and research support (transcription, database creation and/or 
+        management), and education (community-knowledge focused, lesson/article/presentation creation, science dissemination) opportunities.
+        </p>
+        <p>
+            Interdiscplinary skills from classical training or self-teaching. Domains of skills range from computer science/programming, natural language acquisition, art/creativity,
+            research, and data science/analysis. Fields of classical training include the humanities (history), social sciences (psychology),
+            and interdisciplinary fields (cognitive science - computer science). Specific strengths include critical analysis, imaginitive and creative solutions, pedagogy/mentorship,
+            science communication, and attention to detail. Primarily informal, self-paced education in computer science (website development) and data science (visualization, software, AI)
+            with formal training in Java and object-oriented programming. Semi-formal training in Python and R.
+        </p>
+        <h3><a href="/projects/projects.html#publications">PRESENTATIONS AND PUBLICATIONS <i id="link" class="fa-solid fa-link" alt="link"></i></a></h3>
+        <p>Knowledge is mostly meaningless if it is not shared. Presentations have been
+            completed at the undergraduate, graduate, and professional level. Most presentations are within the psychology/neuroscience domains, with some outliers in French. More recent
+            presentations target the cultural heritage sector and the humanities, based on current employment and graduate education. Presentations have been given at local, regional,
+            and international conferences. Some presentations denote mentorship rather than authorship. Publications in tow.</p>
+        <h3><a href="/about-me/about.html">ABOUT ME <i id="link" class="fa-solid fa-link" alt="link"></i></a></h3>
+            <p>Multi-passionate with specific interests in cultural heritage preservation, sociology, and medical/intellectual history. Constantly trying to continue education and satisfy an
+                insatiable curiosity. Multi-lingual (French, English, Spanish, ASL) with no intentions to stop acquiring more languages after becoming a polyglot. If programming languages are counted, the bar of polyglot has been far surpassed (12 and counting).
+                Fan of interdisciplinary research and creative ways to solve problems. Bookworm, chef, baker, enjoyer of horror media, and artistically inclined. Reach out about dinosaurs, medical history, or neuroscience.
+            </p>
+        </article>
+        <article id="main-article">
+        <img id="ez" src="assets/images/ezra_shorthair_self-portrait.png" alt="Grayscale drawn self-portrait of Ezra M. Wingard.">
+            <span id="social-media">
+                <a href="mailto:ez.wingard@gmail.com"><button class="btn"><i id="link" class="fa-regular fa-envelope" style="color: #000000"></i></button></a>
+                <a href="https://orcid.org/0009-0008-5315-2370"><button class="btn"><i id="link" class="fa-brands fa-orcid" style="color: #000000;"></i></button></a>
+                <a href="https://www.linkedin.com/in/ewingard/"><button class="btn"><i id="link" class="fa-brands fa-linkedin" style="color: #000000;"></i></button></a>
+                <a href="https://scholar.google.com/citations?user=uoLtd_YAAAAJ&hl=en&oi=ao"><button class="btn"><i id="link" class="fa-brands fa-google-scholar" style="color: #000000;"></i></button></a>
+                <a href="https://github.com/ewingard"><button class="btn"><i id="link" class="fa-brands fa-github" style="color: #000000;"></i></button></a>
+            </span>
+    </article>
+    </section>
     <script>
-        document.querySelector(".banner__close").addEventListener("click", function () {
-        this.closest(".banner").style.display = "none";
-        });
+        function loadIssue() {
+            fetch("/issue.json", { cache: "no-store" })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Could not load issue information.");
+                    }
+
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("issueNumber").textContent =
+                        `${data.year}, Vol. ${data.volume} Issue #${data.issue}`;
+
+                    const publicationDate = new Date(`${data.date}T00:00:00`);
+
+                    document.getElementById("lastUpdate").textContent =
+                        publicationDate.toLocaleDateString("en-US", {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric"
+                        });
+                })
+                .catch(error => {
+                    console.error("Unable to load issue information:", error);
+
+                    document.getElementById("issueNumber").textContent =
+                        "Issue information unavailable";
+
+                    document.getElementById("lastUpdate").textContent =
+                        "";
+                });
+        }
+
+        loadIssue();
     </script>
-    <script src="script.js"></script>    
+</div>
 </body>
 </html>
 <!-- Local Testing Portal: 

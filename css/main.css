@@ -1,246 +1,561 @@
-body, html {
-    background-image: radial-gradient(circle at 50% 50%, #54afb5, #005239);
+/* Set the font-family to chomsky like this. font-family: Chomsky, cursive; */
+@font-face {
+  font-family: Chomsky;
+  src: url(/assets/fonts/Chomsky.otf);
 }
 
-.name {
-    left: 6vw;
-    margin-bottom: auto;
-}    
-
-.banner {
-    background: #000000;
+html {
+  font-size: 100%;
 }
 
-.banner__content {
-    padding: .05vw;
-    max-width: 100%;
-    margin: 0 auto;
+body {
+  font-family: 'LeagueSpartan-light';
+  background-image: radial-gradient(circle at 50% 50%, #b2b2b2, black);
+}
+
+.newspaper {
+  max-width: 97vw;
+  max-height: auto;
+  background-color: #FFFFFD;
+  background-image: url("/assets/textures/beige-paper.png");
+  padding: 2vw;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  margin: 0;
+  font-size: 140%;
+}
+
+p {
+  font-family: serif;
+  font-size: 16px;
+  text-align: justify;
+  margin: 0;
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: #005239;
+}
+
+header {
+  margin: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-family: Chomsky, cursive !important;
+  font-size: 92px;
+}
+
+header div:first-child {
+  margin-left: 8vw;
+}
+
+header div:last-child {
+  margin-right: 8vw;
+}
+
+header div {
+  padding: 12px;
+  border: 2px solid;
+}
+
+#typewriter {
+  border: none;
+}
+
+nav {
+  padding: 1vh 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  align-content: space-between;
+  text-align: justify;
+  overflow: hidden;
+}
+
+article {
+  margin-top: 18px;
+}
+
+/* #side-article {
+  display: flex;
+  max-height: 75vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-shrink: 1;
+  overflow: none;
+  padding-right: .1em;
+  margin-right: .1em;
+  text-wrap: balance;
+  column-count: 3;
+  column-gap: 1.5rem;
+} */
+
+/* #side-article h3, #side-article p {
+    break-inside: avoid;
+} */
+
+#side-article {
+    column-count: 3;
+    column-gap: 2rem;
+}
+
+#side-article * {
+    width: auto;
+}
+
+/* 
+#side-article *{
+  width: 33%;
+} */
+
+#side-article h3{
+  text-align: center;
+  font-style: italic;
+}
+
+#social-media {
     display: flex;
+    gap: 1rem;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* span { display: flex; 
+       justify-content: center } */
+
+/* #main-article{
+  margin-top: 12px;
+}
+#main-article h2{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 82px;
+  line-height: 80%;
+}
+*/
+
+#main-article {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+#ez {
+  max-width: 20vw;
+  max-height: 20vw;
+  width: auto;
+  height: auto;
+  border: .1vw solid black;
+  margin: 5vh;
+  filter: grayscale(1);
+}
+
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+/* =========================================
+   MOBILE NEWSPAPER
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* Prevent the viewport from creating horizontal overflow */
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
   }
 
-.banner__text {
-    flex-grow: 1;
-    font-family: "LeagueSpartan-SemiBold", sans-serif;
-    color: white;
-    font-size: 1.25rem;
-    text-align: center;
-}
+  body {
+    background: #FFFFFD;
+    background-image: none;
+    overflow-x: hidden;
+  }
 
-.banner__close {
-    background: none;
+  /* =========================================
+     NEWSPAPER
+     ========================================= */
+
+  .newspaper {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 1rem;
+
+    box-sizing: border-box;
+
+    background-color: #FFFFFD;
+    background-image: url("/assets/textures/beige-paper.png");
+  }
+
+
+  /* =========================================
+     HEADER / MASTHEAD
+     ========================================= */
+
+  header {
+    width: 100%;
+    margin: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+
+    box-sizing: border-box;
+  }
+
+  header .typewriter {
+    display: block;
+    width: 100%;
+    order: 1;
+
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  header h1 {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    font-family: Chomsky, cursive !important;
+
+    /*
+      vw makes the title scale with the phone.
+      min() prevents it from becoming enormous.
+    */
+    font-size: min(17vw, 5rem);
+
+    line-height: 0.9;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  header div:first-child,
+  header div:last-child {
+    margin: 0;
+    padding: 0.4rem 0.75rem;
+
+    box-sizing: border-box;
+
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  header div:first-child {
+    order: 2;
+  }
+
+  header div:last-child {
+    order: 3;
+  }
+
+  header h4 {
+    font-size: 1rem;
+  }
+
+
+  /* =========================================
+     NEWSPAPER INFO BAR
+     ========================================= */
+
+  nav {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.25rem;
+
+    padding: 0.75rem 0;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  nav h5 {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+
+  /* =========================================
+     MAIN CONTENT
+     ========================================= */
+
+  section {
+    display: flex !important;
+    flex-direction: column !important;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow: visible !important;
+  }
+
+
+  /* =========================================
+     PORTRAIT
+     ========================================= */
+
+  #main-article {
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center;
+    justify-content: center;
+
+    order: -1;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    margin: 1.5rem 0 0;
+    padding: 0 0 1.5rem;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid black;
+  }
+
+  #ez {
+    display: block;
+
+    width: min(70vw, 280px);
+    max-width: 280px;
+
+    height: auto;
+    max-height: none;
+
+    margin: 1rem auto;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =========================================
+     SOCIAL MEDIA
+     ========================================= */
+
+  #social-media {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    box-sizing: border-box;
+  }
+
+  .btn {
+    font-size: 1.75rem;
+    padding: 0.25rem;
+
+    background: transparent;
     border: none;
-    cursor: pointer;
-}
+  }
 
-.banner__text,
-.banner__close > span {
-    color: #ffffff;
-}
 
-.container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1vw; /*90px;*/
-}
+  /* =========================================
+     ARTICLE
+     ========================================= */
 
-.long-button {
-    width: 20vw; /*276.9px;*/
-    height: 67.25vh; /*calc(452.2px + 150px);*/
-    position: relative; /* Allows absolute positioning inside */
-    background-color: white;
-    margin-right: 0vw; /* 22px */
-    border-radius: 0.59vw; /* 8px;*/
-    margin-bottom: 1vw; /*29px;*/
-    flex: 1 1 auto;
-    left: 6vw;
-    flex-direction: column;
-    overflow: hidden; /* Keeps everything contained inside the button */
-    display: flex;
-    justify-content: flex-end; /* Center items horizontally */
-    align-items: center;
-    align-self: flex-end;
-}
+  #side-article {
+    display: block !important;
 
-.long-button .large-image,
-.long-button .link-text {
-    width: auto; /* Adjust based on your design */
-    max-width: 100%; /* Ensures content doesn't overflow its container */
-    height: auto; /* Maintain aspect ratio for images */
-    display: block; /* Ensures block-level display */
-    margin: 1vw 0; 
-}
+    width: 100%;
+    max-width: none;
+    min-width: 0;
 
-.long-button .large-image {
-    width: 17vw; /* Makes the image cover the button */
-    height: auto; /* Keeps the image aspect ratio */
-    align-items: center;
-}
+    margin: 1.5rem 0 0;
+    padding: 0;
 
-.link-text {
-    font-size: 2.54vw; /* 26pt */
-    color: #000000;
-    font-style: normal;
+    box-sizing: border-box;
+
+    /*
+      THIS IS THE IMPORTANT PART.
+
+      Explicitly destroy the desktop newspaper
+      columns rather than merely changing
+      column-count.
+    */
+    column-count: auto !important;
+    column-width: auto !important;
+    column-fill: auto !important;
+    column-gap: 0 !important;
+    columns: auto !important;
+
+    /*
+      Prevent the article from inheriting any
+      multi-column layout.
+    */
+    display: block !important;
+  }
+
+  #side-article h3 {
+    display: block;
+
+    width: 100%;
+
+    margin: 2rem 0 0.75rem;
+    padding: 1rem 0 0;
+
+    box-sizing: border-box;
+
     text-align: center;
-    font-family: "LeagueSpartan-SemiBold", sans-serif;
-    text-decoration: none;
-    flex-grow: 1;
+
+    font-size: 1.35rem;
+    line-height: 1.1;
+
+    border-top: 1px solid black;
+  }
+
+  #side-article h3:first-child {
+    margin-top: 0;
+    border-top: none;
+  }
+
+  #side-article p {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 1.5rem;
+    padding: 0 0.25rem;
+
+    box-sizing: border-box;
+
+    font-family: serif;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    text-align: left;
+
+    /*
+      Prevent words from forcing the page
+      wider than the phone.
+    */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+
+  /*
+    Reset anything inside the article that might
+    have inherited desktop sizing.
+  */
+
+  #side-article > *,
+  #side-article h3,
+  #side-article p {
+    max-width: 100%;
+  }
+
 }
 
-.long-button .link-text {
-    margin: 0.75vw 0;
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media screen and (max-width: 400px) {
+
+  .newspaper {
+    padding: 0.75rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h4 {
+    font-size: 0.9rem;
+  }
+
+  #side-article h3 {
+    font-size: 1.2rem;
+  }
+
+  #side-article p {
+    font-size: 0.95rem;
+  }
+
+  #ez {
+    width: 65vw;
+    max-width: 250px;
+  }
+
 }
 
-.long-button .small-image {
-    width: 5vw; /*80px */
-    height: auto; /* Maintain aspect ratio */
-    align-self: flex-end;
-    margin-bottom: 2vw;
-}
-
-.name, .long-button {
-    flex-direction: column;
-}
-
-.button-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    /* height: calc(2 * 307.2px + 22px);*/
-    height: 66.75vh;
-}
-
-.button-row {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    right: 6vw;
-}
-
-.small-button {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 16.65vw;
-    height: 35vh;
-    background-color: white;
-    border-radius: 0.59vw; /* 8px */
-    text-decoration: none;
-    padding: 1.64vw; 
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-}    
-
-.small-button img {
-    margin-top: auto;
-    width: 60%;
-    border-radius: 0.59vw; /* 8px */
-}    
-
-.small-button .link-text {
-    margin-top: -2vw; /* 1.46vw; padding: 20px; */
-    padding: auto;
-    padding: 5vh;
-}
-
-.small-button:not(:last-child) {
-margin-right: 1.61vw; /* 22px */
-}
-
-.button-row:not(:last-child) {
-margin-bottom: 1.61vw; /* 22px */
-}
-
-@media (max-width: 1000px) {
-    body, html {
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y:auto;
-        align-items: center;
-        justify-items: flex-start;
-    }
-
-    .mobileMenu {
-        display: none;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        overflow: hidden;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .container .long-button{
-        align-self: flex-start;
-        width:89%
-    }
-
-    .container .small-button {
-        left: 7vw;
-        width: 87%;
-    }
-    .button-row, .button-group, .name-and-long-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%; /* Ensures full width */
-        height: auto;
-        margin-bottom: 1vw;
-        justify-content: flex-end;
-        box-sizing: border-box;
-    }
-
-    .long-button .link-text, .small-button .link-text {
-        font-size: 10vw;
-        text-align: center; /* Center text */
-        white-space: wrap; /* Prevent text wrapping */
-        overflow: hidden; /* Hide overflow text */
-        max-width: 100%; /* Ensure text doesn't overflow its container */
-    }
-    
-    .long-button .large-image {
-        margin-top: 4vw;
-        width: 75vw;
-        height: auto;
-    }
-
-    .long-button .small-image{
-        margin-bottom: 4vw;
-        width: 25vw;
-        height: auto;
-    }
-
-    .small-button, .long-button {
-        width: auto;
-        height: auto;
-        margin: 4vw 0;
-        border-radius: 4vw;
-    }
-
-    .name {
-        font-size: 13vw;
-        letter-spacing: 0.2em;
-        text-align: center;
-        left: 3vw;
-        padding: 2vw;
-    }
-
-    .banner__content {
-        width: 100%; /* still make it wider for mobile */
-        flex-direction: row;
-    }
-
-    .banner__text,
-    .banner__close {
-        font-size: 1.5em; /* keep font size consistent */
-    }
-}
-/* My viewport is 1536 x 841.983 */

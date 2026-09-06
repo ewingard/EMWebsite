@@ -1,9 +1,3 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 @font-face {
     font-family: 'ClearWerk';
     src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
@@ -23,18 +17,6 @@ body, html {
   src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
-}
-
-.accordion {
-    padding: 18px;
-    width: 100%;
-    text-align: left;      
-    border: none;
-    outline: none;
-    font-family: 'LeagueSpartan-SemiBold', sans-serif;
-    font-size: 1.2em;
-    transition: 0.4s;
-    cursor: pointer;
 }
 
 /* CREDITS TO W3SCHOOLS FOR THE BAR ANIMATION https://www.w3schools.com/howto/howto_css_menu_icon.asp */
@@ -64,8 +46,8 @@ body, html {
         display: block;
         color: transparent;
         position: fixed;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust for testing */
+        top: 20px; 
+        right: 20px;
         z-index: 100; 
         font-family: 'LeagueSpartan-SemiBold', sans-serif;
         color: white;
@@ -79,16 +61,16 @@ body, html {
       
       .menu-visible li {
         display: inline;
-        margin-left: 1.46vw; /* Space between links */
+        margin-left: 1.46vw;
       }
       
       .menu-visible a {
         text-decoration: none;
-        color: white; /* Adjust color to fit your design */
-        font-size: 1.5rem; /* Adjust size as needed */
+        color: white; 
+        font-size: 1.5rem;
       }
 
-            /* Mobile Nav Section! */
+                 /* Mobile Nav Section! */
     .mobileMenu {
       display: none;
     }
@@ -139,7 +121,7 @@ body, html {
         position: relative;
         padding: 1.51vw; /* 20px */
         flex-shrink: 0;
-        font-family: "ClearWerk", sans-serif;
+        font-family: "LeagueSpartan-SemiBold", sans-serif; /* Choose your desired font */
         color: #fff;
         letter-spacing: 0.2em;
         font-weight: 400;
@@ -153,24 +135,4 @@ body, html {
       font-size: 1.5vw;
     }
 
-    @media (max-width: 1000px) {
-      body, html {
-        overflow-y: auto;
-      }
-  
-      .mobileMenu {
-          display: block;
-          z-index: 101;
-      }
-
-      .menuButton {
-        display: none;
-      }
-
-      .name{
-        position: relative;
-        top: 3vw;
-        font-size: 2rem;
-        margin: 1em;
-      }
-    }
+    
