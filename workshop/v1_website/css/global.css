@@ -6,21 +6,21 @@ body, html {
 
 @font-face {
     font-family: 'ClearWerk';
-    src: url('/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
+    src: url('/workshop/v1_website/assets/fonts/Clearwerkkraftremix-vmK7.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LeagueSpartan-SemiBold';
-    src: url('/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
+    src: url('/workshop/v1_website/assets/fonts/LeagueSpartan-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'LeagueSpartan-Light';
-  src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
+  src: url('/workshop/v1_website/assets/fonts/LeagueSpartan-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
