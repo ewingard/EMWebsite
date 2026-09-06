@@ -65,20 +65,26 @@ header h1 {
 }
 
 header div:first-child {
-  margin-left: 8vw;
+  margin-left: 1vw;
 }
 
 header div:last-child {
-  margin-right: 8vw;
+  margin-right: 1vw;
 }
 
 header div {
-  padding: 12px;
+  padding: 10px;
   border: 2px solid;
 }
 
+  #issueBox {
+    max-width: 10vw;
+    text-wrap: auto;
+  }
+
 #typewriter {
   border: none;
+  align-self: center;
 }
 
 nav {
