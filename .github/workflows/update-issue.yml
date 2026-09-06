@@ -1,0 +1,81 @@
+name: Publish Issue Information
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  update-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ------------------------------------------------------------
+      # Calculate the next publication/issue number
+      # ------------------------------------------------------------
+
+      - name: Calculate issue information
+        id: issue
+        env:
+          PUSH_DATE: ${{ github.event.head_commit.timestamp }}
+        run: |
+          YEAR=$(date -u -d "$PUSH_DATE" +%Y)
+          DATE=$(date -u -d "$PUSH_DATE" +%Y-%m-%d)
+
+          # 2026 = Volume 1
+          # 2027 = Volume 2
+          # 2028 = Volume 3
+          VOLUME=$((YEAR - 2026 + 1))
+
+          echo "year=$YEAR" >> "$GITHUB_OUTPUT"
+          echo "volume=$VOLUME" >> "$GITHUB_OUTPUT"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+
+          echo "Publication:"
+          echo "  Year:   $YEAR"
+          echo "  Volume: $VOLUME"
+          echo "  Date:   $DATE"
+
+      # ------------------------------------------------------------
+      # Create the JSON file used by the website.
+      #
+      # This file exists ONLY in the GitHub Actions workspace.
+      # It is never committed to main.
+      # ------------------------------------------------------------
+
+      - name: Generate issue.json
+        env:
+          YEAR: ${{ steps.issue.outputs.year }}
+          VOLUME: ${{ steps.issue.outputs.volume }}
+          DATE: ${{ steps.issue.outputs.date }}
+        run: |
+          cat > issue.json << EOF
+          {
+            "year": $YEAR,
+            "volume": $VOLUME,
+            "issue": 1,
+            "date": "$DATE"
+          }
+          EOF
+
+          echo "Generated issue.json:"
+          cat issue.json
+
+      # ------------------------------------------------------------
+      # Deploy your website here.
+      #
+      # IMPORTANT:
+      # issue.json must be included in whatever directory you deploy.
+      # ------------------------------------------------------------
+
+      - name: Deploy website
+        run: |
+          echo "Deploy website here"
+          echo "issue.json will be included in the deployment."
