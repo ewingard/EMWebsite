@@ -84,37 +84,41 @@
     </article>
     </section>
     <script>
-        function loadIssue() {
-            fetch("/issue.json", { cache: "no-store" })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Could not load issue information.");
-                    }
-
-                    return response.json();
-                })
-                .then(data => {
-                    document.getElementById("issueNumber").textContent =
-                        `${data.year}, Vol. ${data.volume} Issue #${data.issue}`;
-
-                    const publicationDate = new Date(`${data.date}T00:00:00`);
-
-                    document.getElementById("lastUpdate").textContent =
-                        publicationDate.toLocaleDateString("en-US", {
-                            month: "long",
-                            day: "numeric",
-                            year: "numeric"
-                        });
-                })
-                .catch(error => {
-                    console.error("Unable to load issue information:", error);
-
-                    document.getElementById("issueNumber").textContent =
-                        "Issue information unavailable";
-
-                    document.getElementById("lastUpdate").textContent =
-                        "";
+        async function loadIssue() {
+            try {
+                const response = await fetch("./issue.json", {
+                    cache: "no-store"
                 });
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Could not load issue information (${response.status})`
+                    );
+                }
+
+                const data = await response.json();
+
+                document.getElementById("issueNumber").textContent =
+                    `${data.year}, Vol. ${data.volume} Issue #${data.issue}`;
+
+                const publicationDate = new Date(`${data.date}T00:00:00`);
+
+                document.getElementById("lastUpdate").textContent =
+                    `Last updated: ${publicationDate.toLocaleDateString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric"
+                    })}`;
+
+            } catch (error) {
+                console.error("Unable to load issue information:", error);
+
+                document.getElementById("issueNumber").textContent =
+                    "Issue information unavailable";
+
+                document.getElementById("lastUpdate").textContent =
+                    "Last updated: unavailable";
+            }
         }
 
         loadIssue();

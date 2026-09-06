@@ -1,24 +1,36 @@
-name: Publish Issue Information
+```yaml
+name: Deploy Website to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+  workflow_dispatch:
+
 permissions:
   contents: read
-  actions: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  update-issue:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # ------------------------------------------------------------
+      # Checkout website
+      # ------------------------------------------------------------
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
       # ------------------------------------------------------------
-      # Calculate the next publication/issue number
+      # Calculate issue information
       # ------------------------------------------------------------
 
       - name: Calculate issue information
@@ -41,13 +53,14 @@ jobs:
           echo "Publication:"
           echo "  Year:   $YEAR"
           echo "  Volume: $VOLUME"
+          echo "  Issue:  1"
           echo "  Date:   $DATE"
 
       # ------------------------------------------------------------
-      # Create the JSON file used by the website.
+      # Generate issue.json
       #
-      # This file exists ONLY in the GitHub Actions workspace.
-      # It is never committed to main.
+      # This file does NOT need to exist in the repository.
+      # It is generated during deployment.
       # ------------------------------------------------------------
 
       - name: Generate issue.json
@@ -69,13 +82,39 @@ jobs:
           cat issue.json
 
       # ------------------------------------------------------------
-      # Deploy your website here.
-      #
-      # IMPORTANT:
-      # issue.json must be included in whatever directory you deploy.
+      # Verify that issue.json exists
       # ------------------------------------------------------------
 
-      - name: Deploy website
+      - name: Verify website files
         run: |
-          echo "Deploy website here"
-          echo "issue.json will be included in the deployment."
+          echo "Website root:"
+          ls -la
+
+          echo ""
+          echo "issue.json:"
+          cat issue.json
+
+      # ------------------------------------------------------------
+      # Configure GitHub Pages
+      # ------------------------------------------------------------
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # ------------------------------------------------------------
+      # Upload website
+      # issue.json is included because it is in the root.
+      # ------------------------------------------------------------
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      # ------------------------------------------------------------
+      # Deploy website
+      # ------------------------------------------------------------
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+```
