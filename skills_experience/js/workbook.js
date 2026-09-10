@@ -1972,7 +1972,7 @@ const workbook = {
 
                 {
                     Certificates:
-                        "College of Charleston Life Coach Certification",
+                        "College of Charleston Life Design Coach Certification",
 
                     Provider:
                         "College of Charleston",
@@ -1981,7 +1981,10 @@ const workbook = {
                         2026,
 
                     Status:
-                        "Upcoming"
+                        "Complete",
+
+                    Link:
+                        "/assets/media/certificates/CofCLifeDesign.pdf"
                 },
 
                 {
