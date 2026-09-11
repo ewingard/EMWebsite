@@ -365,7 +365,7 @@ const projects = [
                     <div class="chart-row">
                         <div class="chart-block">
                             <h3 class="chart-title">
-                                Digital Library Objects Processed/Uploaded
+                                Objects Processed
                             </h3>
                             <div class="publication-chart-container">
                                 <canvas
@@ -378,15 +378,27 @@ const projects = [
                         </div>
                         <div class="chart-block">
                         <h3 class="chart-title">Uploads per Month</h3>
-                        <div class="publication-chart-container">
-                            <canvas
-                                id="uploads-month"
-                                class="project-chart"
-                                data-chart="uploads-month"
-                                aria-label="Line chart showing uploads per month (4 weeks)">
-                            </canvas>
+                            <div class="publication-chart-container">
+                                <canvas
+                                    id="uploads-month"
+                                    class="project-chart"
+                                    data-chart="uploads-month"
+                                    aria-label="Line chart showing uploads per month (4 weeks)">
+                                </canvas>
+                            </div>
                         </div>
                     </div>
+                    <div class="publication-chart-container" id="doublechart-container">
+                        <h3 class="chart-title">
+                            Work Complete per Domain
+                        </h3>
+                            <canvas
+                                id="workBreakdownChart"
+                                class="project-chart"
+                                data-chart="work-breakdown"
+                                aria-label="Uploads by work per month">
+                            </canvas>
+                        </div>
                 </p>`
             }
         ]
@@ -2375,7 +2387,7 @@ async function createObjectTypeChart(canvas) {
             maintainAspectRatio: false,
 
             layout: {
-                padding: 5
+                padding: 2
             },
 
             scales: {
@@ -2528,11 +2540,11 @@ async function createUploadsMonthChart(canvas) {
 
                 padding: {
 
-                    top: 8,
+                    top: 2,
 
-                    right: 5,
+                    right: 3,
 
-                    left: 5,
+                    left: 3,
 
                     bottom: 2
 
@@ -2643,6 +2655,286 @@ async function createUploadsMonthChart(canvas) {
         }
     });
 }
+
+/*
+=====================================================
+MONTHLY WORK CHART
+=====================================================
+
+Creates a stacked bar chart showing the number of
+research outputs by year and output type.
+
+HTML:
+
+data-chart="work-breakdown"
+id="workBreakdownChart"
+=====================================================
+*/
+
+async function createWorkCompletedChart(canvas) {
+
+    if (!canvas) {
+        console.warn("Work Completed chart: canvas was not found.");
+        return;
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error("Work Completed chart: Chart.js is not loaded.");
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart = Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    // ------------------------------------------
+    // Replace these with your actual totals
+    // ------------------------------------------
+
+    const values = {
+        digitization: 5274,
+        metadata: 6473,
+        uploads: 17444,
+        fixes: 23962
+    };
+
+    const total =
+        values.digitization +
+        values.metadata +
+        values.uploads +
+        values.fixes;
+
+    const percentages = {
+        digitization: (values.digitization / total) * 100,
+        metadata: (values.metadata / total) * 100,
+        uploads: (values.uploads / total) * 100,
+        fixes: (values.fixes / total) * 100
+    };
+
+    new Chart(canvas, {
+
+        type: "bar",
+
+        data: {
+
+            labels: [
+                "Digitization",
+                "Metadata",
+                "Uploads",
+                "Fixes"
+            ],
+
+            datasets: [
+                {
+                    data: [
+                        values.digitization,
+                        values.metadata,
+                        values.uploads,
+                        values.fixes
+                    ],
+
+                    backgroundColor: [
+                        "#ac3713",
+                        "#b88e1b",
+                        "#196616",
+                        "#115979"
+                    ],
+
+                    borderRadius: 4,
+
+                    borderSkipped: false,
+
+                    barThickness: 18,
+
+                    maxBarThickness: 18
+                }
+            ]
+
+        },
+
+        options: {
+
+            indexAxis: "y",
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            animation: false,
+
+            layout: {
+                padding: {
+                    top: 2,
+                    right: 8,
+                    bottom: 2,
+                    left: 0
+                }
+            },
+
+            scales: {
+
+                x: {
+                    display: false,
+
+                    beginAtZero: true,
+
+                    grid: {
+                        display: false
+                    }
+                },
+
+                y: {
+                    display: true,
+
+                    grid: {
+                        display: false
+                    },
+
+                    border: {
+                        display: false
+                    },
+
+                    ticks: {
+                        color: "#555",
+
+                        font: {
+                            size: 9
+                        },
+
+                        padding: 4
+                    }
+                }
+
+            },
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+
+                    displayColors: false,
+
+                    callbacks: {
+
+                        title(context) {
+                            return context[0].label;
+                        },
+
+                        label(context) {
+
+                            const index = context.dataIndex;
+
+                            const keys = [
+                                "digitization",
+                                "metadata",
+                                "uploads"
+                            ];
+
+                            const key = keys[index];
+
+                            return [
+                                `Count: ${values[key].toLocaleString()}`,
+                                `Share: ${percentages[key].toFixed(1)}%`
+                            ];
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+        plugins: [
+
+            {
+
+                id: "workCompletedLabels",
+
+                afterDatasetsDraw(chart) {
+
+                    const {
+                        ctx
+                    } = chart;
+
+                    const meta = chart.getDatasetMeta(0);
+
+                    const keys = [
+                        "digitization",
+                        "metadata",
+                        "uploads",
+                        "fixes"
+                    ];
+
+                    ctx.save();
+
+                    ctx.font = "600 8px sans-serif";
+
+                    ctx.textBaseline = "middle";
+
+                    meta.data.forEach((bar, index) => {
+
+                        const key = keys[index];
+
+                        const count =
+                            values[key].toLocaleString();
+
+                        const percentage =
+                            percentages[key].toFixed(0) + "%";
+
+                        const label =
+                            `${count} (${percentage})`;
+
+                        // Keep the label inside the bar when
+                        // the bar is wide enough.
+                        const textWidth =
+                            ctx.measureText(label).width;
+
+                        const inside =
+                            bar.width > textWidth + 12;
+
+                        ctx.fillStyle =
+                            inside ? "#ffffff" : "#555555";
+
+                        ctx.textAlign =
+                            inside ? "right" : "left";
+
+                        const x = inside
+                            ? bar.x - 6
+                            : bar.x + 6;
+
+                        ctx.fillText(
+                            label,
+                            x,
+                            bar.y
+                        );
+
+                    });
+
+                    ctx.restore();
+                }
+
+            }
+
+        ]
+
+    });
+
+}
+
+
 
     /* PUBLICATIONS PROJECT CHARTS*/
 
@@ -5349,6 +5641,20 @@ async function initializeProjectCharts(
             case "uploads-month":
 
                 await createUploadsMonthChart(
+                    canvas
+                );
+
+                break;
+
+            /*
+            -----------------------------------------
+            Work per Month Breakdown chart
+            -----------------------------------------
+            */
+
+            case "work-breakdown":
+
+                await createWorkCompletedChart(
                     canvas
                 );
 
