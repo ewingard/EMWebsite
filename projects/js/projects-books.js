@@ -124,6 +124,17 @@ document.addEventListener(
                 "next-page"
             );
 
+        const libraryNav =
+            document.querySelector(
+                ".library-nav"
+            );
+
+
+        const catalogToggle =
+            document.querySelector(
+                ".catalog-toggle"
+            );
+
 
         /* =================================================
            VALIDATION
@@ -206,20 +217,41 @@ document.addEventListener(
             );
 
 
-        if (
-            missingElements.length
-        ) {
+            if (
+                missingElements.length
+            ) {
 
-            console.error(
-                "Projects book engine: missing DOM elements:",
-                missingElements.map(
-                    ([name]) => name
-                )
-            );
+                console.error(
+                    "Projects book engine: missing DOM elements:",
+                    missingElements.map(
+                        ([name]) => name
+                    )
+                );
 
-            return;
+                return;
 
-        }
+            }
+
+            if (
+        libraryNav &&
+        catalogToggle
+    ) {
+
+        catalogToggle.addEventListener(
+            "click",
+            event => {
+
+                event.stopPropagation();
+
+                libraryNav.classList.toggle(
+                    "is-open"
+                );
+
+            }
+        );
+
+    }
+
 
 
         /* =================================================
@@ -875,10 +907,19 @@ document.addEventListener(
                 * Convert the page index to the appropriate spread.
                 */
 
-                spreadIndex =
-                    pageIndex % 2 === 0
-                        ? pageIndex
-                        : pageIndex - 1;
+                if (isSinglePageMode()) {
+                    spreadIndex =
+                        pageIndex;
+
+                } else {
+
+                    spreadIndex =
+                        pageIndex % 2 === 0
+                            ? pageIndex
+                            : pageIndex - 1;
+
+                }
+
 
                 /*
                 * Wait until the book has opened before rendering
@@ -1133,6 +1174,18 @@ document.addEventListener(
 
         }
 
+        /* =================================================
+            RESPONSIVE MODE
+            ================================================= */
+
+            function isSinglePageMode() {
+
+                return window.matchMedia(
+                    "(max-width: 1200px)"
+                ).matches;
+
+            }
+
 
         /* =================================================
            GET CURRENT SPREAD
@@ -1144,21 +1197,35 @@ document.addEventListener(
                 getProjectPages();
 
 
+            if (isSinglePageMode()) {
+
+                return {
+
+                    left: null,
+
+                    right:
+                        pages[spreadIndex] ||
+                        null
+
+                };
+
+            }
+
+
             return {
 
                 left:
-                    pages[
-                        spreadIndex
-                    ] || null,
+                    pages[spreadIndex] ||
+                    null,
 
                 right:
-                    pages[
-                        spreadIndex + 1
-                    ] || null
+                    pages[spreadIndex + 1] ||
+                    null
 
             };
 
         }
+
 
 
         /* =================================================
@@ -1286,17 +1353,47 @@ document.addEventListener(
 
         function updateNavigation() {
 
-        const pages =
-            getProjectPages();
+            const pages =
+                getProjectPages();
+
+
+            if (spreadIndex === -1) {
+
+                previousButton.disabled = true;
+
+                nextButton.disabled =
+                    pages.length === 0;
+
+                return;
+
+            }
+
+
+            if (isSinglePageMode()) {
+
+                previousButton.disabled =
+                    spreadIndex <= 0;
+
+                nextButton.disabled =
+                    spreadIndex >= pages.length - 1;
+
+                return;
+
+            }
+
+
+            /*
+            * Desktop two-page navigation.
+            */
 
             previousButton.disabled =
-                spreadIndex <= -1;
+                spreadIndex <= 0;
 
             nextButton.disabled =
-                spreadIndex >= 0 &&
                 spreadIndex + 2 >= pages.length;
 
         }
+
 
 
         /* =================================================
@@ -1602,373 +1699,292 @@ document.addEventListener(
         COVER TURN
         ================================================= */
 
-        function turnCover() {
+function turnPage(direction) {
 
-            if (
-                !activeProject ||
-                isAnimating ||
-                spreadIndex !== -1
-            ) {
-
-                return;
-
-            }
+    if (
+        !activeProject ||
+        isAnimating
+    ) {
+        return;
+    }
 
 
-            isAnimating = true;
+    /*
+     * ================================================
+     * COVER
+     * ================================================
+     */
+
+    if (spreadIndex === -1) {
+
+        if (direction === "next") {
+            turnCover();
+        }
+
+        return;
+    }
 
 
-            /*
-            * The cover itself performs the navigation.
-            * Keep it visible while it rotates so there is
-            * never a moment where the book simply disappears.
-            */
+    /*
+     * ================================================
+     * FIRST PAGE -> COVER
+     * ================================================
+     */
 
-            viewer.classList.add(
-                "opening-book"
-            );
+    if (
+        direction === "previous" &&
+        spreadIndex === 0
+    ) {
 
+        if (isSinglePageMode()) {
 
-            bookCover.classList.add(
-                "cover-turning"
-            );
+            returnToCoverInstantly();
 
+        } else {
 
-            setTimeout(
-                () => {
-
-                    if (!activeProject) {
-                        return;
-                    }
-
-
-                    spreadIndex = 0;
-
-
-                    /*
-                    * The first spread was already rendered while
-                    * the cover was closed.
-                    */
-
-                    openBook.classList.add(
-                        "visible"
-                    );
-
-
-                    renderSpread(
-                        false
-                    );
-
-
-                    requestAnimationFrame(
-                        () => {
-
-                            viewer.classList.remove(
-                                "opening-book"
-                            );
-
-
-                            viewer.classList.add(
-                                "book-open"
-                            );
-
-
-                            bookCover.classList.remove(
-                                "is-visible"
-                            );
-
-
-                            bookCover.classList.remove(
-                                "cover-turning"
-                            );
-
-                        }
-                    );
-
-                },
-                TIMING.coverOpen
-            );
-
-
-            setTimeout(
-                () => {
-
-                    isAnimating = false;
-
-                    updateNavigation();
-
-                },
-                TIMING.coverOpen + 40
-            );
+            turnBackToCover();
 
         }
 
+        return;
+    }
 
-        /* =================================================
-        PAGE TURN
-        ================================================= */
 
-        function turnPage(
-            direction
+    const pages =
+        getProjectPages();
+
+
+    /*
+     * ================================================
+     * SINGLE-PAGE MODE
+     *
+     * Tablet + mobile:
+     * one page at a time.
+     * ================================================
+     */
+
+    if (isSinglePageMode()) {
+
+        const destinationIndex =
+            direction === "next"
+                ? spreadIndex + 1
+                : spreadIndex - 1;
+
+
+        if (
+            destinationIndex < 0 ||
+            destinationIndex >= pages.length
         ) {
 
-            if (
-                !activeProject ||
-                isAnimating
-            ) {
-
-                return;
-
-            }
-
-
-            /*
-            * COVER
-            *
-            * The cover is part of the navigation sequence.
-            */
-
-            if (
-                spreadIndex === -1
-            ) {
-
-                if (
-                    direction === "next"
-                ) {
-
-                    turnCover();
-
-                }
-
-                return;
-
-            }
-
-
-            /*
-            * Once we're on the first spread, the previous
-            * arrow physically turns the first page back into
-            * the cover.
-            */
-
-            if (
-                direction === "previous" &&
-                spreadIndex === 0
-            ) {
-
-                turnBackToCover();
-
-                return;
-
-            }
-
-
-            const pages =
-                getProjectPages();
-
-
-            if (
-                direction === "next" &&
-                spreadIndex + 2 >= pages.length
-            ) {
-
-                return;
-
-            }
-
-
-            if (
-                direction === "previous" &&
-                spreadIndex <= 0
-            ) {
-
-                return;
-
-            }
-
-
-            isAnimating = true;
-
-
-            /*
-            * Remember the current spread before changing it.
-            */
-
-            const currentSpread =
-                getCurrentSpread();
-
-
-            /*
-            * Calculate the destination spread.
-            */
-
-            const destinationIndex =
-                direction === "next"
-                    ? spreadIndex + 2
-                    : spreadIndex - 2;
-
-
-            const destinationSpread = {
-
-                left:
-                    pages[destinationIndex] ||
-                    null,
-
-                right:
-                    pages[destinationIndex + 1] ||
-                    null
-
-            };
-
-
-            /*
-            * The sheet being physically turned:
-            *
-            * NEXT:
-            *   current right page -> destination left page
-            *
-            * PREVIOUS:
-            *   current left page -> destination right page
-            */
-
-            const frontPage =
-                direction === "next"
-                    ? currentSpread.right
-                    : currentSpread.left;
-
-
-            const backPage =
-                direction === "next"
-                    ? destinationSpread.left
-                    : destinationSpread.right;
-
-
-            const turningPage =
-                document.createElement(
-                    "div"
-                );
-
-
-            turningPage.className =
-                `page-flip ${direction}`;
-
-
-            const turningFront =
-                document.createElement(
-                    "div"
-                );
-
-
-            turningFront.className =
-                "page-flip-front";
-
-
-            const turningBack =
-                document.createElement(
-                    "div"
-                );
-
-
-            turningBack.className =
-                "page-flip-back";
-
-
-            /*
-            * Build the two real sides of the sheet.
-            */
-
-            if (frontPage) {
-
-                turningFront.appendChild(
-                    createPageSurface(
-                        frontPage
-                    )
-                );
-
-            }
-
-
-            if (backPage) {
-
-                turningBack.appendChild(
-                    createPageSurface(
-                        backPage
-                    )
-                );
-
-            }
-
-
-            turningPage.appendChild(
-                turningFront
-            );
-
-
-            turningPage.appendChild(
-                turningBack
-            );
-
-
-            pageFlipLayer.innerHTML =
-                "";
-
-
-            pageFlipLayer.appendChild(
-                turningPage
-            );
-
-
-            /*
-            * Keep the old spread underneath until the sheet
-            * has passed the point where the new spread can
-            * safely take over.
-            */
-
-            const midpoint =
-                Math.round(
-                    TIMING.pageTurn * 0.68
-                );
-
-
-            setTimeout(
-                () => {
-
-                    spreadIndex =
-                        destinationIndex;
-
-
-                    renderSpread(
-                        false
-                    );
-
-                },
-                midpoint
-            );
-
-
-            setTimeout(
-                () => {
-
-                    if (
-                        turningPage.parentNode
-                    ) {
-
-                        turningPage.remove();
-
-                    }
-
-
-                    isAnimating =
-                        false;
-
-
-                    updateNavigation();
-
-                },
-                TIMING.pageTurn + 30
-            );
+            return;
 
         }
+
+
+        isAnimating = true;
+
+
+        spreadIndex =
+            destinationIndex;
+
+
+        renderSpread(false);
+
+
+        setTimeout(
+            () => {
+
+                isAnimating = false;
+
+                updateNavigation();
+
+            },
+            80
+        );
+
+
+        return;
+    }
+
+
+    /*
+     * ================================================
+     * DESKTOP TWO-PAGE MODE
+     * ================================================
+     */
+
+    if (
+        direction === "next" &&
+        spreadIndex + 2 >= pages.length
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        direction === "previous" &&
+        spreadIndex <= 0
+    ) {
+
+        return;
+
+    }
+
+
+    isAnimating = true;
+
+
+    const currentSpread =
+        getCurrentSpread();
+
+
+    const destinationIndex =
+        direction === "next"
+            ? spreadIndex + 2
+            : spreadIndex - 2;
+
+
+    const destinationSpread = {
+
+        left:
+            pages[destinationIndex] ||
+            null,
+
+        right:
+            pages[destinationIndex + 1] ||
+            null
+
+    };
+
+
+    const frontPage =
+        direction === "next"
+            ? currentSpread.right
+            : currentSpread.left;
+
+
+    const backPage =
+        direction === "next"
+            ? destinationSpread.left
+            : destinationSpread.right;
+
+
+    const turningPage =
+        document.createElement(
+            "div"
+        );
+
+
+    turningPage.className =
+        `page-flip ${direction}`;
+
+
+    const turningFront =
+        document.createElement(
+            "div"
+        );
+
+
+    turningFront.className =
+        "page-flip-front";
+
+
+    const turningBack =
+        document.createElement(
+            "div"
+        );
+
+
+    turningBack.className =
+        "page-flip-back";
+
+
+    if (frontPage) {
+
+        turningFront.appendChild(
+            createPageSurface(
+                frontPage
+            )
+        );
+
+    }
+
+
+    if (backPage) {
+
+        turningBack.appendChild(
+            createPageSurface(
+                backPage
+            )
+        );
+
+    }
+
+
+    turningPage.appendChild(
+        turningFront
+    );
+
+
+    turningPage.appendChild(
+        turningBack
+    );
+
+
+    pageFlipLayer.innerHTML =
+        "";
+
+
+    pageFlipLayer.appendChild(
+        turningPage
+    );
+
+
+    const midpoint =
+        Math.round(
+            TIMING.pageTurn * 0.68
+        );
+
+
+    setTimeout(
+        () => {
+
+            spreadIndex =
+                destinationIndex;
+
+
+            renderSpread(false);
+
+        },
+        midpoint
+    );
+
+
+    setTimeout(
+        () => {
+
+            if (
+                turningPage.parentNode
+            ) {
+
+                turningPage.remove();
+
+            }
+
+
+            isAnimating =
+                false;
+
+
+            updateNavigation();
+
+        },
+        TIMING.pageTurn + 30
+    );
+
+}
 
         /* =================================================
         FIRST SPREAD -> COVER
@@ -2181,6 +2197,248 @@ document.addEventListener(
 
 
         }
+
+        /* =================================================
+            MOBILE + TABLET
+            RETURN TO COVER WITHOUT ANIMATION
+            ================================================= */
+
+            function returnToCoverInstantly() {
+
+                if (
+                    !activeProject ||
+                    isAnimating
+                ) {
+
+                    return;
+
+                }
+
+
+                isAnimating = true;
+
+
+                /*
+                * Remove any page-flip remnants.
+                */
+
+                pageFlipLayer.innerHTML =
+                    "";
+
+
+                /*
+                * Reset the page.
+                */
+
+                spreadIndex =
+                    -1;
+
+
+                /*
+                * Hide the open book.
+                */
+
+                openBook.classList.remove(
+                    "visible"
+                );
+
+
+                /*
+                * Show the cover.
+                */
+
+                bookCover.classList.add(
+                    "is-visible"
+                );
+
+
+                viewer.classList.remove(
+                    "book-open",
+                    "opening-book",
+                    "returning-cover",
+                    "closing-book"
+                );
+
+
+                viewer.classList.add(
+                    "cover-visible"
+                );
+
+
+                bookCover.classList.remove(
+                    "cover-turning",
+                    "cover-turning-back"
+                );
+
+
+                updateNavigation();
+
+
+                isAnimating = false;
+
+            }
+
+            /* =================================================
+                COVER → FIRST PAGE
+                ================================================= */
+
+function turnCover() {
+
+    if (
+        !activeProject ||
+        isAnimating ||
+        spreadIndex !== -1
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+     * =================================================
+     * MOBILE + TABLET
+     *
+     * Open immediately.
+     * No cover flip.
+     * =================================================
+     */
+
+    if (isSinglePageMode()) {
+
+        isAnimating = true;
+
+
+        spreadIndex = 0;
+
+
+        /*
+         * The first page is already rendered.
+         */
+
+        renderSpread(
+            false
+        );
+
+
+        openBook.classList.add(
+            "visible"
+        );
+
+
+        bookCover.classList.remove(
+            "is-visible",
+            "cover-turning"
+        );
+
+
+        viewer.classList.remove(
+            "cover-visible",
+            "opening-book"
+        );
+
+
+        viewer.classList.add(
+            "book-open"
+        );
+
+
+        updateNavigation();
+
+
+        isAnimating = false;
+
+
+        return;
+
+    }
+
+
+    /*
+     * =================================================
+     * DESKTOP
+     *
+     * Keep the existing physical cover turn.
+     * =================================================
+     */
+
+        isAnimating = true;
+
+
+        viewer.classList.add(
+            "opening-book"
+        );
+
+
+        bookCover.classList.add(
+            "cover-turning"
+        );
+
+
+        setTimeout(
+            () => {
+
+                if (!activeProject) {
+                    return;
+                }
+
+
+                spreadIndex = 0;
+
+
+                openBook.classList.add(
+                    "visible"
+                );
+
+
+                renderSpread(
+                    false
+                );
+
+
+                requestAnimationFrame(
+                    () => {
+
+                        viewer.classList.remove(
+                            "opening-book"
+                        );
+
+
+                        viewer.classList.add(
+                            "book-open"
+                        );
+
+
+                        bookCover.classList.remove(
+                            "is-visible"
+                        );
+
+
+                        bookCover.classList.remove(
+                            "cover-turning"
+                        );
+
+                    }
+                );
+
+            },
+            TIMING.coverOpen
+        );
+
+
+        setTimeout(
+            () => {
+
+                isAnimating = false;
+
+                updateNavigation();
+
+            },
+            TIMING.coverOpen + 40
+        );
+
+    }
+
 
 
         /* =================================================

@@ -701,3 +701,105 @@
         opacity .4s ease,
         transform .45s cubic-bezier(.2,.8,.2,1);
 }
+
+/* =====================================================
+   MOBILE + TABLET — NO PAGE FLIP
+   ===================================================== */
+
+@media (max-width: 1024px) {
+
+    /*
+     * Completely disable the physical page-turn layer.
+     *
+     * The page itself will be changed by JS without
+     * showing the desktop flip animation.
+     */
+
+    .page-flip-layer {
+        display: none !important;
+    }
+
+
+    .page-flip,
+    .page-flip.next,
+    .page-flip.previous {
+        display: none !important;
+
+        animation: none !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /*
+     * Do not animate the actual page when changing
+     * between mobile/tablet pages.
+     */
+
+    .book-page,
+    .book-page.page-entering {
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+
+    /*
+     * Prevent the desktop gutter/depth effect.
+     */
+
+    .book-gutter {
+        display: none !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /*
+     * The spread is now just a single-page container.
+     */
+
+    .open-book-spread {
+        transition: none !important;
+        transform: none !important;
+        display: block;
+    }
+
+    .book-page-left {
+        display: none !important;
+    }
+
+    .book-page-right {
+        display: block !important;
+
+        width: 100%;
+        height: 100%;
+
+        flex: none;
+    }
+
+
+    /*
+     * Don't let the desktop cover-turn animation
+     * happen on mobile/tablet either.
+     *
+     * If you want the cover itself to open instantly,
+     * this removes that animation as well.
+     */
+
+    .book-viewer.opening-book .book-cover.cover-turning {
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    .book-viewer.returning-cover .book-cover.cover-turning-back {
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+}

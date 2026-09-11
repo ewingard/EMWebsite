@@ -1364,10 +1364,10 @@ body {
 
 
 /* =====================================================
-   MOBILE
+   MOBILE + TABLET LAYOUT
 ===================================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
 
     /*
      * Stack the two publication charts vertically.
@@ -1460,9 +1460,9 @@ body {
     opacity: .75;
 }
 
-
 /* =====================================================
    PAGE FLIP LAYER
+   Desktop only
 ===================================================== */
 
 .page-flip-layer {
@@ -1474,7 +1474,7 @@ body {
 
     z-index: 50;
 
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -1489,24 +1489,11 @@ body {
     height:
         var(--cover-height);
 
-    background:
-        linear-gradient(
-            90deg,
-            #eee2c8,
-            #faf3e3 50%,
-            #ded1b5
-        );
+    transform-style: preserve-3d;
 
-    border:
-        1px solid
-        rgba(80,55,30,.15);
+    transform-origin: left center;
 
-    box-shadow:
-        0 8px 18px
-        rgba(45,30,15,.15);
-
-    transform-origin:
-        left center;
+    pointer-events: none;
 }
 
 
@@ -1525,6 +1512,18 @@ body {
         right center;
 }
 
+
+/*
+ * Mobile and tablet never render the flip layer.
+ */
+
+@media (max-width: 1024px) {
+
+    .page-flip-layer {
+        display: none !important;
+    }
+
+}
 
 /* =====================================================
    CLOSE
@@ -1716,52 +1715,161 @@ body {
     ================================================= */
 
     .library-nav {
-        position: sticky;
+    position: relative;
 
-        top: 0;
-        left: auto;
+    top: auto;
+    left: auto;
 
-        width: calc(100% + 30px);
+    width: calc(100% + 30px);
 
-        margin-left: -15px;
+    margin-left: -15px;
+    margin-bottom: 0;
 
-        padding: 0;
+    padding: 0;
 
-        border:
-            0
-            0
-            2px
-            0;
+    border:
+        0
+        0
+        2px
+        0;
 
-        border-radius: 0;
+    border-radius: 0;
 
-        z-index: 4500;
+    z-index: 100;
 
-        /*
-         * The navigation itself should not push the
-         * bookshelf sideways or alter its width.
-         */
-        box-shadow:
-            0 4px 12px
-            rgba(45, 27, 15, .3);
+    box-shadow:
+        0 4px 12px
+        rgba(45, 27, 15, .3);
+}
+
+
+/* =================================================
+   CATALOG HEADER
+================================================= */
+
+.nav-label {
+    min-height: 58px;
+
+    width: 100%;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        .1rem
+        .7rem;
+
+    cursor: pointer;
+}
+
+
+/* =================================================
+   CATALOG LINKS
+================================================= */
+
+.nav-drawers {
+    display: none;
+
+    margin: 0;
+
+    padding:
+        .6rem;
+
+    gap: .4rem;
+
+    background:
+        rgba(57, 34, 21, .98);
+}
+
+
+/*
+ * When the catalog is open, its height grows
+ * naturally and pushes everything below it down.
+ */
+
+.library-nav.is-open .nav-drawers {
+    display: flex;
+}
+
+    /* =================================================
+    NAVIGATION CARDS
+    ================================================= */
+
+    .nav-card {
+        width: 100%;
+
+        min-height: 52px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: .7rem;
+
+        padding:
+            3rem
+            .7rem;
+
+        white-space: nowrap;
+
+        transform: none;
+
+        border-radius: 2px;
+    }
+
+
+    .nav-card:hover {
+        transform: none;
+    }
+
+
+    .nav-card:active {
+        transform:
+            scale(.98);
     }
 
 
     /* =================================================
-       CATALOG HEADER
-       
-       Your existing .nav-label becomes the visible
-       "EZRA'S CATALOG" bar.
+    SPACE AFTER CATALOG
     ================================================= */
 
-    .nav-label {
-    min-height: 58px;
-    width: 99.9%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .1rem .2rem;
-    cursor: pointer;
+    /* =================================================
+    HEADER
+    ================================================= */
+
+    .page-header {
+        width: 100%;
+        max-width: 600px;
+
+        margin:
+            0 auto 35px;
+
+        padding-top:
+            80px 0 0;
+
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size:
+            clamp(32px, 10vw, 46px);
+
+        line-height:
+            1.05;
+    }
+
+    .intro {
+        max-width: 100%;
+
+        font-size:
+            16px;
+
+        line-height:
+            1.55;
     }
 
     .nav-label > span:first-child {
@@ -1898,47 +2006,6 @@ body {
 
         color:
             #302116;
-    }
-
-
-    /* =================================================
-       HEADER
-       
-       Completely reset any desktop centering/offset.
-    ================================================= */
-
-    .page-header {
-        width: 100%;
-
-        max-width: 600px;
-
-        margin:
-            45px auto
-            35px;
-
-        padding: 0;
-
-        text-align: center;
-    }
-
-
-    .page-header h1 {
-        font-size:
-            clamp(32px, 10vw, 46px);
-
-        line-height:
-            1.05;
-    }
-
-
-    .intro {
-        max-width: 100%;
-
-        font-size:
-            16px;
-
-        line-height:
-            1.55;
     }
 
 
@@ -2508,25 +2575,9 @@ body {
 
         margin-left:
             -10px;
+        margin-bottom: 40px;
     }
 
-
-    .page-header {
-        margin-top:
-            35px;
-    }
-
-
-    .page-header h1 {
-        font-size:
-            32px;
-    }
-
-
-    .intro {
-        font-size:
-            15px;
-    }
 
 
     .book-wrapper {
@@ -2573,4 +2624,175 @@ body {
         right: 50%;
         left: 48%;
     }
+}
+
+/* =====================================================
+   TABLET — COLLAPSED CATALOG
+===================================================== */
+
+@media (min-width: 701px) and (max-width: 1200px) {
+
+    .library-nav {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        border:
+            0 0 2px 0;
+
+        border-radius: 0;
+
+        z-index: 4500;
+
+        box-shadow:
+            0 4px 12px
+            rgba(45, 27, 15, .3);
+    }
+
+    /* =================================================
+    SPACE AFTER CATALOG / PAGE HEADER
+    ================================================= */
+
+    .nav-label {
+
+        min-height: 58px;
+
+        width: 100%;
+
+        display: flex !important;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding:
+            .1rem
+            1rem;
+
+        cursor: pointer;
+    }
+
+
+    .nav-label > span:first-child {
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: baseline;
+
+        gap: .4rem;
+
+        white-space: nowrap;
+
+    }
+
+
+    .nav-label-small {
+
+        display: inline-block !important;
+
+        font-size: .65rem;
+
+        letter-spacing: .16em;
+
+        margin: 0;
+
+        white-space: nowrap;
+
+    }
+
+
+    .nav-label-title {
+
+        display: inline-block !important;
+
+        font-size: 1.25rem;
+
+        letter-spacing: .06em;
+
+        margin: 0;
+
+        white-space: nowrap;
+
+    }
+
+
+    .catalog-toggle {
+
+        display: block;
+
+        flex-shrink: 0;
+
+        margin: 0;
+
+    }
+
+
+    /*
+     * Closed by default.
+     */
+
+    .nav-drawers {
+
+        display: none;
+
+        margin: 0;
+
+        padding: .5rem;
+
+        gap: .4rem;
+
+        background:
+            rgba(57, 34, 21, .98);
+
+    }
+
+
+    /*
+     * Open when JS adds .is-open.
+     */
+
+    .library-nav.is-open
+    .nav-drawers {
+
+        display: flex;
+
+    }
+
+
+    .nav-card {
+
+        width: 100%;
+
+        min-height: 52px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: .7rem;
+
+        padding:
+            .65rem
+            .7rem;
+
+        transform: none;
+
+    }
+
+
+    .nav-card:hover {
+
+        transform: none;
+
+    }
+
 }
