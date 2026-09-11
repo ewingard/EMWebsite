@@ -423,7 +423,13 @@ const projects = [
                 title: "Digital Library Analyst",
 
                 content: `<p>
-                    
+                    As the Digital Library Analyst for the Lowcountry Digital Library at the College of Charleston, I...
+                    <ul>
+                        <li>Prepare materials for ingestion by digitizing materials, processing images, creating and quality checking metadata, and uploading to our repository/server</li>
+                        <li>Support the Digital Services Coordinator with IT and backend management of 12 websites, 2 servers, and other triage, as needed.</li>
+                        <li>Fix errors in LCDL material in the catalog and ensure parity between LCDL and SCDL material, collection/institution homepages.</li>
+                        <li>Fulfill partner requests for archival masters and fixes</li>
+                        <li>Create and edit documentation for manuals, including a Photoshop manual, Digitization manual, and an Oral History pipeline manual</li>
                 </p>`
             },
 
@@ -488,6 +494,7 @@ const projects = [
 
                 content: `
                 <p>
+                    Parity update 54% of LCDL materials in SCDL
                 </p>`
             },
 
