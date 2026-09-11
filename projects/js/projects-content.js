@@ -367,7 +367,7 @@ const projects = [
             {
                 number: 1,
 
-                label: "",
+                label: "Stats and Charts",
 
                 title: "Digital Library Work",
 
@@ -413,7 +413,172 @@ const projects = [
                             </canvas>
                         </div>
                 </p>`
-            }
+            },
+
+            {
+                number: 2,
+
+                label: "College of Charleston Libraries",
+
+                title: "Digital Library Analyst",
+
+                content: `<p>
+
+                </p>`
+            },
+
+            {
+                number: 3,
+
+                label: "Libraries vs. Archives",
+
+                title:"What is the Difference between a Library and an Archive?",
+
+                content: `<p>
+                Libraries:
+                <ul>
+                    <li></li>
+                </ul>
+                Archives:
+                <ul>
+                    <li></li>
+                </ul>
+
+                </p>`
+            },
+
+            {
+                number: 4,
+
+                label: "Lowcountry Digital Library/Archive",
+
+                title: "Where the Lowcountry Digital Library Fits",
+
+                content: `<p>
+                    The Lowcountry Digital Library may look like a digital archive based on the prior descriptions, but given in the name,
+                    it is a digital *library.*  LCDL engages in the curated collection of digitized material from Special Collections and other partner
+                    organizations to provide primary source material related to the Lowcountry, South Carolina, and other ties to the region.
+                </p>`
+            },
+
+            {
+                number: 5,
+
+                label: "Digital Library Tasks",
+
+                title: "Collection Processing and Ingestion",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 6,
+
+                label: "Digital Library Tasks",
+
+                title: "Fixes and Parity with SCDL",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 7,
+
+                label: "Digital Library Tasks",
+
+                title: "IT Triage and Website/Server Management",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 8,
+
+                label: "Digital Library Tasks",
+
+                title: "DubBot and Accessibility",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 9,
+
+                label: "Digital Library Tasks",
+
+                title: "Partner Reference and Requests",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 10,
+
+                label: "Digital Library Tasks",
+
+                title: "Documentation",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 11,
+
+                label: "Digital Library Tasks",
+
+                title: "Documentation",
+
+                content: `
+                <p>
+                </p>`
+            },
+
+            {
+                number: 12,
+
+                label: "Digital Library Tasks",
+
+                title: "Professional Development and Associations",
+
+                content: `
+                <p>
+                <ul>
+                    <li>I became a member of the CALM (Charleston Archives, Libraries, and Museums) Council in August 2026.</li>
+                    <ul>
+                        <li>Workshops, meetings, and volunteer opportunities with partnering organizations</li>
+                    </ul>
+                    <li>I have attended the <a href="https://www.charleston-hub.com/" target="_blank">Charleston Conference</a> <!--two years in a row--> </li>
+                    <li>I have presented at the LibLearning Retreat, a 2-day symposium hosted by the College of Charleston Libraries</li>
+                    <ul>
+                        <li>Citation listed in my <a href="#publications" target="_blank">Publications</a> project book. <a href="/assets/media/experience/LibLearning2026_DigitalLib.pdf" target="_blank">Presentation <i class="fa-solid fa-file-powerpoint" alt="powerpoint icon"></i></a></li>
+                    </ul>
+                    <li>Attended a tour of the <a href="https://charlestonlibrarysociety.org/legacy-conservation/" target="_blank">Charleston Library Society's book conservation workshop</a>.</li>
+                </p>`
+            },
+
+            // {
+            //     number: 12,
+
+            //     label: "Digital Library Tasks",
+
+            //     title: "",
+
+            //     content: `
+            //     <p>
+            //     </p>`
+            // }
         ]
 
     },
@@ -513,7 +678,7 @@ const projects = [
                     <p>Wingard, E.M. (2026, April). Beyond the Black Box: Digital Library Workflows Behind the Lowcountry Digital Library. Presented at the LibLearning Rretreat, Charleston, SC.</p>
 
                     <p>
-                        <a href="/assets/media/experience/LibLearning2026 _DigitalLib.pdf" target="_blank">
+                        <a href="/assets/media/experience/LibLearning2026_DigitalLib.pdf" target="_blank">
                             Presentation <i class="fa-solid fa-file-powerpoint" alt="powerpoint icon"></i>
                         </a>
                     </p><br>
