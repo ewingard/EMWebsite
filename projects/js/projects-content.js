@@ -569,8 +569,9 @@ const projects = [
                     I have created manuals on:
                     <ul>
                         <li>How to use the Bookeye 5 scanner</li>
-                        <li>
-                    </ul>
+                        <li>an Oral History transcription pipeline</li>
+                    </ul></p>
+                <p>
                     And edited/provided feedback for manuals on:
                     <ul>
                         <li>Photoshop and croppping/de-skewing images</li>
