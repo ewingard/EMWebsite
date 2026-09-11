@@ -423,7 +423,7 @@ const projects = [
                 title: "Digital Library Analyst",
 
                 content: `<p>
-
+                    
                 </p>`
             },
 
@@ -434,14 +434,17 @@ const projects = [
 
                 title:"What is the Difference between a Library and an Archive?",
 
-                content: `<p>
-                Libraries:
+                content: `<p><a href="https://www.lisedunetwork.com/difference-between-archives-and-libraries/" target="_blank">Libraries and archives</a> are similar, but distinct:</p>
+                <p><strong>Libraries:</strong>
+                    <ul>
+                        <li>Library collections are organized using standardized classification systems.</li>
+                        <ul><li>RDA (Resource Description and Access) is a widespread standard for metadata.</li></ul>
+                        <li>Libraries often provide remote access to digital resources.</li></p>
+                    </ul>
+                <p>Archives:
                 <ul>
-                    <li></li>
-                </ul>
-                Archives:
-                <ul>
-                    <li></li>
+                    <li>Material is often organized based on the order in which it originally arrived, or by using information about the object (creator, location, etc.)</li>
+                    <li>Archival materials stay in place and require an in-person visit for access.</li>
                 </ul>
 
                 </p>`
@@ -455,9 +458,12 @@ const projects = [
                 title: "Where the Lowcountry Digital Library Fits",
 
                 content: `<p>
-                    The Lowcountry Digital Library may look like a digital archive based on the prior descriptions, but given in the name,
-                    it is a digital *library.*  LCDL engages in the curated collection of digitized material from Special Collections and other partner
-                    organizations to provide primary source material related to the Lowcountry, South Carolina, and other ties to the region.
+                    LCDL engages in the curated collection of digitized material from Special Collections and other partner
+                    organizations to provide primary source material related to the Lowcountry, South Carolina, and other ties to the region.</p><br>
+                    <p>LCDL provides access to historical and archival material by digitizing for partner institutions and Special Collections at the College of Charleston.
+                    The Library of Congress Classification system is used for all material, with RDA rules for any metadata fields for local figures.</p><br>
+                    <p>Although LCDL provides access to archival material and primarily acts as a repository for historic, primary source material, there are distinctions
+                    that set it apart from a digital archive.</p>
                 </p>`
             },
 
