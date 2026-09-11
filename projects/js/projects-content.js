@@ -356,11 +356,11 @@ const projects = [
 
                 label: "",
 
-                title: "Stats",
+                title: "Digital Library Work",
 
                 content: `<p>
-                        A collection of academic and
-                        professional publications & presentations. Hover/tap for details.
+                        Quantified achievements from my role as a digital library analyst at the Lowcountry Digital Library
+                        from when I started to now. Hover/tap for details.
                     </p><br>
                     <div class="chart-row">
                         <div class="chart-block">
@@ -2484,19 +2484,19 @@ async function createUploadsMonthChart(canvas) {
                         [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230],
 
                     borderColor:
-                        "#a38b1f",
+                        "#a3491f",
 
                     backgroundColor:
-                        "#e2d69f",
+                        "#e2b49f",
 
                     borderWidth:
                         1,
 
                     pointBackgroundColor:
-                        "#a38b1f",
+                        "#a3491f",
 
                     pointBorderColor:
-                        "#a38b1f",
+                        "#a3491f",
 
                     pointRadius:
                         2,
