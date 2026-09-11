@@ -331,6 +331,67 @@ const projects = [
         ],
     },
 
+    {
+        id: "diglib",
+
+        title: "Digital Library",
+
+        shelf: 1,
+
+        color: "#6b1313",
+
+        accent: "#d6ad57",
+
+        width: 75,
+
+        height: 340,
+
+        rotation: "-0.1deg",
+
+        decoration: "panel",
+
+        pages: [
+            {
+                number: 1,
+
+                label: "",
+
+                title: "Stats",
+
+                content: `<p>
+                        A collection of academic and
+                        professional publications & presentations. Hover/tap for details.
+                    </p><br>
+                    <div class="chart-row">
+                        <div class="chart-block">
+                            <h3 class="chart-title">
+                                Digital Library Objects Processed/Uploaded
+                            </h3>
+                            <div class="publication-chart-container">
+                                <canvas
+                                    id="objects-type"
+                                    class="project-chart"
+                                    data-chart="objects-type"
+                                    aria-label="Polar chart of digital library objects by type">
+                                </canvas>
+                            </div>
+                        </div>
+                        <div class="chart-block">
+                        <h3 class="chart-title">Uploads per Month</h3>
+                        <div class="publication-chart-container">
+                            <canvas
+                                id="uploads-month"
+                                class="project-chart"
+                                data-chart="uploads-month"
+                                aria-label="Line chart showing uploads per month (4 weeks)">
+                            </canvas>
+                        </div>
+                    </div>
+                </p>`
+            }
+        ]
+
+    },
 
     {
         id: "publications",
@@ -339,7 +400,7 @@ const projects = [
 
         shelf: 1,
 
-        color: "#7f1313",
+        color: "#7f3213",
 
         accent: "#d6ad57",
 
@@ -2220,6 +2281,370 @@ async function loadPublicationsData() {
     return rows;
 
 }
+
+    /* DIGITAL LIBRARY CHARTS */
+
+/*
+=====================================================
+OBJECT TYPES CHART
+=====================================================
+
+Creates a polar chart showing the number of
+research outputs by year and output type.
+
+HTML:
+
+data-chart="objects-type"
+id="objectsTypeChart"
+=====================================================
+*/
+
+async function createObjectTypeChart(canvas) {
+
+    if (!canvas) {
+        console.warn(
+            "Object Type chart: type chart canvas was not found."
+        );
+        return;
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error(
+            "Object Type chart: Chart.js is not loaded."
+        );
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart = Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    const colors = {
+        "Single and Multi Image": "#c0a763",
+        "Oral History": "#989da7",
+        "Compound": "#96aed1"
+    };
+
+
+
+    new Chart(canvas, {
+
+        type: "polarArea",
+
+        data: {
+
+            labels: [
+                "Single and Multi Image",
+                "Compound",
+                "Oral History"
+            ],
+
+            datasets: [
+                {
+                    data: [142, 139, 69],
+
+                    backgroundColor: [
+                        colors["Single and Multi Image"],
+                        colors["Compound"],
+                        colors["Oral History"]
+                    ],
+
+                    borderColor: [
+                            "#97771d",   // darker edge for Single and Multi Image
+                            "#5456b4",   // darker edge for Compound
+                            "#393b3f"   // darker edge for Oral History
+                        ],
+
+                    borderWidth: 1.5
+                }
+            ]
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            layout: {
+                padding: 5
+            },
+
+            scales: {
+                r: {
+                    ticks: {
+                        display: false
+                    }
+                }
+            },
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+                callbacks: {
+                    label(context) {
+                        return `${context.label}: ${context.raw}`;
+                    }
+                }
+            }
+        }
+    });
+}
+
+
+/*
+=====================================================
+OBJECT TYPES CHART
+=====================================================
+
+Creates a polar chart showing the number of
+research outputs by year and output type.
+
+HTML:
+
+data-chart="objects-type"
+id="objectsTypeChart"
+=====================================================
+*/
+
+async function createUploadsMonthChart(canvas) {
+
+    if (!canvas) {
+
+        console.warn(
+            "Uploads chart: month chart canvas was not found."
+        );
+
+        return;
+    }
+
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+
+    if (typeof Chart === "undefined") {
+
+        console.error(
+            "Uploads chart: Chart.js is not loaded."
+        );
+
+        return;
+    }
+
+
+    markChartInitialized(canvas);
+
+    /*
+    -------------------------------------------------
+    Destroy existing chart
+    -------------------------------------------------
+    */
+
+    const existingChart =
+        Chart.getChart(canvas);
+
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    /*
+    -------------------------------------------------
+    Create line chart
+    -------------------------------------------------
+    */
+
+    new Chart(canvas, {
+
+        type: "line",
+
+
+        data: {
+
+            labels:
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+
+            datasets: [
+
+                {
+
+                    data:
+                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230],
+
+                    borderColor:
+                        "#a38b1f",
+
+                    backgroundColor:
+                        "#e2d69f",
+
+                    borderWidth:
+                        1,
+
+                    pointBackgroundColor:
+                        "#a38b1f",
+
+                    pointBorderColor:
+                        "#a38b1f",
+
+                    pointRadius:
+                        2,
+
+                    pointHoverRadius:
+                        4,
+
+                    tension:
+                        0.25,
+
+                    fill:
+                        true
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+
+            layout: {
+
+                padding: {
+
+                    top: 8,
+
+                    right: 5,
+
+                    left: 5,
+
+                    bottom: 2
+
+                }
+
+            },
+
+
+            scales: {
+
+                x: {
+
+                    title: {
+
+                        display: false
+
+                    },
+
+                    grid: {
+
+                        display: false
+
+                    },
+
+                    ticks: {
+                        stepSize:
+                            3,
+
+                        color:
+                            "#666",
+
+                        font: {
+
+                            size: 8
+
+                        }
+
+                    }
+
+                },
+
+
+                y: {
+
+                    beginAtZero:
+                        true,
+
+                    ticks: {
+
+                        stepSize:
+                            750,
+
+                        precision:
+                            0,
+
+                        color:
+                            "#666",
+
+                        font: {
+
+                            size: 8
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: false
+
+                    },
+
+                    grid: {
+
+                        color:
+                            "#dddddd"
+
+                    }
+
+                }
+
+            },
+
+
+            plugins: {
+
+                /*
+                -------------------------------------
+                No legend
+                -------------------------------------
+                */
+
+                legend: {
+
+                    display: false
+
+                },
+
+
+                tooltip: {
+                    callbacks: {
+                        label(context) {
+                                return `Uploads: ${context.raw}`;
+                            }
+                        }
+                }
+            }
+        }
+    });
+}
+
+    /* PUBLICATIONS PROJECT CHARTS*/
 
 
 /*
@@ -4901,6 +5326,33 @@ async function initializeProjectCharts(
 
                 break;
 
+            /*
+            -----------------------------------------
+            N Objects by Type chart
+            -----------------------------------------
+            */
+
+            case "objects-type":
+
+                await createObjectTypeChart(
+                    canvas
+                );
+
+                break;
+
+            /*
+            -----------------------------------------
+            Uploads per Month chart
+            -----------------------------------------
+            */
+
+            case "uploads-month":
+
+                await createUploadsMonthChart(
+                    canvas
+                );
+
+                break;
          }
     }
 }
