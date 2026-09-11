@@ -372,9 +372,8 @@ const projects = [
                 title: "Digital Library Work",
 
                 content: `<p>
-                        Quantified achievements from my role as a digital library analyst at the Lowcountry Digital Library
-                        from when I started to now. Hover/tap for details.
-                    </p><br>
+                        Quantified achievements from when I started to now. Hover/tap for details.
+                    </p>
                     <div class="chart-row">
                         <div class="chart-block">
                             <h3 class="chart-title">
@@ -425,11 +424,11 @@ const projects = [
                 content: `<p>
                     As the Digital Library Analyst for the Lowcountry Digital Library at the College of Charleston, I...
                     <ul>
-                        <li>Prepare materials for ingestion by digitizing materials, processing images, creating and quality checking metadata, and uploading to our repository/server</li>
+                        <li>Prepare materials for ingestion by digitizing materials, processing images, creating/quality checking metadata, and uploading to our repository & server</li>
                         <li>Support the Digital Services Coordinator with IT and backend management of 12 websites, 2 servers, and other triage, as needed.</li>
-                        <li>Fix errors in LCDL material in the catalog and ensure parity between LCDL and SCDL material, collection/institution homepages.</li>
+                        <li>Fix errors in LCDL material in the catalog and ensure parity between LCDL and SCDL.</li>
                         <li>Fulfill partner requests for archival masters and fixes</li>
-                        <li>Create and edit documentation for manuals, including a Photoshop manual, Digitization manual, and an Oral History pipeline manual</li>
+                        <li>Create and edit documentation for manuals</li>
                 </p>`
             },
 
@@ -438,13 +437,12 @@ const projects = [
 
                 label: "Libraries vs. Archives",
 
-                title:"What is the Difference between a Library and an Archive?",
+                title:"Difference Between a Libraries and Archives",
 
                 content: `<p><a href="https://www.lisedunetwork.com/difference-between-archives-and-libraries/" target="_blank">Libraries and archives</a> are similar, but distinct:</p>
                 <p><strong>Libraries:</strong>
                     <ul>
-                        <li>Library collections are organized using standardized classification systems.</li>
-                        <ul><li>RDA (Resource Description and Access) is a widespread standard for metadata.</li></ul>
+                        <li>Material is organized using standardized classification systems, like Resource Description and Access (RDA) or Library of Congress classification.</li>
                         <li>Libraries often provide remote access to digital resources.</li></p>
                     </ul>
                 <p>Archives:
@@ -467,9 +465,7 @@ const projects = [
                     LCDL engages in the curated collection of digitized material from Special Collections and other partner
                     organizations to provide primary source material related to the Lowcountry, South Carolina, and other ties to the region.</p><br>
                     <p>LCDL provides access to historical and archival material by digitizing for partner institutions and Special Collections at the College of Charleston.
-                    The Library of Congress Classification system is used for all material, with RDA rules for any metadata fields for local figures.</p><br>
-                    <p>Although LCDL provides access to archival material and primarily acts as a repository for historic, primary source material, there are distinctions
-                    that set it apart from a digital archive.</p>
+                    The Library of Congress Classification system is used for all material, with RDA rules for any metadata fields for local figures.</p>
                 </p>`
             },
 
@@ -482,6 +478,14 @@ const projects = [
 
                 content: `
                 <p>
+                    <ol>
+                    <li>Preserving historic documents by digitizing using the Bookeye 5 and Epson Expression 12000XL scanners in our Digitization Lab at the Library. The archival masters (scans) are TIFs</li>
+                    <li>Using Photoshop to crop and de-skew the scans.</li>
+                    <li>Create or quality check metadata for quality and adherence to LCDL Standards. This becomes a CSV file.</li>
+                    <li>Check copyright for materials.</li>
+                    <li>Uploading into our repository (ResourceSpace).</li>
+                    <li>Uploading the archival masters and csv to our server for preservation.</li>
+                </p>
                 </p>`
             },
 
@@ -494,7 +498,13 @@ const projects = [
 
                 content: `
                 <p>
-                    Parity update 54% of LCDL materials in SCDL
+                    When I'm not uploading collection material, I am often fixing files in LCDL's catalog.</p>
+                <p>
+                    I will also update material (collection homepages and institution homepages) on the South Carolina Digital Library (SCDL). Material from LCDL gets harvested into SCDL and later
+                    the Digital Public Library of America (DPLA). When material is available in the SCDL catalog, I will update homepages to ensure that material mirrors LCDL.
+                    <ul><li>
+                        I have updated approximately 54% of material available in LCDL's catalog during parity audits with SCDL.
+                    </li></ul>
                 </p>`
             },
 
@@ -507,6 +517,12 @@ const projects = [
 
                 content: `
                 <p>
+                    LCDL manages 12 WordPress websites for the College of Charleston, which I update weekly. I also update
+                    2 of our Windows servers for the Interlibrary Loan service and EzProxy.</p><br>
+                <p>
+                    I will also manage any social media messages that come through on Facebook or Instagram.</p><br>
+                <p>
+                    Lastly, I assist the Digital Services Coordinator with accessibility updates for our maintained websites.
                 </p>`
             },
 
@@ -519,6 +535,8 @@ const projects = [
 
                 content: `
                 <p>
+                    I complete regular accessibility audits for the Avery Research Center's website (maintained by LCDL) via DubBot, a platform that does
+                    weekly crawls and provides a "health check" for accessibility or other issues.
                 </p>`
             },
 
@@ -531,6 +549,10 @@ const projects = [
 
                 content: `
                 <p>
+                    Sometimes, partners will reach out to me and request the original archival masters of images that are online. I will access
+                    these requested images through our servers and securely send them to our partner organizations.</p>
+                <p>
+                    I also serve as the liaison for any fixes that need to be completed on the backend (including images and metadata).
                 </p>`
             },
 
@@ -543,23 +565,21 @@ const projects = [
 
                 content: `
                 <p>
+                    I collaborate with other members of the LCDL team to create documentation on processes, pipelines, and technology.<br>
+                    I have created manuals on:
+                    <ul>
+                        <li>How to use the Bookeye 5 scanner</li>
+                        <li>
+                    </ul>
+                    And edited/provided feedback for manuals on:
+                    <ul>
+                        <li>Photoshop and croppping/de-skewing images</li>
+                    </ul>
                 </p>`
             },
 
             {
                 number: 11,
-
-                label: "Digital Library Tasks",
-
-                title: "Documentation",
-
-                content: `
-                <p>
-                </p>`
-            },
-
-            {
-                number: 12,
 
                 label: "Digital Library Tasks",
 
