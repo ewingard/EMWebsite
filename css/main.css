@@ -47,8 +47,12 @@ p {
   box-sizing: border-box;
 }
 
-a {
+h3 a {
   text-decoration: none;
+}
+
+a {
+  text-decoration: underline;
   color: black;
 }
 
