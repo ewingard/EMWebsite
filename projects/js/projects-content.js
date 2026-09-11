@@ -148,7 +148,7 @@ const projects = [
     },
 
     {
-    id: "",
+    id: "archives",
 
         title: "Archival Deterioration",
 
@@ -170,7 +170,7 @@ const projects = [
             {
                 number: 1,
 
-                label: "Background",
+                label: "Preface",
 
                 title: "Archival Deterioration",
 
@@ -178,8 +178,18 @@ const projects = [
                 <strong> THIS PROJECT IS UPCOMING</strong><br>
                 <br>
                 Soon, I will be completing a project to assess degredation of our archival audiovisual (A/V) materials
-                located in <a href="https://speccoll.charleston.edu/" target="_blank">Special Collections.</a> I will be using a rubric
-                to determine degredations using smell, touch, and sight. 
+                located in <a href="https://speccoll.charleston.edu/" target="_blank">Special Collections.</a></p>
+                <p>
+                    I will be using a rubric co-created by the College of Charleston's Manager of Archival Processing and the Dean of Collections.
+                    This rubric will allow me to assess archival material degradation in Special Collections, specifically focusing on audio/visual material, using three senses:
+                    <ul>
+                        <li><strong>Sight</strong></li>
+                            <ul><li>Dry rot, discoloration, damage</li></ul>
+                        <li><strong>Smell</strong></li>
+                            <ul><li>Vinegarizing, moldy/chemical smells</li></ul>
+                        <li><strong>Touch</strong></li>
+                            <ul><li>Brittle or damp texture</li></ul>
+                </p> 
                 </p>`
             },
 
@@ -188,11 +198,14 @@ const projects = [
 
                 label: "Background",
 
-                title: "",
+                title: "Archival Deterioration",
 
                 content: `<p>
-
-                </p>`
+                    Archives are meant to preserve archival material to provide access to this important, historic material for future generations.
+                    Despite archivists' best efforts material still degrades over time. Certain
+                    <a href="https://info.gaylord.com/resources/agents-of-deterioration">"agents of deterioration"</a>
+                    can impact preservation efforts and make material degrade even <i>faster</i>.</p>
+                  `
             }
         ]
 
