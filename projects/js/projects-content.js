@@ -214,7 +214,7 @@ const projects = [
     {
         id: "volunteer",
 
-        title: "Transcription",
+        title: "Volunteering Efforts",
 
         shelf: 1,
 
@@ -228,12 +228,42 @@ const projects = [
             {
                 number: 1,
 
-                label: "Organization",
+                label: "Background",
+
+                title: "Volunteering Efforts",
+
+                content: `<p>
+                    This book outlines my current and previous volunteering efforts, including
+                    transcription, metadata, archiving, software documentation development, and leadership.
+                </p>`
+
+            },
+
+            {
+                number: 2,
+
+                label: "Current - Archives",
+
+                title: "Social Networks and Archival Contexts (SNAC)",
+
+                content: `<p>
+                    I am currently an editor for the Social Networks and Archival Contexts Cooperative. I have edited over
+                    20 records for the SNAC Cooperative including people, corporate entities, and resource records.<br>
+                    <br>
+                    <a href="https://snaccooperative.org/">Social Networks and Archival Contexts <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                </p>
+                `
+            },
+
+            {
+                number: 3,
+
+                label: "Current - Transcription",
 
                 title: "By The People – Library of Congress",
 
                 content: `<p>
-                I have completed 8 campaigns, 93 pages, and 131 total actions (saves, submits, and reviews) for the By The People transcription campaigns.<br>
+                I have worked on 8 campaigns, 93 pages, and 131 total actions (saves, submits, and reviews) for the By The People transcription campaigns.<br>
                 <br>
                 <a href="https://crowd.loc.gov/" target="_blank">By The People <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                 <a href="/assets/media/experience/ServiceLetter_LOC_082226.pdf" target="_blank">Download my Service Letter <i class="fa-solid fa-file-lines"></i></a>
@@ -241,9 +271,9 @@ const projects = [
             },
 
             {
-                number: 2,
+                number: 4,
 
-                label: "Organization",
+                label: "Current - Transcription",
 
                 title: "Citizen Archivist Missions - National Archives",
 
@@ -255,9 +285,9 @@ const projects = [
             },
 
             {
-                number: 3,
+                number: 5,
 
-                label: "Organization",
+                label: "Current - Transcription",
 
                 title: "Colored Conventions Project - University of Delaware",
 
@@ -269,9 +299,9 @@ const projects = [
             },
 
             {
-                number: 4,
+                number: 6,
 
-                label: "Organization",
+                label: "Current - Transcription",
 
                 title: "Volunpeer - Digital Volunteer for the Smithsonian",
 
@@ -283,14 +313,26 @@ const projects = [
             },
 
             {
-                number: 5,
+                number: 7,
 
-                label: "Organization",
+                label: "Current - Copyediting",
+
+                title: "Wikipedia",
+
+                content: `<p>
+                    I have completed 338 edits on Wikipedia and written 10 articles, garnering over 1,825,778 views on articles I've edited.
+                </p>`
+            },
+
+            {
+                number: 8,
+
+                label: "Current - Transcription",
 
                 title: "WikiSource",
 
                 content: `<p>
-                I have reviewed 18 page for the 1933 North Dakota Session Laws project, 2 pages for the Tutira-Guthrie-Smith monthly project, and 1 page for the "A Dark Night's Work and Other Tales" monthly project.<br>
+                I have reviewed 18 pages for the 1933 North Dakota Session Laws project, 2 pages for the Tutira-Guthrie-Smith monthly project, and 1 page for the "A Dark Night's Work and Other Tales" monthly project.<br>
                 <br>
                 <a href="https://en.wikisource.org/wiki/Main_Page" target="_blank">WikiSource <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                 <a href="https://en.wikisource.org/wiki/Special:Contributions/Ezardwizard" target="_blank">My Contributions <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
@@ -298,9 +340,9 @@ const projects = [
             },
 
             {
-                number: 6,
+                number: 9,
 
-                label: "Organization",
+                label: "Current - Transcription",
 
                 title: "Zooniverse",
 
@@ -312,33 +354,60 @@ const projects = [
                 </p>`
             },
 
+            // {
+            //     number: ,
+
+            //     label: "Current - Transcription",
+
+            //     title: "Distributed Proofreaders",
+
+            //     content: `<p>
+            //     I am planning to volunteer with Project Gutenberg in the future, with their Distributed Proofreaders program.<br>
+            //     <br>
+            //     <a href="https://www.pgdp.net/c/" target="_blank">Distributed Proofreaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+            //     <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            //     </p>`
+            // },
             {
-                number: 7,
+                number: 10,
 
-                label: "Organization",
-
-                title: "Distributed Proofreaders",
-
-                content: `<p>
-                I am planning to volunteer with Project Gutenberg in the future, with their Distributed Proofreaders program.<br>
-                <br>
-                <a href="https://www.pgdp.net/c/" target="_blank">Distributed Proofreaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-                <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </p>`
-            },
-            {
-                number: 8,
-
-                label: "Organization",
+                label: "Current - Transcription",
 
                 title: "Lowcountry Digital Library and the South Carolina Historical Society",
 
                 content:
                 `<p>
-                I have completed transcriptions and translations for materials in French for the Lowcountry Digital Library and the South Carolina Historical Society.<br>
+                I have completed 4 transcriptions and translations for materials in French for the Lowcountry Digital Library and the South Carolina Historical Society.<br>
                 <br>
                 <a href="https://lcdl.library.cofc.edu/" target="_blank">LCDL <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                 <a href="https://schistory.org/archives/start-research/" target="_blank">South Carolina Historical Society (SCHS) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </p>`
+            },
+
+            {
+                number: 11,
+
+                label: "Current - Metadata",
+
+                title: "OpenLibrary and the Internet Archive",
+
+                content: `<p>
+                    I have updated 5 metadata records for over 4 books. I recently applied to be a Librarian-In-Training at the OpenLibrary to
+                    provide additional help with merging and metadata with the Library.<br>
+                    <br>
+                    <a href="https://openlibrary.org/">Open Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                    <a href="https://archive.org/">Internet Archive <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                </p>`
+            },
+
+            {
+                number: 12,
+
+                label: "",
+
+                title: "",
+
+                content: `<p>
                 </p>`
             }
         ],
