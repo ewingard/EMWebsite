@@ -248,7 +248,7 @@ const projects = [
 
                 content: `<p>
                     I am currently an editor for the Social Networks and Archival Contexts Cooperative. I have edited over
-                    20 records for the SNAC Cooperative including people, corporate entities, and resource records.<br>
+                    40 records for the SNAC Cooperative including people, corporate entities, and resource records.<br>
                     <br>
                     <a href="https://snaccooperative.org/">Social Networks and Archival Contexts <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                 </p>
