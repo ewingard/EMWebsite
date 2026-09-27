@@ -2091,6 +2091,7 @@ const projects = [
 
 ];
 
+
 /*
 =====================================================
 CHARTS
@@ -2977,7 +2978,7 @@ async function createWorkCompletedChart(canvas) {
     }
 
     // ------------------------------------------
-    // Replace these with your actual totals
+    // Data
     // ------------------------------------------
 
     const values = {
@@ -3007,39 +3008,22 @@ async function createWorkCompletedChart(canvas) {
         data: {
 
             labels: [
-                "Digitization",
-                "Metadata",
-                "Uploads",
-                "Fixes"
+                "Single and Multi Image",
+                "Compound",
+                "Oral History"
             ],
 
             datasets: [
                 {
-                    data: [
-                        values.digitization,
-                        values.metadata,
-                        values.uploads,
-                        values.fixes
-                    ],
+                    data: [142, 139, 69],
 
                     backgroundColor: [
-                        "#ac3713",
-                        "#b88e1b",
-                        "#196616",
-                        "#115979"
+                        colors["Single and Multi Image"],
+                        colors["Compound"],
+                        colors["Oral History"]
                     ],
-
-                    borderRadius: 4,
-
-                    borderSkipped: false,
-
-                    barThickness: 18,
-
-                    maxBarThickness: 18
                 }
-            ]
-
-        },
+            ],
 
         options: {
 
@@ -3205,20 +3189,195 @@ async function createWorkCompletedChart(canvas) {
                     });
 
                     ctx.restore();
+                    }
+
+                }
+
+            ]
+        }
+    });
+}
+
+/*
+=====================================================
+VOLUNTEER DISTRIBUTION PIE CHART
+=====================================================
+
+Creates a pie chart showing the distribution of
+volunteer efforts by website/organization.
+
+HTML:
+
+data-chart="volDist"
+id="volunteerDistributionChart"
+=====================================================
+*/
+
+async function createVolunteerDistributionChart(canvas) {
+
+    if (!canvas) {
+        console.warn("Volunteer chart: distribution chart canvas was not found.");
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error(
+            "Volunteer chart: Chart.js is not loaded."
+        );
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart =
+        Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    /*
+    -------------------------------------------------
+    Colors
+    -------------------------------------------------
+    */
+
+    const colors = {
+
+        "SNAC":
+            "#cd5f66",
+
+        "LOC":
+            "#e2738c",
+
+        "Citizen Archivist":
+            "#ffa67c",
+
+        "Colored Conventions":
+            "#f5e1a2",
+
+        "Volunpeer":
+            "#f5e1a2",
+
+        "Wikipedia":
+            "#f5e1a2",
+
+        "WikiSource":
+            "#f5e1a2"
+
+    };
+
+
+    const backgroundColors =
+        types.map(type =>
+            colors[type] || "#888888"
+        );
+
+    /*
+    -------------------------------------------------
+    Create pie chart
+    -------------------------------------------------
+    */
+
+    new Chart(canvas, {
+
+        type: "pie",
+
+        data: {
+
+            labels: ["SNAC", "LOC", "Citizen Archivist", ],
+
+            datasets: [
+
+                {
+
+                    data:
+                        [],
+
+                    backgroundColor: [
+                        colors["Single and Multi Image"],
+                        colors["Compound"],
+                        colors["Oral History"]
+                    ],
+
+                    borderColor: [
+                            "#97771d",   // darker edge for Single and Multi Image
+                            "#5456b4",   // darker edge for Compound
+                            "#393b3f"   // darker edge for Oral History
+                        ],
+
+                    borderWidth: 1.5
+                }
+            ]
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+
+            cutout: "60%",
+
+
+            layout: {
+
+                padding: 5
+
+            },
+
+
+            plugins: {
+
+                /*
+                -------------------------------------
+                Remove legend
+                -------------------------------------
+                */
+
+
+                legend: {
+
+                    display: false
+
+                },
+
+
+                /*
+                -------------------------------------
+                Tooltip
+                -------------------------------------
+                */
+
+                tooltip: {
+
+                    callbacks: {
+
+                        label(context) {
+
+                            return (
+                                `${context.label}: ` +
+                                `${context.raw}`
+                            );
+
+                        }
+
+                    }
+
                 }
 
             }
 
-        ]
+        },
 
+
+        plugins: []
     });
-
 }
-
-
-
-    /* PUBLICATIONS PROJECT CHARTS*/
-
 
 /*
 =====================================================
@@ -3238,9 +3397,7 @@ id="publicationTypeChart"
 async function createPublicationTypeChart(canvas) {
 
     if (!canvas) {
-        console.warn(
-            "Publications chart: type chart canvas was not found."
-        );
+        console.warn("Publications chart: type chart canvas was not found.");
         return;
     }
 
