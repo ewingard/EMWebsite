@@ -11,6 +11,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  deployments: read   # count past deployments
 
 concurrency:
   group: "pages"
@@ -35,49 +36,54 @@ jobs:
       - name: Calculate issue information
         id: issue
         env:
-          PUSH_DATE: ${{ github.event.head_commit.timestamp }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
         run: |
-          YEAR=$(date -u -d "$PUSH_DATE" +%Y)
-          DATE=$(date -u -d "$PUSH_DATE" +%Y-%m-%d)
+          YEAR=$(date -u +%Y)
+          DATE=$(date -u +%Y-%m-%d)
 
-          # 2026 = Volume 1
-          # 2027 = Volume 2
-          # 2028 = Volume 3
+          # 2026 = Volume 1, 2027 = Volume 2, ...
           VOLUME=$((YEAR - 2026 + 1))
 
-          echo "year=$YEAR" >> "$GITHUB_OUTPUT"
+          # Count successful Pages deployments created this year.
+          # (Older deployments get marked "inactive" once superseded,
+          # so check whether ANY status was "success", not just the latest.)
+          PRIOR=$(
+            gh api --paginate \
+              "repos/$REPO/deployments?environment=github-pages&per_page=100" \
+              --jq ".[] | select(.created_at | startswith(\"$YEAR\")) | .id" |
+            while read -r id; do
+              OK=$(gh api "repos/$REPO/deployments/$id/statuses?per_page=100" \
+                     --jq 'any(.[]; .state == "success")')
+              if [ "$OK" = "true" ]; then echo "$id"; fi
+            done | wc -l
+          )
+
+          ISSUE=$((PRIOR + 1))
+
+          echo "year=$YEAR"     >> "$GITHUB_OUTPUT"
           echo "volume=$VOLUME" >> "$GITHUB_OUTPUT"
-          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "issue=$ISSUE"   >> "$GITHUB_OUTPUT"
+          echo "date=$DATE"     >> "$GITHUB_OUTPUT"
 
-          echo "Publication:"
-          echo "  Year:   $YEAR"
-          echo "  Volume: $VOLUME"
-          echo "  Issue:  1"
-          echo "  Date:   $DATE"
-
-      # ------------------------------------------------------------
-      # Generate issue.json
-      #
-      # This file does NOT need to exist in the repository.
-      # It is generated during deployment.
-      # ------------------------------------------------------------
+          echo "Vol. $VOLUME, Issue $ISSUE ($DATE)"
 
       - name: Generate issue.json
         env:
           YEAR: ${{ steps.issue.outputs.year }}
           VOLUME: ${{ steps.issue.outputs.volume }}
+          ISSUE: ${{ steps.issue.outputs.issue }}
           DATE: ${{ steps.issue.outputs.date }}
         run: |
           cat > issue.json << EOF
           {
             "year": $YEAR,
             "volume": $VOLUME,
-            "issue": 1,
+            "issue": $ISSUE,
             "date": "$DATE"
           }
           EOF
 
-          echo "Generated issue.json:"
           cat issue.json
 
       # ------------------------------------------------------------
