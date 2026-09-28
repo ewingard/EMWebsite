@@ -234,13 +234,50 @@ const workbook = {
                         "Metadata, Digitization, IT",
 
                     Achievements:
-                        "Uploaded over 16,000 files across 43 collections.",
+                        "Uploaded over 17,000 files across 43 collections.",
 
                     StartYear:
                         2025,
 
                     StartMonth:
                         8,
+
+                    EndYear:
+                        null,
+
+                    EndMonth:
+                        null
+
+                },
+
+                                {
+
+                    Type:
+                        "Volunteer",
+
+                    Title:
+                        "Leadership Council - Secretary of Public History",
+
+                    Organization:
+                        "Graduate Historical Society, College of Charleston",
+
+                    Location:
+                        "Charleston, SC",
+
+                    Field:
+                        "History",
+
+                    Description:
+                        "Documentation, Organization, Event Planning",
+
+                    Achievements:
+                        "Revive the Graduate Historical Society.",
+
+                    StartYear:
+                        2026,
+
+                    StartMonth:
+                        9,
 
                     EndYear:
                         null,
@@ -271,7 +308,7 @@ const workbook = {
                         "Copyediting, Metadata",
 
                     Achievements:
-                        "Edit metadata for 4 books.",
+                        "Librarian-in-Training for the Open Library.",
 
                     StartYear:
                         2026,
@@ -286,6 +323,7 @@ const workbook = {
                         null
 
                 },
+
 
                 {
 
