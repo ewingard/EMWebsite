@@ -236,7 +236,6 @@ const projects = [
                     This book outlines my current and previous volunteering efforts, including
                     transcription, metadata, archiving, software documentation development, and leadership.
                 </p>
-                <div class="chart-row">
                         <div class="chart-block">
                             <h3 class="chart-title">
                                 Distribution of Efforts
@@ -269,37 +268,6 @@ const projects = [
             {
                 number: 2,
 
-                label: "Current - Archives",
-
-                title: "Social Networks and Archival Contexts (SNAC)",
-
-                content: `<p>
-                    I am currently an editor for the Social Networks and Archival Contexts Cooperative. I have edited over
-                    40 records for the SNAC Cooperative including people, corporate entities, and resource records.<br>
-                    <br>
-                    <a href="https://snaccooperative.org/">Social Networks and Archival Contexts <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-                </p>
-                `
-            },
-
-            {
-                number: 3,
-
-                label: "Current - Transcription",
-
-                title: "By The People – Library of Congress",
-
-                content: `<p>
-                I have worked on 8 campaigns, 93 pages, and 131 total actions (saves, submits, and reviews) for the By The People transcription campaigns.<br>
-                <br>
-                <a href="https://crowd.loc.gov/" target="_blank">By The People <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-                <a href="/assets/media/experience/ServiceLetter_LOC_082226.pdf" target="_blank">Download my Service Letter <i class="fa-solid fa-file-lines"></i></a>
-                </p>`
-            },
-
-            {
-                number: 4,
-
                 label: "Current - Transcription",
 
                 title: "Citizen Archivist Missions - National Archives",
@@ -311,8 +279,9 @@ const projects = [
                 </p>`
             },
 
+
             {
-                number: 5,
+                number: 3,
 
                 label: "Current - Transcription",
 
@@ -326,77 +295,7 @@ const projects = [
             },
 
             {
-                number: 6,
-
-                label: "Current - Transcription",
-
-                title: "Volunpeer - Digital Volunteer for the Smithsonian",
-
-                content: `<p>
-                I have reviewed 1 page for the Smithsonian Volunpeer Program.<br>
-                <br>
-                <a href="https://transcription.si.edu/" target="_blank">Smithsonian Transcriptions <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-                </p>`
-            },
-
-            {
-                number: 7,
-
-                label: "Current - Copyediting",
-
-                title: "Wikipedia",
-
-                content: `<p>
-                    I have completed 338 edits on Wikipedia and written 10 articles, garnering over 1,825,778 views on articles I've edited.
-                </p>`
-            },
-
-            {
-                number: 8,
-
-                label: "Current - Transcription",
-
-                title: "WikiSource",
-
-                content: `<p>
-                I have reviewed 18 pages for the 1933 North Dakota Session Laws project, 2 pages for the Tutira-Guthrie-Smith monthly project, and 1 page for the "A Dark Night's Work and Other Tales" monthly project.<br>
-                <br>
-                <a href="https://en.wikisource.org/wiki/Main_Page" target="_blank">WikiSource <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-                <a href="https://en.wikisource.org/wiki/Special:Contributions/Ezardwizard" target="_blank">My Contributions <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-                </p>`
-            },
-
-            {
-                number: 9,
-
-                label: "Current - Transcription",
-
-                title: "Zooniverse",
-
-                content: `<p>
-                I have reviewed/classified 8 pages across 3 projects, including the E.W. Harper papers for the Colored Conventions Project at the University of Delaware 
-                and the USC Transcribes Together project at the University of South Carolina.<br>
-                <br>
-                <a href="https://www.zooniverse.org/" target="_blank">Zooniverse <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </p>`
-            },
-
-            // {
-            //     number: ,
-
-            //     label: "Current - Transcription",
-
-            //     title: "Distributed Proofreaders",
-
-            //     content: `<p>
-            //     I am planning to volunteer with Project Gutenberg in the future, with their Distributed Proofreaders program.<br>
-            //     <br>
-            //     <a href="https://www.pgdp.net/c/" target="_blank">Distributed Proofreaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-            //     <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            //     </p>`
-            // },
-            {
-                number: 10,
+                number: 4,
 
                 label: "Current - Transcription",
 
@@ -412,31 +311,231 @@ const projects = [
             },
 
             {
-                number: 11,
+                number: 5,
+
+                label: "Current - Transcription",
+
+                title: "By The People – Library of Congress",
+
+                content: `<p>
+                I have worked on 8 campaigns, 96 pages, and 135 total actions (saves, submits, and reviews) for the By The People transcription campaigns.<br>
+                <br>
+                <a href="https://crowd.loc.gov/" target="_blank">By The People <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                <a href="/assets/media/experience/ServiceLetter_LOC_082226.pdf" target="_blank">Download my Service Letter <i class="fa-solid fa-file-lines"></i></a>
+                </p>
+                    <h3 class="chart-title">
+                        Types of Edits
+                    </h3>
+                <div class="publication-chart-container">
+                    <canvas
+                        id="locDistributionChart"
+                        class="project-chart"
+                        data-chart="locDist"
+                        aria-label="Pie chart of volunteer edit types completed for the Library of Congress">
+                    </canvas>
+                </div>`
+            },
+
+            {
+                number: 6,
 
                 label: "Current - Metadata",
 
                 title: "OpenLibrary and the Internet Archive",
 
                 content: `<p>
-                    I have updated 5 metadata records for over 4 books. I recently applied to be a Librarian-In-Training at the OpenLibrary to
-                    provide additional help with merging and metadata with the Library.<br>
+                    I have updated 12 metadata records for over 11 books and one author. I am a Librarian-In-Training to help with merging and metadata with the Library.<br>
                     <br>
                     <a href="https://openlibrary.org/">Open Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                     <a href="https://archive.org/">Internet Archive <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                </p>
+                <h3 class="chart-title">
+                        Types of Edits
+                    </h3>
+                <div class="publication-chart-container">
+                    <canvas
+                        id="openlibEditsChart"
+                        class="project-chart"
+                        data-chart="openlibEdits"
+                        aria-label="Chart of volunteering efforts per month"
+                </div>`
+            },
+
+            {
+                number: 7,
+
+                label: "Current - Archives",
+
+                title: "Social Networks and Archival Contexts (SNAC)",
+
+                content: `<p>
+                    I am currently an editor for the <a href="https://snaccooperative.org/">Social Networks and Archival Contexts <i class="fa-solid fa-arrow-up-right-from-square"></i></a> Cooperative. I have edited over
+                    25 records on people, corporate entities, families, and (archival) resources.<br>
+                    <br>
+                </p>
+                <div class="chart-block">
+                    <h3 class="chart-title">
+                        Distribution of Efforts
+                    </h3>
+
+                    <div class="publication-chart-container">
+                        <canvas
+                            id="snacDistributionChart"
+                            class="project-chart"
+                            data-chart="snacDist"
+                            aria-label="Pie chart of volunteer efforts distribution for SNAC">
+                        </canvas>
+                    </div>
+                    </div>
+                    <div class="chart-block">
+                        <h3 class="chart-title">
+                            Types of Edits
+                        </h3>
+                    <div class="publication-chart-container">
+                        <canvas
+                            id="snacEditsChart"
+                            class="project-chart"
+                            data-chart="snacEdits"
+                            aria-label="Bar chart of edits made for SNAC"
+                    </div>
+                </div>`
+            },
+
+            {
+                number: 8,
+
+                label: "Current - Transcription",
+
+                title: "Volunpeer - Digital Volunteer for the Smithsonian",
+
+                content: `<p>
+                I have reviewed 1 page for the Smithsonian Volunpeer Program.<br>
+                <br>
+                <a href="https://transcription.si.edu/" target="_blank">Smithsonian Transcriptions <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                 </p>`
             },
 
             {
-                number: 12,
+                number: 9,
 
-                label: "",
+                label: "Current - Metadata",
 
-                title: "",
+                title: "Wikidata",
 
                 content: `<p>
+                    I have completed 392 edits on Wikidata across 62 unique records.
                 </p>`
-            }
+
+            },
+
+            {
+                number: 10,
+
+                label: "Current - Transcription",
+
+                title: "WikiSource",
+
+                content: `<p>
+                I have reviewed 18 pages for the 1933 North Dakota Session Laws project, 2 pages for the Tutira-Guthrie-Smith monthly project, and 1 page for the "A Dark Night's Work and Other Tales" monthly project.<br>
+                <br>
+                <a href="https://en.wikisource.org/wiki/Main_Page" target="_blank">WikiSource <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                <a href="https://en.wikisource.org/wiki/Special:Contributions/Ezardwizard" target="_blank">My Contributions <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                </p>`
+            },
+            {
+                number: 11,
+
+                label: "Current - Copyediting",
+
+                title: "Wikipedia",
+
+                content: `<p>
+                    I have completed 392 edits on Wikipedia and written 17 articles, garnering over 1,825,778 views on articles I've edited.
+                </p>
+                <div class="chart-block">
+                    <h3 class="chart-title">
+                        Distribution of Efforts
+                    </h3>
+
+                    <div class="publication-chart-container">
+                        <canvas
+                            id="wikiDistributionChart"
+                            class="project-chart"
+                            data-chart="wikiDist"
+                            aria-label="Pie chart of volunteer efforts distribution for Wikipedia">
+                        </canvas>
+                    </div>
+                    </div>
+                    <div class="chart-block">
+                        <h3 class="chart-title">
+                            Types of Edits
+                        </h3>
+                    <div class="publication-chart-container">
+                        <canvas
+                            id="wikiEditsChart"
+                            class="project-chart"
+                            data-chart="wikiEdits"
+                            aria-label="Bar chart of edits made for Wikipedia"
+                    </div>
+                </div>`
+            },
+
+            {
+
+                number: 12,
+
+                label: "Current - Copyediting",
+
+                title: "Wikipedia",
+
+                content: `<p><br>
+                    In addition to my regular Wikipedia edits, I have also participated in two Edit-a-thons:
+                    <ul>
+                    <li><strong>March 2026</strong>: Transatlantic Anti-Slavery Wiki Edit-a-thon, co-hosted by the University of Rochester and Leeds Library for Frederick Douglass Day</li>
+                    <li><strong>September 2026</strong>: WikiProject Organized Labour Month Online Campaign Community Edit-a-thon</li>
+                </p>`
+            },
+
+            {
+                number: 13,
+
+                label: "Current - Transcription",
+
+                title: "Zooniverse",
+
+                content: `<p>
+                I have reviewed/classified 8 pages across 3 projects, including the E.W. Harper papers for the Colored Conventions Project at the University of Delaware 
+                and the USC Transcribes Together project at the University of South Carolina.<br>
+                <br>
+                <a href="https://www.zooniverse.org/" target="_blank">Zooniverse <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </p>`
+            },
+
+            // {
+            //     number: 13,
+
+            //     label: "Current - Transcription",
+
+            //     title: "Distributed Proofreaders",
+
+            //     content: `<p>
+            //     I am planning to volunteer with Project Gutenberg in the future, with their Distributed Proofreaders program.<br>
+            //     <br>
+            //     <a href="https://www.pgdp.net/c/" target="_blank">Distributed Proofreaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+            //     <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            //     </p>`
+            // },
+
+            // {
+            //     number: 14,
+
+            //     label: "",
+
+            //     title: "",
+
+            //     content: `<p>
+            //     </p>`
+            // }
         ],
     },
 
@@ -2670,7 +2769,7 @@ async function createObjectTypeChart(canvas) {
 
             datasets: [
                 {
-                    data: [142, 139, 69],
+                    data: [147, 146, 69],
 
                     backgroundColor: [
                         colors["Single and Multi Image"],
@@ -2802,7 +2901,7 @@ async function createUploadsMonthChart(canvas) {
                 {
 
                     data:
-                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230, 1418],
+                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230, 1424],
 
                     borderColor:
                         "#a3491f",
@@ -3251,10 +3350,10 @@ async function createWorkCompletedChart(canvas) {
     // ------------------------------------------
 
     const values = {
-        digitization: 5274,
-        metadata: 6473,
-        uploads: 17444,
-        fixes: 23962
+        digitization: 5926,
+        metadata: 6872,
+        uploads: 17871,
+        fixes: 24175
     };
 
     const total =
@@ -3535,37 +3634,37 @@ async function createVolunteerDistributionChart(canvas) {
     const colors = {
 
         "Citizen Archivist":
-            "#cd5f66",
+            "#8f2355",
 
         "Colored Conventions":
-            "#e2738c",
+            "#ac3713",
 
         "LCDL":
-            "#ffa67c",
+            "#b16107",
 
         "LOC":
-            "#dfc573",
+            "#b88e1b",
 
         "Open Library":
-            "#9dc186",
+            "#76801d",
 
         "SNAC":
-            "#77bba0",
+            "#196616",
 
         "Volunpeer":
-            "#6ec299",
+            "#2a6868",
 
         "Wikidata":
-            "#6eaec2",
+            "#1d698a",
 
         "Wikipedia":
-            "#7c91e2",
+            "#334192",
 
         "WikiSource":
-            "#937ecc",
+            "#571c86",
 
         "Zooniverse":
-            "#db84cc"
+            "#942b82"
 
     };
 
@@ -3605,17 +3704,1042 @@ async function createVolunteerDistributionChart(canvas) {
                     ],
 
                     borderColor: [
-                            "#ca454e",   // Citizen Archivist
-                            "#c85872",   // Colored Conventions
-                            "#d27449",   // LCDL
-                            "#c5a84a",   // LOC
-                            "#7bc44a",   // Open Library
-                            "#47b568",   // SNAC
-                            "#42a87c",   // Volunpeer
-                            "#4699b2",   // Wikidata
-                            "#4b60b3",   // Wikipedia
-                            "#6b51b3",   // Wikisource
-                            "#ac499b",   // Zooniverse
+                            "#570c5a",   // Citizen Archivist
+                            "#8b2e11",   // Colored Conventions
+                            "#834d0f",   // LCDL
+                            "#7e5f0b",   // LOC
+                            "rgb(84, 107, 21)",   // Open Library
+                            "#1b6619",   // SNAC
+                            "#064b39",   // Volunpeer
+                            "#114961",   // Wikidata
+                            "#10193d",   // Wikipedia
+                            "#370f57",   // Wikisource
+                            "#922780",   // Zooniverse
+                        ],
+
+                    borderWidth: 1.5
+                }
+            ]
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+
+            cutout: "60%",
+
+
+            layout: {
+
+                padding: 5
+
+            },
+
+
+            plugins: {
+
+                /*
+                -------------------------------------
+                Remove legend
+                -------------------------------------
+                */
+
+
+                legend: {
+
+                    display: false
+
+                },
+
+
+                /*
+                -------------------------------------
+                Tooltip
+                -------------------------------------
+                */
+
+                tooltip: {
+
+                    callbacks: {
+
+                        label(context) {
+
+                            return (
+                                `${context.label}: ` +
+                                `${context.raw}`
+                            );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+
+        plugins: []
+    });
+}
+
+/*
+=====================================================
+SNAC DISTRIBUTION PIE CHART
+=====================================================
+
+Creates a pie chart showing the distribution of
+SNAC efforts per edit type.
+
+HTML:
+
+data-chart="snacDist"
+id="snacDistributionChart"
+=====================================================
+*/
+
+
+async function createSnacDistributionChart(canvas) {
+
+    if (!canvas) {
+        console.warn("SNAC chart: distribution chart canvas was not found.");
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error(
+            "SNAC Distribution chart: Chart.js is not loaded."
+        );
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart =
+        Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    /*
+    -------------------------------------------------
+    Colors
+    -------------------------------------------------
+    */
+
+    const colors = {
+
+        "Personal":
+            "#ac3713",
+
+
+        "Corporate":
+            "#b16107",
+
+        "Families":
+            "#b88e1b",
+
+        "Resources":
+           "#196616",
+
+        "Merges":
+            "#115979",
+
+    };
+
+    /*
+    -------------------------------------------------
+    Create pie chart
+    -------------------------------------------------
+    */
+
+    new Chart(canvas, {
+
+        type: "pie",
+
+        data: {
+
+            labels: ["Personal", "Corporate", "Families", "Resources", "Merges"],
+
+            datasets: [
+
+                {
+                    data:
+                       [20, 1, 0, 10, 0],
+
+                    backgroundColor: [
+                        colors["Personal"],
+                        colors["Corporate"],
+                        colors["Families"],
+                        colors["Resources"],
+                        colors["Merges"],
+                    ],
+
+                    borderColor: [
+                        "#792106",   // Personal
+                        "#703e04", // Corporate
+                        "#7e5e05", // Families
+                        "#083f06", // Resources
+                        "#053246", // Merges
+                        ],
+
+                    borderWidth: 1.5
+                }
+            ]
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+
+            cutout: "60%",
+
+
+            layout: {
+
+                padding: 5
+
+            },
+
+
+            plugins: {
+
+                /*
+                -------------------------------------
+                Remove legend
+                -------------------------------------
+                */
+
+
+                legend: {
+
+                    display: false
+
+                },
+
+
+                /*
+                -------------------------------------
+                Tooltip
+                -------------------------------------
+                */
+
+                tooltip: {
+
+                    callbacks: {
+
+                        label(context) {
+
+                            return (
+                                `${context.label}: ` +
+                                `${context.raw}`
+                            );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+
+        plugins: []
+    });
+}
+
+/*
+=====================================================
+SNAC EDITS BAR CHART
+=====================================================
+
+Creates a bar chart showing the amount of
+SNAC edits per edit type.
+
+HTML:
+
+data-chart="snacEdits"
+id="snacEditsChart"
+=====================================================
+*/
+
+
+async function createSnacEditsChart(canvas) {
+
+    if (!canvas) {
+        console.warn("SNAC Edits chart: canvas was not found.");
+        return;
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error("SNAC Edits chart: Chart.js is not loaded.");
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart = Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    // ------------------------------------------
+    // Replace these with your actual totals
+    // ------------------------------------------
+
+    const values = {
+        personal: 20,
+        corporate: 1,
+        resources: 10,
+        families: 0,
+        merges: 0
+    };
+
+    const total =
+        values.personal +
+        values.corporate +
+        values.resources +
+        values.families +
+        values.merges;
+
+    const percentages = {
+        personal: (values.personal / total) * 100,
+        corporate: (values.corporate / total) * 100,
+        resources: (values.resources / total) * 100,
+        families: (values.families / total) * 100,
+        merges: (values.merges / total) * 100
+    };
+
+    new Chart(canvas, {
+
+        type: "bar",
+
+        data: {
+
+            labels: [
+                "Personal",
+                "Corporate",
+                "Resources",
+                "Families",
+                "Merges"
+            ],
+
+            datasets: [
+                {
+                    data: [
+                        values.personal,
+                        values.corporate,
+                        values.resources,
+                        values.families,
+                        values.merges
+                    ],
+
+                    backgroundColor: [
+                        "#ac3713",
+                        "#b88e1b",
+                        "#196616",
+                        "#115979",
+                        "#581179"
+                    ],
+
+                    borderRadius: 4,
+
+                    borderSkipped: false,
+
+                    barThickness: 18,
+
+                    maxBarThickness: 18
+                }
+            ]
+
+        },
+
+        options: {
+
+            indexAxis: "y",
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            animation: false,
+
+            layout: {
+                padding: {
+                    top: 2,
+                    right: 8,
+                    bottom: 2,
+                    left: 0
+                }
+            },
+
+            scales: {
+
+                x: {
+                    display: false,
+
+                    beginAtZero: true,
+
+                    grid: {
+                        display: false
+                    }
+                },
+
+                y: {
+                    display: true,
+
+                    grid: {
+                        display: false
+                    },
+
+                    border: {
+                        display: false
+                    },
+
+                    ticks: {
+                        color: "#555",
+
+                        font: {
+                            size: 9
+                        },
+
+                        padding: 4
+                    }
+                }
+
+            },
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+
+                    displayColors: false,
+
+                    callbacks: {
+
+                        title(context) {
+                            return context[0].label;
+                        },
+
+                        label(context) {
+
+                            const index = context.dataIndex;
+
+                            const keys = [
+                                "personal",
+                                "corporate",
+                                "resources",
+                                "families",
+                                "merges"
+                            ];
+
+                            const key = keys[index];
+
+                            return [
+                                `Count: ${values[key].toLocaleString()}`,
+                                `Share: ${percentages[key].toFixed(1)}%`
+                            ];
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+        plugins: [
+
+            {
+
+                id: "snacEditLabels",
+
+                afterDatasetsDraw(chart) {
+
+                    const {
+                        ctx
+                    } = chart;
+
+                    const meta = chart.getDatasetMeta(0);
+
+                    const keys = [
+                        "personal",
+                        "corporate",
+                        "resources",
+                        "families",
+                        "merges"
+                    ];
+
+                    ctx.save();
+
+                    ctx.font = "600 8px sans-serif";
+
+                    ctx.textBaseline = "middle";
+
+                    meta.data.forEach((bar, index) => {
+
+                        const key = keys[index];
+
+                        const count =
+                            values[key].toLocaleString();
+
+                        const percentage =
+                            percentages[key].toFixed(0) + "%";
+
+                        const label =
+                            `${count} (${percentage})`;
+
+                        // Keep the label inside the bar when
+                        // the bar is wide enough.
+                        const textWidth =
+                            ctx.measureText(label).width;
+
+                        const inside =
+                            bar.width > textWidth + 12;
+
+                        ctx.fillStyle =
+                            inside ? "#ffffff" : "#555555";
+
+                        ctx.textAlign =
+                            inside ? "right" : "left";
+
+                        const x = inside
+                            ? bar.x - 6
+                            : bar.x + 6;
+
+                        ctx.fillText(
+                            label,
+                            x,
+                            bar.y
+                        );
+
+                    });
+
+                    ctx.restore();
+                }
+
+            }
+
+        ]
+
+    });
+
+}
+
+/*
+=====================================================
+WIKI EDITS BAR CHART
+=====================================================
+
+Creates a bar chart showing the amount of
+SNAC edits per edit type.
+
+HTML:
+
+data-chart="wikiEdits"
+id="wikiEditsChart"
+=====================================================
+*/
+
+
+async function createWikiEditsChart(canvas) {
+
+    if (!canvas) {
+        console.warn("Wiki Edits chart: canvas was not found.");
+        return;
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error("Wiki Edits chart: Chart.js is not loaded.");
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart = Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    // ------------------------------------------
+    // Replace these with your actual totals
+    // ------------------------------------------
+
+    const keys = ["newArticles", "copyedit", "links", "src", "categories"];
+    const labels = ["New Articles", "Copyedits", "Links", "Sources", "Categories"];
+
+    const values = {
+        newArticles: 17,
+        copyedit: 180,
+        links: 142,
+        src: 97,
+        categories: 72,
+    };
+
+    const total =
+        values.newArticles +
+        values.copyedit +
+        values.links +
+        values.src +
+        values.categories;
+
+    const percentages = {
+        newArticles: (values.newArticles / total) * 100,
+        copyedit: (values.copyedit / total) * 100,
+        links: (values.links / total) * 100,
+        src: (values.src / total) * 100,
+        categories: (values.categories / total) * 100
+    };
+
+    new Chart(canvas, {
+
+        type: "bar",
+
+        data: {
+
+            labels: [
+                "New Articles",
+                "Copyedits",
+                "Links",
+                "Sources",
+                "Categories",
+            ],
+
+            datasets: [
+                {
+                    data: keys.map(k => values[k]),
+
+                    backgroundColor: [
+                        "#ac3713", // New Articles
+                        "#b16107", // Copyedits
+                        "#b88e1b", // Links
+                        "#196616", // Sources
+                        "#115979", // Categories
+                    ],
+
+                    borderRadius: 4,
+
+                    borderSkipped: false,
+
+                    barThickness: 18,
+
+                    maxBarThickness: 18
+                }
+            ]
+
+        },
+
+        options: {
+
+            indexAxis: "y",
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            animation: false,
+
+            layout: {
+                padding: {
+                    top: 2,
+                    right: 8,
+                    bottom: 2,
+                    left: 0
+                }
+            },
+
+            scales: {
+
+                x: {
+                    display: false,
+
+                    beginAtZero: true,
+
+                    grid: {
+                        display: false
+                    }
+                },
+
+                y: {
+                    display: true,
+
+                    grid: {
+                        display: false
+                    },
+
+                    border: {
+                        display: false
+                    },
+
+                    ticks: {
+                        color: "#555",
+
+                        font: {
+                            size: 9
+                        },
+
+                        padding: 4
+                    }
+                }
+
+            },
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+
+                    displayColors: false,
+
+                    callbacks: {
+
+                        title(context) {
+                            return context[0].label;
+                        },
+
+                        label(context) {
+                            const key = keys[context.dataIndex];
+                            return [
+                                `Count: ${values[key].toLocaleString()}`,
+                                `Share: ${percentages[key].toFixed(1)}%`
+                            ];
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+        plugins: [
+
+            {
+
+                id: "wikiEditsLabels",
+
+                afterDatasetsDraw(chart) {
+                    const { ctx } = chart;
+                    const meta = chart.getDatasetMeta(0);
+
+                    ctx.save();
+                    ctx.font = "600 8px sans-serif";
+                    ctx.textBaseline = "middle";
+
+                    meta.data.forEach((bar, index) => {
+                        const key = keys[index];
+                        const label = `${values[key].toLocaleString()} (${percentages[key].toFixed(0)}%)`;
+
+                        const textWidth = ctx.measureText(label).width;
+                        const inside = bar.width > textWidth + 12;
+
+                        ctx.fillStyle = inside ? "#ffffff" : "#555555";
+                        ctx.textAlign = inside ? "right" : "left";
+                        ctx.fillText(label, inside ? bar.x - 6 : bar.x + 6, bar.y);
+                    });
+
+                    ctx.restore();
+                }
+
+            }
+
+        ]
+
+    });
+
+}
+
+/*
+=====================================================
+WIKI DISTRIBUTION PIE CHART
+=====================================================
+
+Creates a pie chart showing the distribution of
+wiki efforts per edit type.
+
+HTML:
+
+data-chart="wikiDist"
+id="wikiDistributionChart"
+=====================================================
+*/
+
+
+async function createWikiDistributionChart(canvas) {
+
+    if (!canvas) {
+        console.warn("Wiki chart: distribution chart canvas was not found.");
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error(
+            "Wiki Distribution chart: Chart.js is not loaded."
+        );
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart =
+        Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    /*
+    -------------------------------------------------
+    Colors
+    -------------------------------------------------
+    */
+
+    const colors = {
+
+        "New Articles":
+            "#ac3713",
+
+        "Copyedits":
+            "#b16107",
+
+        "Links":
+            "#b88e1b",
+
+        "Sources":
+            "#196616",
+
+        "Categories":
+            "#115979",
+
+    };
+
+    /*
+    -------------------------------------------------
+    Create pie chart
+    -------------------------------------------------
+    */
+
+    new Chart(canvas, {
+
+        type: "pie",
+
+        data: {
+
+            labels: ["New Articles", "Copyedits", "Links", "Sources", "Categories"],
+
+            datasets: [
+
+                {
+                    data:
+                       [17, 180, 142, 97, 72],
+
+                    backgroundColor: [
+                        colors["New Articles"],
+                        colors["Copyedits"],
+                        colors["Links"],
+                        colors["Sources"],
+                        colors["Categories"],
+                    ],
+
+                    borderColor: [
+                        "#792106",   // New Articles
+                        "#703e04", // Copyedits
+                        "#7e5e05", // Links
+                        "#083f06", // Sources
+                        "#053246", // Categories
+                        ],
+
+                    borderWidth: 1.5
+                }
+            ]
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+
+            cutout: "60%",
+
+
+            layout: {
+
+                padding: 5
+
+            },
+
+
+            plugins: {
+
+                /*
+                -------------------------------------
+                Remove legend
+                -------------------------------------
+                */
+
+
+                legend: {
+
+                    display: false
+
+                },
+
+
+                /*
+                -------------------------------------
+                Tooltip
+                -------------------------------------
+                */
+
+                tooltip: {
+
+                    callbacks: {
+
+                        label(context) {
+
+                            return (
+                                `${context.label}: ` +
+                                `${context.raw}`
+                            );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+
+        plugins: []
+    });
+}
+
+
+/*
+=====================================================
+LOC DISTRIBUTION PIE CHART
+=====================================================
+
+Creates a pie chart showing the distribution of
+LOC efforts per edit type.
+
+HTML:
+
+data-chart="locDist"
+id="locDistributionChart"
+=====================================================
+*/
+
+async function createLOCDistributionChart(canvas) {
+
+    if (!canvas) {
+        console.warn("LOC chart: distribution chart canvas was not found.");
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error(
+            "LOC Distribution chart: Chart.js is not loaded."
+        );
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart =
+        Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    /*
+    -------------------------------------------------
+    Colors
+    -------------------------------------------------
+    */
+
+    const colors = {
+
+        "Reviews":
+            "#b88e1b",
+
+        "Transcriptions":
+            "#115979",
+
+    };
+
+    /*
+    -------------------------------------------------
+    Create pie chart
+    -------------------------------------------------
+    */
+
+    new Chart(canvas, {
+
+        type: "pie",
+
+        data: {
+
+            labels: ["Reviews", "Transcriptions"],
+
+            datasets: [
+
+                {
+                    data:
+                       [22, 75],
+
+                    backgroundColor: [
+                        colors["Reviews"],
+                        colors["Transcriptions"],
+                    ],
+
+                    borderColor: [
+                            "#7e5e05",   // Reviews
+                            "#324283",   // Transcriptions
                         ],
 
                     borderWidth: 1.5
@@ -6407,8 +7531,95 @@ async function initializeProjectCharts(
                 );
 
                 break;
-            
 
+            /*
+            -----------------------------------------
+            SNAC Distribution chart
+            -----------------------------------------
+            */
+
+            case "snacDist":
+
+                await createSnacDistributionChart(
+                    canvas
+            
+                );
+
+                break;
+
+            /*
+            -----------------------------------------
+            SNAC Edits chart
+            -----------------------------------------
+            */
+
+            case "snacEdits":
+
+                await createSnacEditsChart(
+                    canvas
+            
+                );
+
+                break;
+
+            /*
+            -----------------------------------------
+            OpenLibrary Edits chart
+            -----------------------------------------
+            */
+
+            case "openLibEdits":
+
+                await createOpenLibraryEditsChart(
+                    canvas
+            
+                );
+
+                break;
+                        /*
+            -----------------------------------------
+            LOC Distribution chart
+            -----------------------------------------
+            */
+
+            case "locDist":
+
+                await createLOCDistributionChart(
+                    canvas
+            
+                );
+
+                break;
+                        /*
+            -----------------------------------------
+            Wikipedia Distribution chart
+            -----------------------------------------
+            */
+
+            case "wikiDist":
+
+                await createWikiDistributionChart(
+                    canvas
+            
+                );
+
+                break;
+            
+            /*
+            -----------------------------------------
+            Wiki Edits chart
+            -----------------------------------------
+            */
+
+            case "wikiEdits":
+
+                await createWikiEditsChart(
+                    canvas
+            
+                );
+
+                break;
+            
             /*
             -----------------------------------------
             Uploads per Month chart
