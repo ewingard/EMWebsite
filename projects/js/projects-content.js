@@ -235,7 +235,34 @@ const projects = [
                 content: `<p>
                     This book outlines my current and previous volunteering efforts, including
                     transcription, metadata, archiving, software documentation development, and leadership.
-                </p>`
+                </p>
+                <div class="chart-row">
+                        <div class="chart-block">
+                            <h3 class="chart-title">
+                                Distribution of Efforts
+                            </h3>
+
+                        <div class="publication-chart-container">
+                            <canvas
+                                id="volunteerDistributionChart"
+                                class="project-chart"
+                                data-chart="volDist"
+                                aria-label="Pie chart of volunteer efforts distribution">
+                            </canvas>
+                        </div>
+                        </div>
+                        <div class="chart-block">
+                            <h3 class="chart-title">
+                                Volunteering per Month
+                            </h3>
+                        <div class="publication-chart-container">
+                            <canvas
+                                id="volunteerMonthChart"
+                                class="project-chart"
+                                data-chart="volunteer-month"
+                                aria-label="Chart of volunteering efforts per month"
+                </div>
+                </div>`
 
             },
 
@@ -2768,14 +2795,14 @@ async function createUploadsMonthChart(canvas) {
         data: {
 
             labels:
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
 
             datasets: [
 
                 {
 
                     data:
-                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230],
+                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230, 1418],
 
                     borderColor:
                         "#a3491f",
@@ -2791,6 +2818,248 @@ async function createUploadsMonthChart(canvas) {
 
                     pointBorderColor:
                         "#a3491f",
+
+                    pointRadius:
+                        2,
+
+                    pointHoverRadius:
+                        4,
+
+                    tension:
+                        0.25,
+
+                    fill:
+                        true
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+
+            layout: {
+
+                padding: {
+
+                    top: 2,
+
+                    right: 3,
+
+                    left: 3,
+
+                    bottom: 2
+
+                }
+
+            },
+
+
+            scales: {
+
+                x: {
+
+                    title: {
+
+                        display: false
+
+                    },
+
+                    grid: {
+
+                        display: false
+
+                    },
+
+                    ticks: {
+                        stepSize:
+                            3,
+
+                        color:
+                            "#666",
+
+                        font: {
+
+                            size: 8
+
+                        }
+
+                    }
+
+                },
+
+
+                y: {
+
+                    beginAtZero:
+                        true,
+
+                    ticks: {
+
+                        stepSize:
+                            750,
+
+                        precision:
+                            0,
+
+                        color:
+                            "#666",
+
+                        font: {
+
+                            size: 8
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: false
+
+                    },
+
+                    grid: {
+
+                        color:
+                            "#dddddd"
+
+                    }
+
+                }
+
+            },
+
+
+            plugins: {
+
+                /*
+                -------------------------------------
+                No legend
+                -------------------------------------
+                */
+
+                legend: {
+
+                    display: false
+
+                },
+
+
+                tooltip: {
+                    callbacks: {
+                        label(context) {
+                                return `Uploads: ${context.raw}`;
+                            }
+                        }
+                }
+            }
+        }
+    });
+}
+
+/*
+=====================================================
+VOLUNTEERING STATS PER MONTH CHART
+=====================================================
+
+Creates a line chart showing the amount of volunteering
+ items completed per month.
+
+HTML:
+
+data-chart="volunteer-month"
+id="volunteerMonthChart"
+=====================================================
+*/
+
+async function createVolunteerMonthChart(canvas) {
+
+    if (!canvas) {
+
+        console.warn(
+            "Volunteering chart: month chart canvas was not found."
+        );
+
+        return;
+    }
+
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+
+    if (typeof Chart === "undefined") {
+
+        console.error(
+            "Volunteering chart: Chart.js is not loaded."
+        );
+
+        return;
+    }
+
+
+    markChartInitialized(canvas);
+
+    /*
+    -------------------------------------------------
+    Destroy existing chart
+    -------------------------------------------------
+    */
+
+    const existingChart =
+        Chart.getChart(canvas);
+
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    /*
+    -------------------------------------------------
+    Create line chart
+    -------------------------------------------------
+    */
+
+    new Chart(canvas, {
+
+        type: "line",
+
+
+        data: {
+
+            labels:
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+
+            datasets: [
+
+                {
+
+                    data:
+                        [0, 0, 0, 0, 0, 0, 17, 127, 80, 132, 72, 51, 275],
+
+                    borderColor:
+                        "#a31f1f",
+
+                    backgroundColor:
+                        "#e29f9f",
+
+                    borderWidth:
+                        1,
+
+                    pointBackgroundColor:
+                        "#a31f1f",
+
+                    pointBorderColor:
+                        "#a31f1f",
 
                     pointRadius:
                         2,
@@ -2978,7 +3247,7 @@ async function createWorkCompletedChart(canvas) {
     }
 
     // ------------------------------------------
-    // Data
+    // Replace these with your actual totals
     // ------------------------------------------
 
     const values = {
@@ -3008,22 +3277,39 @@ async function createWorkCompletedChart(canvas) {
         data: {
 
             labels: [
-                "Single and Multi Image",
-                "Compound",
-                "Oral History"
+                "Digitization",
+                "Metadata",
+                "Uploads",
+                "Fixes"
             ],
 
             datasets: [
                 {
-                    data: [142, 139, 69],
+                    data: [
+                        values.digitization,
+                        values.metadata,
+                        values.uploads,
+                        values.fixes
+                    ],
 
                     backgroundColor: [
-                        colors["Single and Multi Image"],
-                        colors["Compound"],
-                        colors["Oral History"]
+                        "#ac3713",
+                        "#b88e1b",
+                        "#196616",
+                        "#115979"
                     ],
+
+                    borderRadius: 4,
+
+                    borderSkipped: false,
+
+                    barThickness: 18,
+
+                    maxBarThickness: 18
                 }
-            ],
+            ]
+
+        },
 
         options: {
 
@@ -3189,13 +3475,14 @@ async function createWorkCompletedChart(canvas) {
                     });
 
                     ctx.restore();
-                    }
-
                 }
 
-            ]
-        }
+            }
+
+        ]
+
     });
+
 }
 
 /*
@@ -3247,34 +3534,40 @@ async function createVolunteerDistributionChart(canvas) {
 
     const colors = {
 
-        "SNAC":
+        "Citizen Archivist":
             "#cd5f66",
 
-        "LOC":
+        "Colored Conventions":
             "#e2738c",
 
-        "Citizen Archivist":
+        "LCDL":
             "#ffa67c",
 
-        "Colored Conventions":
-            "#f5e1a2",
+        "LOC":
+            "#dfc573",
+
+        "Open Library":
+            "#9dc186",
+
+        "SNAC":
+            "#77bba0",
 
         "Volunpeer":
-            "#f5e1a2",
+            "#6ec299",
+
+        "Wikidata":
+            "#6eaec2",
 
         "Wikipedia":
-            "#f5e1a2",
+            "#7c91e2",
 
         "WikiSource":
-            "#f5e1a2"
+            "#937ecc",
+
+        "Zooniverse":
+            "#db84cc"
 
     };
-
-
-    const backgroundColors =
-        types.map(type =>
-            colors[type] || "#888888"
-        );
 
     /*
     -------------------------------------------------
@@ -3288,25 +3581,41 @@ async function createVolunteerDistributionChart(canvas) {
 
         data: {
 
-            labels: ["SNAC", "LOC", "Citizen Archivist", ],
+            labels: ["Citizen Archivist", "Colored Conventions", "LCDL", "LOC", "Open Library", "SNAC", 
+                "Volunpeer", "Wikidata", "Wikipedia", "WikiSource", "Zooniverse"],
 
             datasets: [
 
                 {
-
                     data:
-                        [],
+                       [4, 2, 4, 135, 12, 40, 1, 392, 370, 24, 7],
 
                     backgroundColor: [
-                        colors["Single and Multi Image"],
-                        colors["Compound"],
-                        colors["Oral History"]
+                        colors["Citizen Archivist"],
+                        colors["Colored Conventions"],
+                        colors["LCDL"],
+                        colors["LOC"],
+                        colors["Open Library"],
+                        colors["SNAC"],
+                        colors["Volunpeer"],
+                        colors["Wikidata"],
+                        colors["Wikipedia"],
+                        colors["WikiSource"],
+                        colors["Zooniverse"]
                     ],
 
                     borderColor: [
-                            "#97771d",   // darker edge for Single and Multi Image
-                            "#5456b4",   // darker edge for Compound
-                            "#393b3f"   // darker edge for Oral History
+                            "#ca454e",   // Citizen Archivist
+                            "#c85872",   // Colored Conventions
+                            "#d27449",   // LCDL
+                            "#c5a84a",   // LOC
+                            "#7bc44a",   // Open Library
+                            "#47b568",   // SNAC
+                            "#42a87c",   // Volunpeer
+                            "#4699b2",   // Wikidata
+                            "#4b60b3",   // Wikipedia
+                            "#6b51b3",   // Wikisource
+                            "#ac499b",   // Zooniverse
                         ],
 
                     borderWidth: 1.5
@@ -6069,6 +6378,36 @@ async function initializeProjectCharts(
                 );
 
                 break;
+
+                        /*
+            -----------------------------------------
+           Volunteer Distribution chart
+            -----------------------------------------
+            */
+
+            case "volDist":
+
+                await createVolunteerDistributionChart(
+                    canvas
+                );
+
+                break;
+
+            /*
+            -----------------------------------------
+            Volunteer per Month chart
+            -----------------------------------------
+            */
+
+            case "volunteer-month":
+
+                await createVolunteerMonthChart(
+                    canvas
+            
+                );
+
+                break;
+            
 
             /*
             -----------------------------------------
