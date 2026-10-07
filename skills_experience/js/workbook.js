@@ -164,7 +164,7 @@ const workbook = {
                         2026,
 
                     EndYear:
-                        2029
+                        2030
 
                 },
 
@@ -250,13 +250,13 @@ const workbook = {
 
                 },
 
-                                {
+                {
 
                     Type:
                         "Volunteer",
 
                     Title:
-                        "Leadership Council - Secretary of Public History",
+                        "Secretary of Public History",
 
                     Organization:
                         "Graduate Historical Society, College of Charleston",
@@ -271,7 +271,7 @@ const workbook = {
                         "Documentation, Organization, Event Planning",
 
                     Achievements:
-                        "Revive the Graduate Historical Society.",
+                        "Revived the Graduate Historical Society.",
 
                     StartYear:
                         2026,
@@ -293,10 +293,10 @@ const workbook = {
                         "Volunteer",
 
                     Title:
-                        "Volunteer Editor",
+                        "Librarian-in-Training",
 
                     Organization:
-                        "Internet Archive (Open Library)",
+                        "Open Library (Internet Archive)",
 
                     Location:
                         "Remote",
@@ -324,6 +324,34 @@ const workbook = {
 
                 },
 
+                {
+                    Type:
+                        "Volunteer",
+
+                    Title:
+                        "Linked Data Editor",
+
+                    Organization:
+                        "Social Networks in Archival Contexts (SNAC) Cooperative",
+
+                    Location:
+                        "Remote",
+                    
+                    Field:
+                        "Library",
+
+                    Description:
+                        "Linked Data, Metadata, Research",
+
+                    Achievements:
+                        "Directly supervised by the SNAC Director, editing 40+ records.",
+
+                    StartYear:
+                        2026,
+
+                    StartMonth:
+                        8
+                },
 
                 {
 
@@ -420,7 +448,7 @@ const workbook = {
                         "Copyediting, Metadata, Publication",
 
                     Achievements:
-                        "Edit over 300 articles, averaging 1,299,990 total views; author 8 articles.",
+                        "Edit 350+ articles, averaging approx. 2m total views; author 17+ articles.",
 
                     StartYear:
                         2026,
@@ -457,7 +485,7 @@ const workbook = {
                         "Copyediting, Paleography, Transcription",
 
                     Achievements:
-                        "Transcribed 100, reviewed 28, and translated 5 historical documents across 142 pages.",
+                        "Transcribed 107, reviewed 28, and translated 5 historical documents across 149 pages.",
 
                     StartYear:
                         2026,
@@ -476,9 +504,13 @@ const workbook = {
                             title: "Organizations I Transcribe For",
 
                             text:
-                                "The list is growing, but I currently transcribe for: South Carolina Historical Society, Library of Congress, National Archives, Smithsonian, Zooniverse, and the Wikimedia Foundation.",
+                                "The list is growing, but I currently transcribe for: South Carolina Historical Society, Library of Congress, National Archives, Smithsonian, Zooniverse, and the Wikimedia Foundation. For more information, check out my projects page.",
 
                             links: [
+                                {
+                                    label: "Projects Page - Volunteering",
+                                    url: "https://ewingard.xyz/projects/projects.html#volunteer"
+                                },
                                 {
                                     label: "By The People - Library of Congress",
                                     url: "https://www.crowd.loc.gov/"
@@ -498,7 +530,8 @@ const workbook = {
                                 {
                                     label: "Wikisource - Wikimedia Foundation",
                                     url: "https://en.wikisource.org/wiki/User:Ezardwizard"
-                                }
+                                },
+
                             ]
                         }
                     }
