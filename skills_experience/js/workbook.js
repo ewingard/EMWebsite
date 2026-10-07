@@ -2023,20 +2023,6 @@ const workbook = {
 
                     Link:
                         "/assets/media/certificates/CofCLifeDesign.pdf"
-                },
-
-                {
-                    Certificates:
-                        "Certified Interpretive Guide Certificate",
-
-                    Provider:
-                        "National Association for Interpreters",
-
-                    Year:
-                        2026,
-
-                    Status:
-                        "Tentative"
                 }
 
             ]

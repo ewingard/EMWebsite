@@ -904,7 +904,7 @@ const projects = [
                 title: "Current Publications & Presentations",
 
                 content: `
-                    <p>Wingard, E.M. (2026, April). Beyond the Black Box: Digital Library Workflows Behind the Lowcountry Digital Library. Presented at the LibLearning Rretreat, Charleston, SC.</p>
+                    <p>Wingard, E.M. (2026, August). Beyond the Black Box: Digital Library Workflows Behind the Lowcountry Digital Library. Presented at the LibLearning Rretreat, Charleston, SC.</p>
 
                     <p>
                         <a href="/assets/media/experience/LibLearning2026_DigitalLib.pdf" target="_blank">
@@ -912,7 +912,7 @@ const projects = [
                         </a>
                     </p><br>
                     <p>
-                        Nelson, K., R., Nelson, C. M., Johnson, M., <strong>Wingard, E. M.</strong>, Hudac, C. M. (March, April, 2026). When a Face Feels Familiar: How Connections Influence Adolescent Brain Responses to Friend's Faces. <a href="https://www.b-radlab.com/uploads/1/4/2/0/142020983/nelson_k_sra26.pdf" target="_blank">Presented at the 2026 Institute for Mind and Brain Conference: Creativity in Human and Artificial Systems, Columbia, SC; 2026 Society for Research on Adolescence Conference, Toronto, Canada.</a> |
+                        Nelson, K., R., Nelson, C. M., Johnson, M., <strong>Wingard, E. M.</strong>, Hudac, C. M. (2026, March & April). When a Face Feels Familiar: How Connections Influence Adolescent Brain Responses to Friend's Faces. <a href="https://www.b-radlab.com/uploads/1/4/2/0/142020983/nelson_k_sra26.pdf" target="_blank">Presented at the 2026 Institute for Mind and Brain Conference: Creativity in Human and Artificial Systems, Columbia, SC; 2026 Society for Research on Adolescence Conference, Toronto, Canada.</a> |
                         <a href="/assets/media/experience/FamiliarFaces_Nelson.pdf"> PDF <i class="fa-solid fa-file-image" alt="image file icon"></i></a>
                         </p>`
             },
