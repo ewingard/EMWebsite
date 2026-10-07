@@ -314,7 +314,7 @@ const workbook = {
                         2026,
 
                     StartMonth:
-                        7,
+                        9,
 
                     EndYear:
                         null,
