@@ -2056,7 +2056,58 @@ const workbook = {
 
                     Link:
                         "/assets/media/certificates/CofCLifeDesign.pdf"
-                }
+                },
+
+                {
+                    Certificates:
+                        "Scopus Academy: Research Collaborations Module",
+
+                    Provider:
+                        "Elsevier",
+
+                    Year:
+                        2026,
+
+                    Status:
+                        "Complete",
+
+                    Link:
+                        "/assets/media/certificates/ScopusResearch_Certificate.pdf"
+                },
+
+                {
+                    Certificates:
+                        "Scopus Academy: Metrics Module",
+
+                    Provider:
+                        "Elsevier",
+
+                    Year:
+                        2026,
+
+                    Status:
+                        "Complete",
+
+                    Link:
+                        "/assets/media/certificates/ScopusMetric_Certificate.pdf"
+                },
+
+                {
+                    Certificates:
+                        "Scopus Academy: Basic Search Module",
+
+                    Provider:
+                        "Elsevier",
+
+                    Year:
+                        2026,
+
+                    Status:
+                        "Complete",
+
+                    Link:
+                        "/assets/media/certificates/ScopusBasic_Certificate.pdf"
+                },
 
             ]
 
