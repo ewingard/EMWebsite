@@ -318,7 +318,7 @@ const projects = [
                 title: "By The People – Library of Congress",
 
                 content: `<p>
-                I have worked on 8 campaigns, 96 pages, and 135 total actions (saves, submits, and reviews) for the By The People transcription campaigns.<br>
+                I have worked on 8 campaigns, 97 pages, and 137 total actions (saves, submits, and reviews) for the By The People transcription campaigns.<br>
                 <br>
                 <a href="https://crowd.loc.gov/" target="_blank">By The People <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                 <a href="/assets/media/experience/ServiceLetter_LOC_082226.pdf" target="_blank">Download my Service Letter <i class="fa-solid fa-file-lines"></i></a>
@@ -339,12 +339,12 @@ const projects = [
             {
                 number: 6,
 
-                label: "Current - Metadata",
+                label: "Current - Metadata & Translation",
 
                 title: "OpenLibrary and the Internet Archive",
 
                 content: `<p>
-                    I have updated 12 metadata records for over 11 books and one author. I am a Librarian-In-Training to help with merging and metadata with the Library.<br>
+                    I have updated 12 metadata records for over 11 books and one author. I am a Librarian-In-Training to help with merging and metadata with the Library. I have also translated 35 technical words/phrases for OpenLibrary documentation.<br>
                     <br>
                     <a href="https://openlibrary.org/">Open Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
                     <a href="https://archive.org/">Internet Archive <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
@@ -354,9 +354,9 @@ const projects = [
                     </h3>
                 <div class="publication-chart-container">
                     <canvas
-                        id="openlibEditsChart"
+                        id="openLibEditsChart"
                         class="project-chart"
-                        data-chart="openlibEdits"
+                        data-chart="openLibEdits"
                         aria-label="Chart of volunteering efforts per month"
                 </div>`
             },
@@ -369,8 +369,7 @@ const projects = [
                 title: "Social Networks and Archival Contexts (SNAC)",
 
                 content: `<p>
-                    I am currently an editor for the <a href="https://snaccooperative.org/">Social Networks and Archival Contexts <i class="fa-solid fa-arrow-up-right-from-square"></i></a> Cooperative. I have edited over
-                    25 records on people, corporate entities, families, and (archival) resources.<br>
+                    I am currently an editor for the <a href="https://snaccooperative.org/">Social Networks and Archival Contexts <i class="fa-solid fa-arrow-up-right-from-square"></i></a> Cooperative.<br>
                     <br>
                 </p>
                 <div class="chart-block">
@@ -423,7 +422,7 @@ const projects = [
                 title: "Wikidata",
 
                 content: `<p>
-                    I have completed 392 edits on Wikidata across 62 unique records.
+                    I have completed 453 edits on Wikidata across 72 unique records.
                 </p>`
 
             },
@@ -450,7 +449,7 @@ const projects = [
                 title: "Wikipedia",
 
                 content: `<p>
-                    I have completed 392 edits on Wikipedia and written 17 articles, garnering over 1,825,778 views on articles I've edited.
+                    I have completed over 400 edits on Wikipedia and written 17 articles, garnering over 1,876,978 views on articles I've edited.
                 </p>
                 <div class="chart-block">
                     <h3 class="chart-title">
@@ -493,6 +492,7 @@ const projects = [
                     <ul>
                     <li><strong>March 2026</strong>: Transatlantic Anti-Slavery Wiki Edit-a-thon, co-hosted by the University of Rochester and Leeds Library for Frederick Douglass Day</li>
                     <li><strong>September 2026</strong>: WikiProject Organized Labour Month Online Campaign Community Edit-a-thon</li>
+                    <!-- Future Consideration- create/add js chart w/edit-a-thon stats via Excel -->
                 </p>`
             },
 
@@ -511,20 +511,20 @@ const projects = [
                 </p>`
             },
 
-            // {
-            //     number: 13,
+            {
+                number: 13,
 
-            //     label: "Current - Transcription",
+                label: "Future - Transcription",
 
-            //     title: "Distributed Proofreaders",
+                title: "Distributed Proofreaders",
 
-            //     content: `<p>
-            //     I am planning to volunteer with Project Gutenberg in the future, with their Distributed Proofreaders program.<br>
-            //     <br>
-            //     <a href="https://www.pgdp.net/c/" target="_blank">Distributed Proofreaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
-            //     <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            //     </p>`
-            // },
+                content: `<p>
+                I am planning to volunteer with Project Gutenberg in the future, with their Distributed Proofreaders program.<br>
+                <br>
+                <a href="https://www.pgdp.net/c/" target="_blank">Distributed Proofreaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br>
+                <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </p>`
+            },
 
             // {
             //     number: 14,
@@ -2769,7 +2769,7 @@ async function createObjectTypeChart(canvas) {
 
             datasets: [
                 {
-                    data: [147, 146, 69],
+                    data: [148, 147, 69],
 
                     backgroundColor: [
                         colors["Single and Multi Image"],
@@ -2894,14 +2894,14 @@ async function createUploadsMonthChart(canvas) {
         data: {
 
             labels:
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
 
             datasets: [
 
                 {
 
                     data:
-                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230, 1424],
+                        [1802, 1322, 1043, 2500, 1765, 342, 487, 2895, 1703, 1092, 1183, 230, 1424, 640],
 
                     borderColor:
                         "#a3491f",
@@ -3136,14 +3136,14 @@ async function createVolunteerMonthChart(canvas) {
         data: {
 
             labels:
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
 
             datasets: [
 
                 {
 
                     data:
-                        [0, 0, 0, 0, 0, 0, 17, 127, 80, 132, 72, 51, 275],
+                        [0, 0, 0, 0, 0, 0, 17, 127, 80, 132, 72, 60, 311, 130],
 
                     borderColor:
                         "#a31f1f",
@@ -3297,7 +3297,7 @@ async function createVolunteerMonthChart(canvas) {
                 tooltip: {
                     callbacks: {
                         label(context) {
-                                return `Uploads: ${context.raw}`;
+                                return `Volunteer edits: ${context.raw}`;
                             }
                         }
                 }
@@ -3350,10 +3350,10 @@ async function createWorkCompletedChart(canvas) {
     // ------------------------------------------
 
     const values = {
-        digitization: 5926,
-        metadata: 6872,
-        uploads: 17871,
-        fixes: 24175
+        digitization: 5963,
+        metadata: 7180,
+        uploads: 18496,
+        fixes: 24356
     };
 
     const total =
@@ -3687,7 +3687,7 @@ async function createVolunteerDistributionChart(canvas) {
 
                 {
                     data:
-                       [4, 2, 4, 135, 12, 40, 1, 392, 370, 24, 7],
+                       [4, 2, 4, 135, 71, 65, 1, 453, 388, 24, 7],
 
                     backgroundColor: [
                         colors["Citizen Archivist"],
@@ -3873,7 +3873,7 @@ async function createSnacDistributionChart(canvas) {
 
                 {
                     data:
-                       [20, 1, 0, 10, 0],
+                       [21, 21, 0, 10, 0],
 
                     backgroundColor: [
                         colors["Personal"],
@@ -4006,8 +4006,8 @@ async function createSnacEditsChart(canvas) {
     // ------------------------------------------
 
     const values = {
-        personal: 20,
-        corporate: 1,
+        personal: 21,
+        corporate: 21,
         resources: 10,
         families: 0,
         merges: 0
@@ -4250,12 +4250,298 @@ async function createSnacEditsChart(canvas) {
 }
 
 /*
+==========================================
+OPEN LIBRARY EDITS BAR CHART
+==========================================
+
+Creates a bar chart showing the amount of
+OpenLibrary edits per edit type:
+
+HTML:
+
+data-chart="openLibEdits"
+id="openLibEditsChart"
+*/
+
+async function createOpenLibraryEditsChart(canvas) {
+
+    if (!canvas) {
+        console.warn("OL Edits chart: canvas was not found.");
+        return;
+    }
+
+    if (isChartInitialized(canvas)) {
+        return;
+    }
+
+    if (typeof Chart === "undefined") {
+        console.error("OL Edits chart: Chart.js is not loaded.");
+        return;
+    }
+
+    markChartInitialized(canvas);
+
+    const existingChart = Chart.getChart(canvas);
+
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    // ------------------------------------------
+    // Replace these with your actual totals
+    // ------------------------------------------
+
+    const values = {
+        authors: 1,
+        books: 12,
+        translations: 35,
+        suggestedDelete: 0,
+        merges: 0
+    };
+
+    const total =
+        values.authors +
+        values.books +
+        values.translations +
+        values.suggestedDelete +
+        values.merges;
+
+    const percentages = {
+        authors: (values.authors / total) * 100,
+        books: (values.books / total) * 100,
+        translations: (values.translations / total) * 100,
+        suggestedDelete: (values.suggestedDelete / total) * 100,
+        merges: (values.merges / total) * 100
+    };
+
+    new Chart(canvas, {
+
+        type: "bar",
+
+        data: {
+
+            labels: [
+                "Author Pages",
+                "Books",
+                "Translations",
+                "Suggested Deletions",
+                "Merges"
+            ],
+
+            datasets: [
+                {
+                    data: [
+                        values.authors,
+                        values.books,
+                        values.translations,
+                        values.suggestedDelete,
+                        values.merges
+                    ],
+
+                    backgroundColor: [
+                        "#ac3713",
+                        "#b88e1b",
+                        "#196616",
+                        "#115979",
+                        "#581179"
+                    ],
+
+                    borderRadius: 4,
+
+                    borderSkipped: false,
+
+                    barThickness: 18,
+
+                    maxBarThickness: 18
+                }
+            ]
+
+        },
+
+        options: {
+
+            indexAxis: "y",
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            animation: false,
+
+            layout: {
+                padding: {
+                    top: 2,
+                    right: 8,
+                    bottom: 2,
+                    left: 0
+                }
+            },
+
+            scales: {
+
+                x: {
+                    display: false,
+
+                    beginAtZero: true,
+
+                    grid: {
+                        display: false
+                    }
+                },
+
+                y: {
+                    display: true,
+
+                    grid: {
+                        display: false
+                    },
+
+                    border: {
+                        display: false
+                    },
+
+                    ticks: {
+                        color: "#555",
+
+                        font: {
+                            size: 9
+                        },
+
+                        padding: 4
+                    }
+                }
+
+            },
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+
+                    displayColors: false,
+
+                    callbacks: {
+
+                        title(context) {
+                            return context[0].label;
+                        },
+
+                        label(context) {
+
+                            const index = context.dataIndex;
+
+                            const keys = [
+                                "authors",
+                                "books",
+                                "translations",
+                                "suggestedDelete",
+                                "merges"
+                            ];
+
+                            const key = keys[index];
+
+                            return [
+                                `Count: ${values[key].toLocaleString()}`,
+                                `Share: ${percentages[key].toFixed(1)}%`
+                            ];
+                        }
+
+                    }
+
+                }
+
+            }
+
+        },
+
+        plugins: [
+
+            {
+
+                id: "openLibEditLabels",
+
+                afterDatasetsDraw(chart) {
+
+                    const {
+                        ctx
+                    } = chart;
+
+                    const meta = chart.getDatasetMeta(0);
+
+                    const keys = [
+                        "authors",
+                        "books",
+                        "translations",
+                        "suggestedDelete",
+                        "merges"
+                    ];
+
+                    ctx.save();
+
+                    ctx.font = "600 8px sans-serif";
+
+                    ctx.textBaseline = "middle";
+
+                    meta.data.forEach((bar, index) => {
+
+                        const key = keys[index];
+
+                        const count =
+                            values[key].toLocaleString();
+
+                        const percentage =
+                            percentages[key].toFixed(0) + "%";
+
+                        const label =
+                            `${count} (${percentage})`;
+
+                        // Keep the label inside the bar when
+                        // the bar is wide enough.
+                        const textWidth =
+                            ctx.measureText(label).width;
+
+                        const inside =
+                            bar.width > textWidth + 12;
+
+                        ctx.fillStyle =
+                            inside ? "#ffffff" : "#555555";
+
+                        ctx.textAlign =
+                            inside ? "right" : "left";
+
+                        const x = inside
+                            ? bar.x - 6
+                            : bar.x + 6;
+
+                        ctx.fillText(
+                            label,
+                            x,
+                            bar.y
+                        );
+
+                    });
+
+                    ctx.restore();
+                }
+
+            }
+
+        ]
+
+    });
+
+}
+
+/*
 =====================================================
 WIKI EDITS BAR CHART
 =====================================================
 
 Creates a bar chart showing the amount of
-SNAC edits per edit type.
+Wikipedia edits per edit type.
 
 HTML:
 
@@ -4298,9 +4584,9 @@ async function createWikiEditsChart(canvas) {
 
     const values = {
         newArticles: 17,
-        copyedit: 180,
-        links: 142,
-        src: 97,
+        copyedit: 186,
+        links: 156,
+        src: 100,
         categories: 72,
     };
 
@@ -4566,7 +4852,7 @@ async function createWikiDistributionChart(canvas) {
 
                 {
                     data:
-                       [17, 180, 142, 97, 72],
+                       [17, 186, 156, 100, 72],
 
                     backgroundColor: [
                         colors["New Articles"],
