@@ -2149,36 +2149,83 @@ const projects = [
         ]
 
     },
-    // {
-    //     id: "",
 
-    //     title: "Researcher Mentorship",
+    {
+        id: "",
 
-    //     shelf: 1,
+        title: "Graduate Historical Society",
 
-    //     color: "#853953",
+        shelf: 1,
 
-    //     accent: "#d0b56d",
+        color: "#853953",
 
-    //     decoration: "ornament",
+        accent: "#d0b56d",
 
-    //     rotation: "1deg",
+        decoration: "ornament",
 
-    //     width: 35,
+        rotation: "1deg",
 
-    //     height: 273,
+        width: 35,
 
-    //     decoration: "lines",
+        height: 273,
 
-    //      pages: [
+        decoration: "lines",
 
-    //        {
+         pages: [
 
-    //        }
+           {
+            number: 1,
 
-    //      ]
+                label: "Background",
 
-    // },
+                title: "What is the Graduate Historical Society?",
+
+                content: `<p>
+                The Graduate Historical Society (GHS) is primarily a student-led organization that hosts events and gatherings, as well as formal and informal avenues of support for current graduate students.
+                In the past, the GHS has hosted academic talks among CofC faculty, organized social gatherings, and partnered with faculty to assist students in career readiness,
+                PhD applications, and other professional oriented events.
+                </p>`
+           },
+
+            {
+            number: 2,
+
+                label: "Background",
+
+                title: "Temporary Paused Operations",
+
+                content: `<p>
+                The Graduate Historical Society was temporarily suspended as a student-led organization, with operations and oversight paused for over 3 years. As part of the Graduate Historical Society
+                Leadership Team, I was one of 9 re-founding members who resurrected the Society.</p>
+                <p> During the resurrection process, we created a leadership hierarchy with two main silos for the GHS to operate within: Academic History and Public History.
+                Any formal events within the realms of <i>experiential learning</i> and <i>professional development</i> may relate to academic or public history,
+                with "steering committees" dedicated to each flavor of history. Each silo (Academic/Public History) has a "president," "vice president," and two secretaries to help govern and plan events.
+                My formal role within the GHS is the Secretary of Public History, although the reality is that I tend to complete tasks for whatever the GHS needs.
+                </p>`
+           },
+
+           {
+            number: 3,
+
+                label: "Tasks",
+
+                title: "Events and Ideation",
+
+                content: `<p>
+                The Graduate Historical Society was temporarily suspended as a student-led organization, with operations and oversight paused for over 3 years. As part of the Graduate Historical Society
+                Leadership Team, I was one of 9 re-founding members who resurrected the Society.
+                </p>`
+           },
+
+           {
+            number: 4,
+
+            label: ""
+           }
+
+         ]
+
+    },
 
     {
         id: "",
