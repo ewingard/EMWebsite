@@ -2185,42 +2185,81 @@ const projects = [
                 In the past, the GHS has hosted academic talks among CofC faculty, organized social gatherings, and partnered with faculty to assist students in career readiness,
                 PhD applications, and other professional oriented events.
                 </p>`
-           },
+            },
 
             {
-            number: 2,
+                number: 2,
 
                 label: "Background",
 
-                title: "Temporary Paused Operations",
+                title: "Temporary Pause on Operations",
 
                 content: `<p>
                 The Graduate Historical Society was temporarily suspended as a student-led organization, with operations and oversight paused for over 3 years. As part of the Graduate Historical Society
-                Leadership Team, I was one of 9 re-founding members who resurrected the Society.</p>
-                <p> During the resurrection process, we created a leadership hierarchy with two main silos for the GHS to operate within: Academic History and Public History.
+                Leadership Team, I was one of 9 re-founding members who resurrected the Society.</p>`    
+            },
+
+            {
+                number: 3,
+
+                label: "Background",
+
+                title: "Leadership and Power Structures",
+
+                content:
+                `<p> During the resurrection process, we created a leadership hierarchy with two main silos for the GHS to operate within: Academic History and Public History.
                 Any formal events within the realms of <i>experiential learning</i> and <i>professional development</i> may relate to academic or public history,
-                with "steering committees" dedicated to each flavor of history. Each silo (Academic/Public History) has a "president," "vice president," and two secretaries to help govern and plan events.
-                My formal role within the GHS is the Secretary of Public History, although the reality is that I tend to complete tasks for whatever the GHS needs.
-                </p>`
-           },
-
-           {
-            number: 3,
-
-                label: "Tasks",
-
-                title: "Events and Ideation",
-
-                content: `<p>
-                The Graduate Historical Society was temporarily suspended as a student-led organization, with operations and oversight paused for over 3 years. As part of the Graduate Historical Society
-                Leadership Team, I was one of 9 re-founding members who resurrected the Society.
+                with "steering committees" dedicated to each flavor of history. Each silo (Academic/Public History) has a "president," "vice president," and two secretaries to help govern and plan events.</p><br/>
+                <p>My formal role within the GHS is the Secretary of Public History, although the reality is that I tend to complete tasks for whatever the GHS needs.
                 </p>`
            },
 
            {
             number: 4,
 
-            label: ""
+                label: "Tasks",
+
+                title: "Events and Ideation",
+
+                content: `<p>
+                    The Graduate Historical Society was reinstated in the Fall 2026 semester, during which we held 3 events:
+                    <ul>
+                    <li><i>Experiential learning</i>: Interpretive Tour at the Charleston Museum</li>
+                    <li><i>Social</i>: Happy Hour/informal social at Tommy Condon's in Charleston</li>
+                    <li><i>Social</i>: Movie Night held on campus</i></li></ul>
+                </p>`
+           },
+
+           {
+            number: 5,
+
+            label: "Tasks",
+
+            title: "Event Statistics",
+
+            content: `<p>I coordinated and engaged in outreach, ideation, and statistics tracking for all three events in the Fall 2026 semester. Statistics tracked per meeting include:</p>
+                <ul>
+                    <li>Number of attendees</li>
+                    <li>On/off campus</li>
+                    <li>Was the event funded with Dean's Discretionary Funds? If so, how much?</li>
+                </ul>
+                <p>Statistics are tracked to provide actionable insights for more desirable events and to watch for trends (is the Spring semester more attended than the Fall? Do people prefer
+                on campus events more than off campus? Is there a best time to hold events? How much money have we been able to procure from Dean's Discretionary funds for experiential learning events?)</p>`
+           },
+
+           {
+            number: 6,
+
+            label: "Tasks",
+
+            title: "SharePoint and Society Organization",
+
+            content: `<p>
+                For each GHS meeting that is held, I take extensive meeting minutes notes and send a copy to all GHS members (in attendance or not) to summarize the meeting.
+                </p>
+                <p>To keep the Society organized, I created a SharePoint website to manage the meeting minutes documents. Additionally, I created <strong>2</strong> subpages on the site
+                with resources (e.g., internships) to provide to any student in the History graduate program, as well as undergraduates who may be interested in attending the program at CofC.
+            </p>`
            }
 
          ]
