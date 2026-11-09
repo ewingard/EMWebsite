@@ -2109,6 +2109,42 @@ const workbook = {
                         "/assets/media/certificates/ScopusBasic_Certificate.pdf"
                 },
 
+                {
+                    Certificates:
+                        "NASA Open Science 101",
+
+                    Provider:
+                        "NASA",
+
+                    Year:
+                        "2026",
+
+                    Status:
+                        "Completed",
+
+                    Link:
+                        "/assets/media/certificates/OS101_NASA_Certificate.pdf"
+
+                },
+
+                {
+                    Certificates:
+                        "NASA Open Science Essentials",
+
+                    Provider:
+                        "NASA",
+
+                    Year:
+                        "2026",
+
+                    Status:
+                        "Completed",
+
+                    Link:
+                        "/assets/media/certificates/OSEssentials_NASA_Certificate.pdf"
+
+                }
+
             ]
 
         }
