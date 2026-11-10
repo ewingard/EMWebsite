@@ -362,6 +362,14 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
 }
 
+.btn {
+    font-size: 1.75rem;
+    padding: 0.25rem;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+
 /* =========================================
    WINDOWS 95 SCROLLBAR — ABOUTME.TXT
    ========================================= */
